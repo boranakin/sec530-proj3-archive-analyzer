@@ -270,5 +270,16 @@ if __name__ == "__main__":
     analyzer = ArchiveAnalyzer(target_file)
     result = analyzer.analyze()
     
-    # Outputs beautifully structured JSON ready for Task 2 consumption
+    # 1. Print the JSON to the console for your immediate review
     print(json.dumps(result, indent=4))
+    
+    # 2. Generate a unique timestamp (Format: YYYYMMDD_HHMMSS)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base_name = Path(target_file).stem
+    output_filename = f"{base_name}_{timestamp}.json"
+    
+    # 3. Save the JSON to a unique file
+    with open(output_filename, 'w') as f:
+        json.dump(result, f, indent=4)
+        
+    print(f"\n[+] Success! Report saved to: {output_filename}")

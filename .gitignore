@@ -216,3 +216,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+/task1/dummy_malware
+task1/analyzer_v1.py
