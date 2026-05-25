@@ -1,0 +1,1160 @@
+{
+  "test_samples": [
+    {
+      "_scenario": "MALICIOUS-01: Classic phishing dropper — decoy PDF + double-ext EXE + downloader script",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R01", "R02", "R04", "R08", "R15", "R16", "R18", "R20", "R29"],
+      "1_basic_info": {
+        "file_name": "invoice_Q3_2024.zip",
+        "file_size": 204800,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "d41d8cd98f00b204e9800998ecf8427e",
+          "sha1": "adc83b19e793491b1c6ea0fd8b46cd9f32e592fc",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 12.4,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 3,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "invoice_2024.pdf",
+          "file_name": "invoice_2024.pdf",
+          "file_extension": ".pdf",
+          "compressed_size": 51200,
+          "uncompressed_size": 102400,
+          "timestamp": "2024-11-01T10:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.2,
+          "detected_mime": "application/pdf"
+        },
+        {
+          "internal_path": "invoice_2024.pdf.exe",
+          "file_name": "invoice_2024.pdf.exe",
+          "file_extension": ".exe",
+          "compressed_size": 102400,
+          "uncompressed_size": 409600,
+          "timestamp": "2024-11-01T10:05:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": true,
+          "entropy": 7.8,
+          "detected_mime": "application/x-dosexec"
+        },
+        {
+          "internal_path": "update.ps1",
+          "file_name": "update.ps1",
+          "file_extension": ".ps1",
+          "compressed_size": 8192,
+          "uncompressed_size": 16384,
+          "timestamp": "2024-11-01T10:10:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 5.1,
+          "detected_mime": "text/plain"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 1,
+        "double_extensions": ["invoice_2024.pdf.exe"],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": true
+      },
+      "5_content_indicators": {
+        "urls_found": ["http://192.168.1.100:4444/payload.exe"],
+        "suspicious_commands": ["powershell", "Invoke-WebRequest", "cmd.exe"]
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-02: Zip bomb — extreme compression ratio",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R11", "R12"],
+      "1_basic_info": {
+        "file_name": "free_software.zip",
+        "file_size": 1024,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sha1": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 1032.5,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 1,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "data.txt",
+          "file_name": "data.txt",
+          "file_extension": ".txt",
+          "compressed_size": 1000,
+          "uncompressed_size": 1073741824,
+          "timestamp": "2024-01-01T00:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 0.1,
+          "detected_mime": "text/plain"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": false,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": true,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-03: Zip Slip path traversal — CVE-2018-3718",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R13", "R01", "R08"],
+      "1_basic_info": {
+        "file_name": "update_package.zip",
+        "file_size": 512000,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "sha1": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 3.2,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 3,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "readme.pdf",
+          "file_name": "readme.pdf",
+          "file_extension": ".pdf",
+          "compressed_size": 10240,
+          "uncompressed_size": 20480,
+          "timestamp": "2024-06-15T08:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 3.9,
+          "detected_mime": "application/pdf"
+        },
+        {
+          "internal_path": "../../Windows/System32/malware.exe",
+          "file_name": "malware.exe",
+          "file_extension": ".exe",
+          "compressed_size": 204800,
+          "uncompressed_size": 512000,
+          "timestamp": "2024-06-15T08:05:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.6,
+          "detected_mime": "application/x-dosexec"
+        },
+        {
+          "internal_path": "../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat",
+          "file_name": "run.bat",
+          "file_extension": ".bat",
+          "compressed_size": 512,
+          "uncompressed_size": 1024,
+          "timestamp": "2024-06-15T08:06:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 3.2,
+          "detected_mime": "text/plain"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 6,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": true
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": ["cmd.exe"]
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-04: WinRAR RCE — CVE-2023-38831 pattern",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R21", "R13", "R01", "R08"],
+      "1_basic_info": {
+        "file_name": "contract_signed.rar",
+        "file_size": 307200,
+        "file_extension": ".rar",
+        "mime_type": "application/x-rar-compressed",
+        "hashes": {
+          "md5": "cccccccccccccccccccccccccccccccc",
+          "sha1": "cccccccccccccccccccccccccccccccccccccccc",
+          "sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "RAR",
+        "compression_method": "RAR5",
+        "compression_ratio": 4.1,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 3,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "contract_signed.pdf",
+          "file_name": "contract_signed.pdf",
+          "file_extension": ".pdf",
+          "compressed_size": 51200,
+          "uncompressed_size": 102400,
+          "timestamp": "2024-09-10T12:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.1,
+          "detected_mime": "application/pdf"
+        },
+        {
+          "internal_path": "contract_signed.pdf/",
+          "file_name": "contract_signed.pdf",
+          "file_extension": "",
+          "compressed_size": 0,
+          "uncompressed_size": 0,
+          "timestamp": "2024-09-10T12:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 0,
+          "detected_mime": ""
+        },
+        {
+          "internal_path": "contract_signed.pdf/../payload.exe",
+          "file_name": "payload.exe",
+          "file_extension": ".exe",
+          "compressed_size": 153600,
+          "uncompressed_size": 307200,
+          "timestamp": "2024-09-10T12:01:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.9,
+          "detected_mime": "application/x-dosexec"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 2,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": true
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-05: Encrypted archive hiding executable payload",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R07", "R01"],
+      "1_basic_info": {
+        "file_name": "protected_docs.zip",
+        "file_size": 409600,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "dddddddddddddddddddddddddddddddd",
+          "sha1": "dddddddddddddddddddddddddddddddddddddddd",
+          "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "AES-256",
+        "compression_ratio": 1.1,
+        "password_protected": true,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 2,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "readme.txt",
+          "file_name": "readme.txt",
+          "file_extension": ".txt",
+          "compressed_size": 512,
+          "uncompressed_size": 512,
+          "timestamp": "2024-10-01T09:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 0,
+          "detected_mime": ""
+        },
+        {
+          "internal_path": "installer.exe",
+          "file_name": "installer.exe",
+          "file_extension": ".exe",
+          "compressed_size": 409000,
+          "uncompressed_size": 409000,
+          "timestamp": "2024-10-01T09:01:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 0,
+          "detected_mime": ""
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-06: RTLO unicode trick — CVE-2009-3376",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R09", "R01", "R08"],
+      "1_basic_info": {
+        "file_name": "photos.zip",
+        "file_size": 102400,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "sha1": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 2.1,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 2,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "holiday.jpg",
+          "file_name": "holiday.jpg",
+          "file_extension": ".jpg",
+          "compressed_size": 51200,
+          "uncompressed_size": 102400,
+          "timestamp": "2024-08-01T14:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.1,
+          "detected_mime": "image/jpeg"
+        },
+        {
+          "internal_path": "photo\u202egpj.exe",
+          "file_name": "photo\u202egpj.exe",
+          "file_extension": ".exe",
+          "compressed_size": 51000,
+          "uncompressed_size": 204800,
+          "timestamp": "2024-08-01T14:05:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.7,
+          "detected_mime": "application/x-dosexec"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": ["photo\u202egpj.exe"],
+        "unicode_rtlo_detected": true,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": true
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-07: LNK shortcut + obfuscated PowerShell downloader",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R03", "R15", "R16", "R17", "R08", "R29"],
+      "1_basic_info": {
+        "file_name": "resume_john_doe.zip",
+        "file_size": 61440,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "ffffffffffffffffffffffffffffffff",
+          "sha1": "ffffffffffffffffffffffffffffffffffffffff",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 5.2,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 2,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "Resume_JohnDoe.pdf",
+          "file_name": "Resume_JohnDoe.pdf",
+          "file_extension": ".pdf",
+          "compressed_size": 20480,
+          "uncompressed_size": 40960,
+          "timestamp": "2024-10-15T09:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.5,
+          "detected_mime": "application/pdf"
+        },
+        {
+          "internal_path": "Open_Resume.lnk",
+          "file_name": "Open_Resume.lnk",
+          "file_extension": ".lnk",
+          "compressed_size": 20480,
+          "uncompressed_size": 20480,
+          "timestamp": "2024-10-15T09:05:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 5.8,
+          "detected_mime": "application/x-ms-shortcut"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": false,
+        "has_office_macros": false,
+        "has_lnk": true,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": ["http://evil.ru/stage2/payload.exe", "http://c2.evil.ru/beacon"],
+        "suspicious_commands": [
+          "powershell",
+          "Invoke-WebRequest",
+          "-encodedcommand",
+          "FromBase64String",
+          "iex("
+        ]
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-08: Macro-enabled Office doc + VBA downloader strings",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R05", "R15", "R16", "R17", "R29"],
+      "1_basic_info": {
+        "file_name": "Q4_budget_report.zip",
+        "file_size": 153600,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "11111111111111111111111111111111",
+          "sha1": "1111111111111111111111111111111111111111",
+          "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 3.8,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 1,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "Q4_budget_report.xlsm",
+          "file_name": "Q4_budget_report.xlsm",
+          "file_extension": ".xlsm",
+          "compressed_size": 153600,
+          "uncompressed_size": 583680,
+          "timestamp": "2024-11-20T10:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 6.2,
+          "detected_mime": "application/vnd.ms-excel.sheet.macroenabled.12"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": false,
+        "has_office_macros": true,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": ["http://185.220.101.45/drop/stage1.dll"],
+        "suspicious_commands": [
+          "URLDownloadToFile",
+          "WScript.Shell",
+          "CreateObject",
+          "Shell",
+          "base64"
+        ]
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-09: Deeply nested archives — AV evasion",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R06", "R01", "R08"],
+      "1_basic_info": {
+        "file_name": "software_bundle.zip",
+        "file_size": 819200,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "22222222222222222222222222222222",
+          "sha1": "2222222222222222222222222222222222222222",
+          "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 2.0,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 4,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "readme.txt",
+          "file_name": "readme.txt",
+          "file_extension": ".txt",
+          "compressed_size": 1024,
+          "uncompressed_size": 2048,
+          "timestamp": "2024-07-01T10:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 3.5,
+          "detected_mime": "text/plain"
+        },
+        {
+          "internal_path": "layer1.zip",
+          "file_name": "layer1.zip",
+          "file_extension": ".zip",
+          "compressed_size": 204800,
+          "uncompressed_size": 409600,
+          "timestamp": "2024-07-01T10:01:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.9,
+          "detected_mime": "application/zip"
+        },
+        {
+          "internal_path": "layer1/layer2.7z",
+          "file_name": "layer2.7z",
+          "file_extension": ".7z",
+          "compressed_size": 204800,
+          "uncompressed_size": 409600,
+          "timestamp": "2024-07-01T10:02:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.9,
+          "detected_mime": "application/x-7z-compressed"
+        },
+        {
+          "internal_path": "layer1/layer2/payload.exe",
+          "file_name": "payload.exe",
+          "file_extension": ".exe",
+          "compressed_size": 409600,
+          "uncompressed_size": 819200,
+          "timestamp": "2024-07-01T10:03:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.95,
+          "detected_mime": "application/x-dosexec"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": true,
+        "max_nesting_depth": 3,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": true
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-10: Header manipulation — zero uncompressed size trick",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R27", "R01", "R18"],
+      "1_basic_info": {
+        "file_name": "patch_v2.zip",
+        "file_size": 307200,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "33333333333333333333333333333333",
+          "sha1": "3333333333333333333333333333333333333333",
+          "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 0.0,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 2,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "patch_notes.txt",
+          "file_name": "patch_notes.txt",
+          "file_extension": ".txt",
+          "compressed_size": 512,
+          "uncompressed_size": 1024,
+          "timestamp": "2024-12-01T08:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 3.8,
+          "detected_mime": "text/plain"
+        },
+        {
+          "internal_path": "patch.exe",
+          "file_name": "patch.exe",
+          "file_extension": ".exe",
+          "compressed_size": 307200,
+          "uncompressed_size": 0,
+          "timestamp": "2024-12-01T08:01:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.95,
+          "detected_mime": "application/x-dosexec"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-11: WinRAR buffer overflow bait — CVE-2018-18384, oversized path",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R22", "R01"],
+      "1_basic_info": {
+        "file_name": "archive_test.rar",
+        "file_size": 102400,
+        "file_extension": ".rar",
+        "mime_type": "application/x-rar-compressed",
+        "hashes": {
+          "md5": "44444444444444444444444444444444",
+          "sha1": "4444444444444444444444444444444444444444",
+          "sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "RAR",
+        "compression_method": "RAR5",
+        "compression_ratio": 2.0,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 1,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe",
+          "file_name": "AAAAAAAAAAAAAAAA.exe",
+          "file_extension": ".exe",
+          "compressed_size": 102400,
+          "uncompressed_size": 204800,
+          "timestamp": "2024-05-01T12:00:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.5,
+          "detected_mime": "application/x-dosexec"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "MALICIOUS-12: Unicode normalization spoof — CVE-2025-8088",
+      "_expected": "MALICIOUS",
+      "_rules_expected": ["R24", "R01", "R08"],
+      "1_basic_info": {
+        "file_name": "documents.zip",
+        "file_size": 204800,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "55555555555555555555555555555555",
+          "sha1": "5555555555555555555555555555555555555555",
+          "sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 3.5,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 2,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "report.pdf",
+          "file_name": "report.pdf",
+          "file_extension": ".pdf",
+          "compressed_size": 51200,
+          "uncompressed_size": 102400,
+          "timestamp": "2024-03-01T10:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.0,
+          "detected_mime": "application/pdf"
+        },
+        {
+          "internal_path": "rep\u0041\u0300rt_v2.exe",
+          "file_name": "rep\u0041\u0300rt_v2.exe",
+          "file_extension": ".exe",
+          "compressed_size": 102400,
+          "uncompressed_size": 204800,
+          "timestamp": "2024-03-01T10:05:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.8,
+          "detected_mime": "application/x-dosexec"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": true,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 0,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": true
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "BENIGN-01: Normal ZIP with documents and images",
+      "_expected": "BENIGN",
+      "_rules_expected": [],
+      "1_basic_info": {
+        "file_name": "holiday_photos_2024.zip",
+        "file_size": 5242880,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "66666666666666666666666666666666",
+          "sha1": "6666666666666666666666666666666666666666",
+          "sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 1.1,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 24,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "IMG_001.jpg",
+          "file_name": "IMG_001.jpg",
+          "file_extension": ".jpg",
+          "compressed_size": 2097152,
+          "uncompressed_size": 2359296,
+          "timestamp": "2024-08-15T14:22:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.2,
+          "detected_mime": "image/jpeg"
+        },
+        {
+          "internal_path": "IMG_002.jpg",
+          "file_name": "IMG_002.jpg",
+          "file_extension": ".jpg",
+          "compressed_size": 2097152,
+          "uncompressed_size": 2359296,
+          "timestamp": "2024-08-15T14:25:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.1,
+          "detected_mime": "image/jpeg"
+        },
+        {
+          "internal_path": "notes.txt",
+          "file_name": "notes.txt",
+          "file_extension": ".txt",
+          "compressed_size": 1024,
+          "uncompressed_size": 2048,
+          "timestamp": "2024-08-15T20:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.1,
+          "detected_mime": "text/plain"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": false,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 1,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "BENIGN-02: Developer source code archive",
+      "_expected": "BENIGN",
+      "_rules_expected": ["R02"],
+      "1_basic_info": {
+        "file_name": "myproject_v1.0.tar.gz",
+        "file_size": 102400,
+        "file_extension": ".gz",
+        "mime_type": "application/gzip",
+        "hashes": {
+          "md5": "77777777777777777777777777777777",
+          "sha1": "7777777777777777777777777777777777777777",
+          "sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "TAR",
+        "compression_method": "gzip",
+        "compression_ratio": 4.2,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 18,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "myproject/main.py",
+          "file_name": "main.py",
+          "file_extension": ".py",
+          "compressed_size": 4096,
+          "uncompressed_size": 8192,
+          "timestamp": "2024-11-10T16:00:00",
+          "is_executable_or_script": true,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.8,
+          "detected_mime": "text/x-python"
+        },
+        {
+          "internal_path": "myproject/README.md",
+          "file_name": "README.md",
+          "file_extension": ".md",
+          "compressed_size": 2048,
+          "uncompressed_size": 4096,
+          "timestamp": "2024-11-10T16:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 4.2,
+          "detected_mime": "text/markdown"
+        },
+        {
+          "internal_path": "myproject/requirements.txt",
+          "file_name": "requirements.txt",
+          "file_extension": ".txt",
+          "compressed_size": 512,
+          "uncompressed_size": 1024,
+          "timestamp": "2024-11-10T16:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 3.9,
+          "detected_mime": "text/plain"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": false,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 2,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    },
+
+    {
+      "_scenario": "BENIGN-03: Standard Office document backup",
+      "_expected": "BENIGN",
+      "_rules_expected": [],
+      "1_basic_info": {
+        "file_name": "work_backup_nov2024.zip",
+        "file_size": 2097152,
+        "file_extension": ".zip",
+        "mime_type": "application/zip",
+        "hashes": {
+          "md5": "88888888888888888888888888888888",
+          "sha1": "8888888888888888888888888888888888888888",
+          "sha256": "8888888888888888888888888888888888888888888888888888888888888888"
+        }
+      },
+      "2_archive_metadata": {
+        "format": "ZIP",
+        "compression_method": "Deflate",
+        "compression_ratio": 3.1,
+        "password_protected": false,
+        "is_split_archive": false,
+        "corrupted": false,
+        "file_count": 5,
+        "comment": null
+      },
+      "3_internal_files": [
+        {
+          "internal_path": "Q3_report.docx",
+          "file_name": "Q3_report.docx",
+          "file_extension": ".docx",
+          "compressed_size": 512000,
+          "uncompressed_size": 1024000,
+          "timestamp": "2024-11-01T09:00:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.6,
+          "detected_mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        },
+        {
+          "internal_path": "budget_2024.xlsx",
+          "file_name": "budget_2024.xlsx",
+          "file_extension": ".xlsx",
+          "compressed_size": 1024000,
+          "uncompressed_size": 2048000,
+          "timestamp": "2024-11-01T09:05:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.4,
+          "detected_mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        },
+        {
+          "internal_path": "presentation.pptx",
+          "file_name": "presentation.pptx",
+          "file_extension": ".pptx",
+          "compressed_size": 512000,
+          "uncompressed_size": 1024000,
+          "timestamp": "2024-11-01T09:10:00",
+          "is_executable_or_script": false,
+          "is_hidden": false,
+          "has_double_extension": false,
+          "entropy": 7.3,
+          "detected_mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+        }
+      ],
+      "4_security_indicators": {
+        "has_executables": false,
+        "has_office_macros": false,
+        "has_lnk": false,
+        "has_nested_archives": false,
+        "max_nesting_depth": 1,
+        "double_extensions": [],
+        "suspicious_filenames": [],
+        "unicode_rtlo_detected": false,
+        "extension_mismatches": [],
+        "archive_bomb_suspected": false,
+        "decoy_and_executable_combo": false
+      },
+      "5_content_indicators": {
+        "urls_found": [],
+        "suspicious_commands": []
+      }
+    }
+  ]
+}

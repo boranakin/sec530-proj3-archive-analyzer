@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Task 2 — Archive Analysis Report</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:system-ui,-apple-system,sans-serif; background:#f5f5f4; color:#1c1c1a; }
+  a { color:inherit; }
+  @media print { body { background:#fff; } }
+</style>
+</head>
+<body>
+<div style="max-width:860px;margin:0 auto;padding:2rem 1rem;">
+
+  <div style="margin-bottom:2rem;">
+    <p style="font-size:12px;color:#888780;margin-bottom:6px;">sec530 · project 3 · task 2 · static rule-based detection · 2026-05-25 14:04:49</p>
+    <h1 style="font-size:24px;font-weight:500;margin-bottom:1.25rem;">archive analysis report</h1>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.5rem;">
+      <div style="background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:1rem;">
+        <p style="font-size:11px;color:#888780;margin-bottom:3px;">total analyzed</p>
+        <p style="font-size:26px;font-weight:500;">15</p>
+      </div>
+      <div style="background:#FCEBEB;border-radius:10px;padding:1rem;">
+        <p style="font-size:11px;color:#A32D2D;margin-bottom:3px;">malicious</p>
+        <p style="font-size:26px;font-weight:500;color:#A32D2D;">12</p>
+      </div>
+      <div style="background:#FAEEDA;border-radius:10px;padding:1rem;">
+        <p style="font-size:11px;color:#854F0B;margin-bottom:3px;">suspicious</p>
+        <p style="font-size:26px;font-weight:500;color:#854F0B;">2</p>
+      </div>
+      <div style="background:#EAF3DE;border-radius:10px;padding:1rem;">
+        <p style="font-size:11px;color:#3B6D11;margin-bottom:3px;">benign</p>
+        <p style="font-size:26px;font-weight:500;color:#3B6D11;">1</p>
+      </div>
+    </div>
+
+    <div style="background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:10px;padding:1rem;margin-bottom:1.5rem;">
+      <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">contents</p>
+      <a href="#sample-1" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#1</span><span style="font-size:13px;color:#1c1c1a;flex:1;">invoice_Q3_2024.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-2" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#2</span><span style="font-size:13px;color:#1c1c1a;flex:1;">free_software.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-3" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#3</span><span style="font-size:13px;color:#1c1c1a;flex:1;">update_package.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-4" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#4</span><span style="font-size:13px;color:#1c1c1a;flex:1;">contract_signed.rar</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-5" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#5</span><span style="font-size:13px;color:#1c1c1a;flex:1;">protected_docs.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-6" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#6</span><span style="font-size:13px;color:#1c1c1a;flex:1;">photos.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-7" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#7</span><span style="font-size:13px;color:#1c1c1a;flex:1;">resume_john_doe.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-8" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#8</span><span style="font-size:13px;color:#1c1c1a;flex:1;">Q4_budget_report.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-9" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#9</span><span style="font-size:13px;color:#1c1c1a;flex:1;">software_bundle.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-10" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#10</span><span style="font-size:13px;color:#1c1c1a;flex:1;">patch_v2.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-11" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#11</span><span style="font-size:13px;color:#1c1c1a;flex:1;">archive_test.rar</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-12" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#12</span><span style="font-size:13px;color:#1c1c1a;flex:1;">documents.zip</span><span style="font-size:11px;font-weight:500;color:#A32D2D;">MALICIOUS</span></a><a href="#sample-13" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#13</span><span style="font-size:13px;color:#1c1c1a;flex:1;">holiday_photos_2024.zip</span><span style="font-size:11px;font-weight:500;color:#3B6D11;">BENIGN</span></a><a href="#sample-14" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#14</span><span style="font-size:13px;color:#1c1c1a;flex:1;">myproject_v1.0.tar.gz</span><span style="font-size:11px;font-weight:500;color:#854F0B;">SUSPICIOUS</span></a><a href="#sample-15" style="display:flex;align-items:center;gap:8px;padding:6px 0;text-decoration:none;border-bottom:0.5px solid rgba(0,0,0,0.06);"><span style="font-size:11px;color:#888780;min-width:24px;">#15</span><span style="font-size:13px;color:#1c1c1a;flex:1;">work_backup_nov2024.zip</span><span style="font-size:11px;font-weight:500;color:#854F0B;">SUSPICIOUS</span></a>
+    </div>
+  </div>
+
+  
+<div id="sample-1" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#1 &nbsp;·&nbsp; MALICIOUS-01: Classic phishing dropper — decoy PDF + double-ext EXE + downloader script</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">invoice_Q3_2024.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">9</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">d41d8cd98f00b204e9800998ecf8427e</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">adc83b19e793491b1c6ea0fd8b46cd9f32e592fc</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (9)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R04</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Double-extension filenames disguise executables as documents.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['invoice_2024.pdf'], Executables: ['invoice_2024.pdf.exe', 'update.ps1']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R15</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings contain download commands indicating staged malware delivery.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['invoke-webrequest']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf.exe', 'update.ps1']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['cmd.exe', 'powershell']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R02</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute commands.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['update.ps1']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R20</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Phishing-related terms found in filenames — indicates social engineering attack.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf', 'invoice_2024.pdf.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R29</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URL or IP address — may indicate C2 communication or staged download.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs: ['http://192.168.1.100:4444/payload.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'invoice_Q3_2024.zip' was classified as MALICIOUS based on 9 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R04] Double-extension filenames disguise executables as documents.
+  - [R08] Archive contains both a decoy document and an executable — classic dropper pattern.
+  - [R15] Extracted strings contain download commands indicating staged malware delivery.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R16] Extracted strings reference shell execution APIs — possible malicious script.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+MEDIUM severity indicators:
+  - [R02] Archive contains script files that can execute commands.
+  - [R20] Phishing-related terms found in filenames — indicates social engineering attack.
+  - [R29] Hardcoded URL or IP address — may indicate C2 communication or staged download.</p>
+    
+  </div>
+
+</div>
+<div id="sample-2" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#2 &nbsp;·&nbsp; MALICIOUS-02: Zip bomb — extreme compression ratio</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">free_software.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">50/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:50%;height:6px;border-radius:99px;background:#EF9F27;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">HIGH</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (1)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R11</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-10769</span>
+    <span style="font-size:13px;color:#1c1c1a;">Extreme compression ratio indicates a potential decompression bomb.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Ratio: 1032.5x, Uncompressed: 1.00 GB</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'free_software.zip' was classified as MALICIOUS based on 1 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R11] [CVE-2019-10769] Extreme compression ratio indicates a potential decompression bomb.
+
+Matched CVEs: CVE-2019-10769</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-10769</span></div>
+  </div>
+
+</div>
+<div id="sample-3" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#3 &nbsp;·&nbsp; MALICIOUS-03: Zip Slip path traversal — CVE-2018-3718</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">update_package.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">6</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (6)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['readme.pdf'], Executables: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R13</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-3718</span>
+    <span style="font-size:13px;color:#1c1c1a;">Path traversal filenames can overwrite system files on extraction.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['cmd.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R02</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute commands.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'update_package.zip' was classified as MALICIOUS based on 6 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R08] Archive contains both a decoy document and an executable — classic dropper pattern.
+  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R16] Extracted strings reference shell execution APIs — possible malicious script.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+MEDIUM severity indicators:
+  - [R02] Archive contains script files that can execute commands.
+
+Matched CVEs: CVE-2018-3718</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-3718</span></div>
+  </div>
+
+</div>
+<div id="sample-4" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#4 &nbsp;·&nbsp; MALICIOUS-04: WinRAR RCE — CVE-2023-38831 pattern</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">contract_signed.rar</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">5</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">2</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">cccccccccccccccccccccccccccccccc</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">cccccccccccccccccccccccccccccccccccccccc</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (5)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['contract_signed.pdf', 'contract_signed.pdf/'], Executables: ['contract_signed.pdf/../payload.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R13</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-3718</span>
+    <span style="font-size:13px;color:#1c1c1a;">Path traversal filenames can overwrite system files on extraction.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
+    <span style="font-size:13px;color:#1c1c1a;">Structure resembles CVE-2023-38831 WinRAR RCE — path traversal + executable in RAR.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: RAR, Path traversal detected, Executables present.</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'contract_signed.rar' was classified as MALICIOUS based on 5 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R08] Archive contains both a decoy document and an executable — classic dropper pattern.
+  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.
+  - [R21] [CVE-2023-38831] Structure resembles CVE-2023-38831 WinRAR RCE — path traversal + executable in RAR.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+
+Matched CVEs: CVE-2018-3718, CVE-2023-38831</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-3718</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span></div>
+  </div>
+
+</div>
+<div id="sample-5" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#5 &nbsp;·&nbsp; MALICIOUS-05: Encrypted archive hiding executable payload</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">protected_docs.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">80/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:80%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">2</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">dddddddddddddddddddddddddddddddd</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">dddddddddddddddddddddddddddddddddddddddd</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (2)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R07</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Encrypted archive with executables/scripts hides payloads from AV.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Encrypted: True, Suspicious files: ['installer.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['installer.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'protected_docs.zip' was classified as MALICIOUS based on 2 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R07] Encrypted archive with executables/scripts hides payloads from AV.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.</p>
+    
+  </div>
+
+</div>
+<div id="sample-6" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#6 &nbsp;·&nbsp; MALICIOUS-06: RTLO unicode trick — CVE-2009-3376</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">photos.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">6</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">2</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (6)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['holiday.jpg'], Executables: ['photo\u202egpj.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R09</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2009-3376</span>
+    <span style="font-size:13px;color:#1c1c1a;">RTLO character (U+202E) reverses the filename to hide the real extension.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R24</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-8088</span>
+    <span style="font-size:13px;color:#1c1c1a;">Unicode normalization spoofing — filename appears benign but has executable extension.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R19</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Suspicious directory names, hidden files, or Task 1 flagged filenames detected.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Directories: [], Hidden: [], Other: ['photo\u202egpj.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'photos.zip' was classified as MALICIOUS based on 6 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R08] Archive contains both a decoy document and an executable — classic dropper pattern.
+  - [R09] [CVE-2009-3376] RTLO character (U+202E) reverses the filename to hide the real extension.
+  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+MEDIUM severity indicators:
+  - [R19] Suspicious directory names, hidden files, or Task 1 flagged filenames detected.
+
+Matched CVEs: CVE-2009-3376, CVE-2025-8088</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2009-3376</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-8088</span></div>
+  </div>
+
+</div>
+<div id="sample-7" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#7 &nbsp;·&nbsp; MALICIOUS-07: LNK shortcut + obfuscated PowerShell downloader</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">resume_john_doe.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">5</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">ffffffffffffffffffffffffffffffff</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">ffffffffffffffffffffffffffffffffffffffff</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (5)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R15</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings contain download commands indicating staged malware delivery.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['invoke-webrequest']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R03</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Shortcut files (.lnk/.url) are used to execute hidden payloads.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['Open_Resume.lnk']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['powershell']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R17</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Obfuscation techniques detected — attacker is hiding payload from static analysis.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['base64', 'frombase64string', '-encodedcommand', 'iex(']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R29</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URL or IP address — may indicate C2 communication or staged download.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs: ['http://evil.ru/stage2/payload.exe', 'http://c2.evil.ru/beacon']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'resume_john_doe.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R15] Extracted strings contain download commands indicating staged malware delivery.
+HIGH severity indicators:
+  - [R03] Shortcut files (.lnk/.url) are used to execute hidden payloads.
+  - [R16] Extracted strings reference shell execution APIs — possible malicious script.
+  - [R17] Obfuscation techniques detected — attacker is hiding payload from static analysis.
+MEDIUM severity indicators:
+  - [R29] Hardcoded URL or IP address — may indicate C2 communication or staged download.</p>
+    
+  </div>
+
+</div>
+<div id="sample-8" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#8 &nbsp;·&nbsp; MALICIOUS-08: Macro-enabled Office doc + VBA downloader strings</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">Q4_budget_report.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">5</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">11111111111111111111111111111111</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">1111111111111111111111111111111111111111</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">1111111111111111111111111111111111111111111111111111111111111111</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (5)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R15</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings contain download commands indicating staged malware delivery.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['urldownloadtofile']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R05</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Macro-enabled Office documents can execute arbitrary code on open.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['Q4_budget_report.xlsm']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['wscript.shell', 'createobject', 'wscript']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R17</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Obfuscation techniques detected — attacker is hiding payload from static analysis.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['base64']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R29</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URL or IP address — may indicate C2 communication or staged download.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs: ['http://185.220.101.45/drop/stage1.dll']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'Q4_budget_report.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R15] Extracted strings contain download commands indicating staged malware delivery.
+HIGH severity indicators:
+  - [R05] Macro-enabled Office documents can execute arbitrary code on open.
+  - [R16] Extracted strings reference shell execution APIs — possible malicious script.
+  - [R17] Obfuscation techniques detected — attacker is hiding payload from static analysis.
+MEDIUM severity indicators:
+  - [R29] Hardcoded URL or IP address — may indicate C2 communication or staged download.</p>
+    
+  </div>
+
+</div>
+<div id="sample-9" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#9 &nbsp;·&nbsp; MALICIOUS-09: Deeply nested archives — AV evasion</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">software_bundle.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">4</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">22222222222222222222222222222222</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">2222222222222222222222222222222222222222</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">2222222222222222222222222222222222222222222222222222222222222222</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (4)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R06</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Nested archives are used to evade AV scanning and detection.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Archives: ['layer1.zip', 'layer1/layer2.7z'], max depth: 3</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: [], Executables: ['layer1/layer2/payload.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['layer1/layer2/payload.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['layer1/layer2.7z', 'layer1/layer2/payload.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'software_bundle.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R06] Nested archives are used to evade AV scanning and detection.
+  - [R08] Archive contains both a decoy document and an executable — classic dropper pattern.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.</p>
+    
+  </div>
+
+</div>
+<div id="sample-10" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#10 &nbsp;·&nbsp; MALICIOUS-10: Header manipulation — zero uncompressed size trick</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">patch_v2.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">90/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:90%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">3</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">33333333333333333333333333333333</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">3333333333333333333333333333333333333333</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">3333333333333333333333333333333333333333333333333333333333333333</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (3)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['patch.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['patch.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R27</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Files with non-zero compressed size but zero uncompressed size — header manipulation.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['patch.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'patch_v2.zip' was classified as MALICIOUS based on 3 triggered detection rule(s).
+
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+  - [R27] Files with non-zero compressed size but zero uncompressed size — header manipulation.</p>
+    
+  </div>
+
+</div>
+<div id="sample-11" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#11 &nbsp;·&nbsp; MALICIOUS-11: WinRAR buffer overflow bait — CVE-2018-18384, oversized path</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">archive_test.rar</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">90/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:90%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">3</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">44444444444444444444444444444444</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">4444444444444444444444444444444444444444</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">4444444444444444444444444444444444444444444444444444444444444444</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (3)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R22</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-18384</span>
+    <span style="font-size:13px;color:#1c1c1a;">Malformed structure or oversized path may trigger CVE-2018-18384 WinRAR buffer overflow.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: RAR, Corrupted: False, Long path: True</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'archive_test.rar' was classified as MALICIOUS based on 3 triggered detection rule(s).
+
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+  - [R22] [CVE-2018-18384] Malformed structure or oversized path may trigger CVE-2018-18384 WinRAR buffer overflow.
+
+Matched CVEs: CVE-2018-18384</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-18384</span></div>
+  </div>
+
+</div>
+<div id="sample-12" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#12 &nbsp;·&nbsp; MALICIOUS-12: Unicode normalization spoof — CVE-2025-8088</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">documents.zip</h2>
+    </div>
+    <span style="background:#FCEBEB;color:#A32D2D;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ⚠ MALICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">4</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">55555555555555555555555555555555</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">5555555555555555555555555555555555555555</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">5555555555555555555555555555555555555555555555555555555555555555</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (4)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['report.pdf'], Executables: ['repÀrt_v2.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R24</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-8088</span>
+    <span style="font-size:13px;color:#1c1c1a;">Unicode normalization spoofing — filename appears benign but has executable extension.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['repÀrt_v2.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['repÀrt_v2.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['repÀrt_v2.exe']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'documents.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).
+
+CRITICAL indicators:
+  - [R08] Archive contains both a decoy document and an executable — classic dropper pattern.
+  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.
+HIGH severity indicators:
+  - [R01] Archive contains executable or binary files.
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+
+Matched CVEs: CVE-2025-8088</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-8088</span></div>
+  </div>
+
+</div>
+<div id="sample-13" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#13 &nbsp;·&nbsp; BENIGN-01: Normal ZIP with documents and images</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">holiday_photos_2024.zip</h2>
+    </div>
+    <span style="background:#EAF3DE;color:#3B6D11;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ✓ BENIGN
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">0/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:0%;height:6px;border-radius:99px;background:#639922;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">LOW</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">66666666666666666666666666666666</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">6666666666666666666666666666666666666666</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">6666666666666666666666666666666666666666666666666666666666666666</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (0)</p>
+    <p style="font-size:13px;color:#888780;">No rules triggered.</p>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">No suspicious indicators were found in 'holiday_photos_2024.zip'. The archive appears to contain only standard files with no anomalous features.</p>
+    
+  </div>
+
+</div>
+<div id="sample-14" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#14 &nbsp;·&nbsp; BENIGN-02: Developer source code archive</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">myproject_v1.0.tar.gz</h2>
+    </div>
+    <span style="background:#FAEEDA;color:#854F0B;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ◈ SUSPICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">15/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:15%;height:6px;border-radius:99px;background:#639922;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">LOW</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">77777777777777777777777777777777</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">7777777777777777777777777777777777777777</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">7777777777777777777777777777777777777777777777777777777777777777</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (1)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R02</span>
+    <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute commands.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['myproject/main.py']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'myproject_v1.0.tar.gz' was classified as SUSPICIOUS based on 1 triggered detection rule(s).
+
+MEDIUM severity indicators:
+  - [R02] Archive contains script files that can execute commands.</p>
+    
+  </div>
+
+</div>
+<div id="sample-15" style="border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;background:#fff;">
+
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:1.25rem;">
+    <div>
+      <p style="font-size:12px;color:#888780;margin-bottom:3px;">#15 &nbsp;·&nbsp; BENIGN-03: Standard Office document backup</p>
+      <h2 style="font-size:17px;font-weight:500;color:#1c1c1a;">work_backup_nov2024.zip</h2>
+    </div>
+    <span style="background:#FAEEDA;color:#854F0B;padding:5px 14px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;">
+      ◈ SUSPICIOUS
+    </span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
+      <p style="font-size:20px;font-weight:500;">30/100</p>
+      <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
+        <div style="width:30%;height:6px;border-radius:99px;background:#378ADD;"></div>
+      </div>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
+      <p style="font-size:20px;font-weight:500;">MEDIUM</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
+    </div>
+    <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
+      <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
+    </div>
+  </div>
+
+  
+  <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;margin-bottom:1rem;display:grid;grid-template-columns:auto 1fr;gap:4px 16px;">
+    <div style="color:#888780;font-size:12px;">md5</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">88888888888888888888888888888888</div><div style="color:#888780;font-size:12px;">sha1</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">8888888888888888888888888888888888888888</div><div style="color:#888780;font-size:12px;">sha256</div><div style="font-family:monospace;font-size:11px;word-break:break-all;">8888888888888888888888888888888888888888888888888888888888888888</div>
+  </div>
+
+  <div style="margin-bottom:1rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (1)</p>
+    
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
+    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['Q3_report.docx']</p>
+</div>
+  </div>
+
+  <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'work_backup_nov2024.zip' was classified as SUSPICIOUS based on 1 triggered detection rule(s).
+
+HIGH severity indicators:
+  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.</p>
+    
+  </div>
+
+</div>
+
+  <p style="font-size:11px;color:#b4b2a9;text-align:center;margin-top:2rem;">
+    generated by sec530 task 2 detector &middot; 2026-05-25 14:04:49
+  </p>
+
+</div>
+</body>
+</html>
