@@ -1,0 +1,6 @@
+# Archive Support
+py7zr
+rarfile
+
+# File Identification (Windows-compatible libmagic)
+python-magic-bin
