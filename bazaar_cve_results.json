@@ -1,0 +1,3411 @@
+{
+  "generated_at": "2026-05-29T23:10:42.533099",
+  "total_cves": 35,
+  "total_samples": 148,
+  "results": [
+    {
+      "cve_id": "CVE-2004-0648",
+      "description": "WinRAR format-string vulnerability",
+      "status": "found",
+      "sample_count": 1,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2005-2349",
+      "description": "WinRAR split archive handling",
+      "status": "found",
+      "sample_count": 1,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2007-4559",
+      "description": "Python tarfile path traversal",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2008-0888",
+      "description": "WinZip timestamp handling crash",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2008-5518",
+      "description": "Apache Tomcat null-byte filename bypass",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2012-0010",
+      "description": "IE content-type mismatch",
+      "status": "found",
+      "sample_count": 10,
+      "samples": [
+        {
+          "sha256": "1b01aefde5fb78109b606778240deec65d3414e7953a2db7b7b04eea04e2b7a2",
+          "sha1": "6fc92e3c039d49b1243b150437ccb2bcb292cc48",
+          "md5": "7c289893cf9f5e2528af37dcd013bdfd",
+          "file_name": "yp-VeZ5H7M6wd3HCRN0X.png",
+          "file_type": "zip",
+          "file_size": 1624958,
+          "signature": null,
+          "tags": [
+            "BypassUAC",
+            "Convagent",
+            "exploit",
+            "zip"
+          ],
+          "first_seen": "2026-05-09 14:40:52",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/1b01aefde5fb78109b606778240deec65d3414e7953a2db7b7b04eea04e2b7a2/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "a567d09b15f6e4440e70c9f2aa8edec8ed59f53301952df05c719aa3911687f9",
+          "sha1": "83194d178f4b9c6fcdfaed0ea4ae3ec2ca3db6f4",
+          "md5": "75b009a56079eef56d8b845ffab385eb",
+          "file_name": "copy_fail_exp.py",
+          "file_type": "py",
+          "file_size": 732,
+          "signature": null,
+          "tags": [
+            "CVE-2026-31431",
+            "exploit",
+            "py",
+            "Python"
+          ],
+          "first_seen": "2026-04-30 11:20:42",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a567d09b15f6e4440e70c9f2aa8edec8ed59f53301952df05c719aa3911687f9/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "93008c42764b74b759678fd376abd90696f74af408600727b6649286d8424270",
+          "sha1": "a6ddb1c5ad6a1e16c0f92fc2c967dca3c979a2cc",
+          "md5": "9210d45827b893c515e961d3008b4fb8",
+          "file_name": "FunnyApp.exe",
+          "file_type": "exe",
+          "file_size": 388608,
+          "signature": null,
+          "tags": [
+            "BlueHammer",
+            "cve",
+            "exe",
+            "exploit"
+          ],
+          "first_seen": "2026-04-08 16:49:26",
+          "last_seen": null,
+          "imphash": "b29e03e462b5c6f15c11504694bc3422",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/93008c42764b74b759678fd376abd90696f74af408600727b6649286d8424270/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "240821416fe1785124e5e24fe953b8b87b4ce2798f296351026fab8e80726aca",
+          "sha1": "60644c9c0b7ab619ff0719bb39c8d6770aac61d7",
+          "md5": "e68ddd1d7caa97e6bd6fdebf3aebdc40",
+          "file_name": "240821416fe1785124e5e24fe953b8b87b4ce2798f296351026fab8e80726aca.doc",
+          "file_type": "doc",
+          "file_size": 16384,
+          "signature": null,
+          "tags": [
+            "doc",
+            "exploit",
+            "extra",
+            "MalwareMustDie"
+          ],
+          "first_seen": "2026-03-07 07:09:41",
+          "last_seen": "2026-03-07 07:43:00",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/240821416fe1785124e5e24fe953b8b87b4ce2798f296351026fab8e80726aca/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "f48f713168ef951fa3c7ce2a8cc480ef42a168c4184043a302b206da7fab0239",
+          "sha1": "867d013dd581a92e0ccc8d0858a8d62e951794c9",
+          "md5": "c7878e8e4bbb1222bc10facc29801d19",
+          "file_name": "f48f713168ef951fa3c7ce2a8cc480ef42a168c4184043a302b206da7fab0239.dll",
+          "file_type": "dll",
+          "file_size": 5267459,
+          "signature": "WannaCry",
+          "tags": [
+            "cve-2017-0147",
+            "dll",
+            "eternalblue",
+            "exploit",
+            "honeypot",
+            "SMB",
+            "WannaCry"
+          ],
+          "first_seen": "2026-01-04 06:00:20",
+          "last_seen": null,
+          "imphash": "2e5708ae5fed0403e8117c645fb23e5b",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f48f713168ef951fa3c7ce2a8cc480ef42a168c4184043a302b206da7fab0239/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "d2f1a27ceb90e61023066ed6ee9f40c9c3d53ac22e19eef3c25dc2fa16174381",
+          "sha1": "80028f73b08bd2bdad7a76371c31ed2e1adbc925",
+          "md5": "a7ff21a8257e49faa1923f1a2e42c2e0",
+          "file_name": "d2f1a27ceb90e61023066ed6ee9f40c9c3d53ac22e19eef3c25dc2fa16174381.dll",
+          "file_type": "dll",
+          "file_size": 5267459,
+          "signature": "WannaCry",
+          "tags": [
+            "cve-2017-0147",
+            "dll",
+            "eternalblue",
+            "exploit",
+            "honeypot",
+            "SMB",
+            "WannaCry"
+          ],
+          "first_seen": "2026-01-04 06:00:13",
+          "last_seen": null,
+          "imphash": "2e5708ae5fed0403e8117c645fb23e5b",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/d2f1a27ceb90e61023066ed6ee9f40c9c3d53ac22e19eef3c25dc2fa16174381/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "e5d2af532f6971a1d4dd80fd01dfdd5490bda7b865a24b1d491ee0d13aae2936",
+          "sha1": "c8e3e7bf243523c90ffaa29c0227ea22a2814a45",
+          "md5": "e483da8dc2e72df362eb07faaf3af3b8",
+          "file_name": "e5d2af532f6971a1d4dd80fd01dfdd5490bda7b865a24b1d491ee0d13aae2936.dll",
+          "file_type": "dll",
+          "file_size": 5267459,
+          "signature": "WannaCry",
+          "tags": [
+            "cve-2017-0147",
+            "dll",
+            "eternalblue",
+            "exploit",
+            "honeypot",
+            "SMB",
+            "WannaCry"
+          ],
+          "first_seen": "2026-01-04 06:00:06",
+          "last_seen": null,
+          "imphash": "2e5708ae5fed0403e8117c645fb23e5b",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/e5d2af532f6971a1d4dd80fd01dfdd5490bda7b865a24b1d491ee0d13aae2936/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "e56aa4a56013428a699d626c3e7970befea642eff8542511d5f9ac2b569d19f8",
+          "sha1": "06d5fbf16878b3aaa322f54940bcc298a53b7066",
+          "md5": "35c58b22eb39ef826794553e1da0bd09",
+          "file_name": "1766225785.2111099.dll",
+          "file_type": "exe",
+          "file_size": 107520,
+          "signature": null,
+          "tags": [
+            "exe",
+            "exploit"
+          ],
+          "first_seen": "2025-12-22 16:29:20",
+          "last_seen": null,
+          "imphash": "6245d613cf86cf3a2137c6627c491d3c",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/e56aa4a56013428a699d626c3e7970befea642eff8542511d5f9ac2b569d19f8/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "712a568f5cf7030d62a2f6885cc536660767a9423fc299ee2db4c2c9206b0ad5",
+          "sha1": "140eb792584f19d7163b4709b4a39ff52f91eb48",
+          "md5": "b6121a84837969f3aaef401aa4d08fdb",
+          "file_name": "251007-hn5x4szxa1_pw_infected.zip",
+          "file_type": "zip",
+          "file_size": 1659,
+          "signature": null,
+          "tags": [
+            "CVE-2025-61882",
+            "exploit",
+            "Python",
+            "zip"
+          ],
+          "first_seen": "2025-10-09 05:17:41",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/712a568f5cf7030d62a2f6885cc536660767a9423fc299ee2db4c2c9206b0ad5/",
+          "matched_query": "tag:exploit"
+        },
+        {
+          "sha256": "aa0d3859d6633b62bccfb69017d33a8979a3be1f3f0a5a4bf6960d6c73d41121",
+          "sha1": "f90ac7ef934cb7d4d5e7f21338961727ca72fa6d",
+          "md5": "b296d3b3115762096286f225696a9bb1",
+          "file_name": "exp.py",
+          "file_type": "py",
+          "file_size": 3713,
+          "signature": null,
+          "tags": [
+            "CVE-2025-61882",
+            "exploit",
+            "py",
+            "Python"
+          ],
+          "first_seen": "2025-10-09 05:14:08",
+          "last_seen": "2025-10-09 06:30:59",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/aa0d3859d6633b62bccfb69017d33a8979a3be1f3f0a5a4bf6960d6c73d41121/",
+          "matched_query": "tag:exploit"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2014-8139",
+      "description": "Info-ZIP CRC buffer overflow",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2014-8140",
+      "description": "Info-ZIP extra-field buffer overflow",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2015-0098",
+      "description": "Windows WUSA CAB extraction privilege escalation",
+      "status": "found",
+      "sample_count": 10,
+      "samples": [
+        {
+          "sha256": "cf1811f23a50874bf46247e46af14ed4e8a81b9b6436f2e704f7005904438a7d",
+          "sha1": "273a08618f8bee67407078382e5918d0d8d764bc",
+          "md5": "728bc06acf90bb3cee4be104b3bd8aca",
+          "file_name": "PO-1512024-pdf.cab",
+          "file_type": "cab",
+          "file_size": 83797,
+          "signature": null,
+          "tags": [
+            "cab"
+          ],
+          "first_seen": "2026-05-21 14:45:15",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/cf1811f23a50874bf46247e46af14ed4e8a81b9b6436f2e704f7005904438a7d/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "b49154415e86353a2cfd3d25646074c446bbcda72a09fcd7365c4823027a061a",
+          "sha1": "c0a9315f9cec91d79fda095b3dd129874172e1b8",
+          "md5": "e11512aca1f3ca1e327e6b2dea6f8741",
+          "file_name": "TransportLabel_DocDelivery.pdf.cab",
+          "file_type": "cab",
+          "file_size": 741361,
+          "signature": "RedLineStealer",
+          "tags": [
+            "cab",
+            "RedLineStealer"
+          ],
+          "first_seen": "2026-05-21 14:38:45",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/b49154415e86353a2cfd3d25646074c446bbcda72a09fcd7365c4823027a061a/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "a71a378d71f0720844e05051cee3116be3d32e9c9b6ef59d24f499fcbf6e8a2d",
+          "sha1": "f13e8899070dd4863aeae7fa9a1bedaa9ac49e67",
+          "md5": "a25e34db105c73cbc2f7499176cacd5a",
+          "file_name": "Payment_Advice_pdf.cab",
+          "file_type": "cab",
+          "file_size": 794251,
+          "signature": "Formbook",
+          "tags": [
+            "cab",
+            "FormBook"
+          ],
+          "first_seen": "2026-05-20 18:04:11",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a71a378d71f0720844e05051cee3116be3d32e9c9b6ef59d24f499fcbf6e8a2d/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "82479e4d05e505c6f4950070ad1baaead0cd3f3d7631c74709c47fe8e344611c",
+          "sha1": "30f5cf1c4184ea61382c616793172fa058ead9ac",
+          "md5": "cd50a68fbba965531d13ae3de7239f47",
+          "file_name": "Requested_Doc_0990_7726667_998002.pdf.cab",
+          "file_type": "cab",
+          "file_size": 250442,
+          "signature": "MassLogger",
+          "tags": [
+            "cab",
+            "MassLogger"
+          ],
+          "first_seen": "2026-05-20 17:53:23",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/82479e4d05e505c6f4950070ad1baaead0cd3f3d7631c74709c47fe8e344611c/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "603d9fdfc167a527db2ce8f9771b754c83fe18bd51b596cd4da7d71bfff19fdc",
+          "sha1": "958acc08626979a9229e19cb54ea8238afbae6d0",
+          "md5": "dd1557b643de9701f0c4f2f19288a1db",
+          "file_name": "ENQUIRYXOFFICEXBUILDINGXSHAKHBOUTXCITYXPURCAHSEXORDER454646.cab",
+          "file_type": "cab",
+          "file_size": 18662,
+          "signature": "AsyncRAT",
+          "tags": [
+            "AsyncRAT",
+            "cab"
+          ],
+          "first_seen": "2026-05-20 17:44:16",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/603d9fdfc167a527db2ce8f9771b754c83fe18bd51b596cd4da7d71bfff19fdc/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "0c775e6471968ac7a8db8546dd02c03bdd973aaf706fca09823c6d9a6b8ecf3d",
+          "sha1": "3c8253858d53f16436233253c96c61612429d3d5",
+          "md5": "8d27aa0cb9c4f4fbb20ab46cc0888d36",
+          "file_name": "Q2_Compliance_Document_PDF.cab",
+          "file_type": "cab",
+          "file_size": 785713,
+          "signature": "Formbook",
+          "tags": [
+            "cab",
+            "FormBook"
+          ],
+          "first_seen": "2026-05-20 17:20:38",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0c775e6471968ac7a8db8546dd02c03bdd973aaf706fca09823c6d9a6b8ecf3d/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "a78120361ce09f993df8e5a5edb4fd30fd5988cee764d1fcb809ba462bf86b87",
+          "sha1": "0a1223d2618b07fe84f9137b7a76e2ab5661a74d",
+          "md5": "deb12cc88437eeba6720cb60c2c44a99",
+          "file_name": "2000386252_04142026.PDF.cab",
+          "file_type": "cab",
+          "file_size": 112553,
+          "signature": null,
+          "tags": [
+            "cab"
+          ],
+          "first_seen": "2026-05-20 16:49:13",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a78120361ce09f993df8e5a5edb4fd30fd5988cee764d1fcb809ba462bf86b87/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "57aecd9cbd9565e1c5b8419ae6a458a8853617be91888262822b8332ae5d825c",
+          "sha1": "f373efbcd2004781fde1b4932c5fe6ae9cba364e",
+          "md5": "cfaf54f122db01828cbfdb906abad0d1",
+          "file_name": "Shipping_doc_04222026-04222026.cab",
+          "file_type": "cab",
+          "file_size": 117020,
+          "signature": null,
+          "tags": [
+            "cab"
+          ],
+          "first_seen": "2026-05-20 16:44:00",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/57aecd9cbd9565e1c5b8419ae6a458a8853617be91888262822b8332ae5d825c/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "0fc241415c287d3d1defb80ed6581d0bb20c60b88c331a0fac4addc6b8297e92",
+          "sha1": "bdd47f46d6b5dc8473a8f49a82b75bcd0daaf89a",
+          "md5": "45277dd5d23aaa9bf5227258d3a99988",
+          "file_name": "F10097782_BHU_998320091.pdf.cab",
+          "file_type": "cab",
+          "file_size": 161975,
+          "signature": null,
+          "tags": [
+            "cab"
+          ],
+          "first_seen": "2026-05-20 16:39:07",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0fc241415c287d3d1defb80ed6581d0bb20c60b88c331a0fac4addc6b8297e92/",
+          "matched_query": "tag:cab"
+        },
+        {
+          "sha256": "5d25fddd2df4aea89361d098b8b0139eb5d03c499706ad2726348ab9be90c207",
+          "sha1": "7b732679755d5ca2edcbc09763660a4044e89a89",
+          "md5": "cf8bc7a95d80b9b1577171b39e906cf2",
+          "file_name": "5d25fddd2df4aea89361d098b8b0139eb5d03c499706ad2726348ab9be90c207.cab",
+          "file_type": "cab",
+          "file_size": 5085040,
+          "signature": null,
+          "tags": [
+            "cab",
+            "machinesdelek-com"
+          ],
+          "first_seen": "2026-04-23 07:57:10",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/5d25fddd2df4aea89361d098b8b0139eb5d03c499706ad2726348ab9be90c207/",
+          "matched_query": "tag:cab"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2016-1541",
+      "description": "libarchive heap overflow in malformed ZIP",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2016-9844",
+      "description": "Info-ZIP long comment buffer overflow",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2017-11826",
+      "description": "Office DDE injection / memory corruption",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2018-1000544",
+      "description": "rubyzip Zip Slip path traversal",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2018-1002209",
+      "description": "quazip Java Zip Slip",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2018-10860",
+      "description": "libarchive-zip-perl Zip Slip",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2018-18384",
+      "description": "WinRAR 5.x stack buffer overflow (long filename)",
+      "status": "found",
+      "sample_count": 1,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2018-20250",
+      "description": "WinRAR ACE UNACEV2.DLL absolute path traversal RCE",
+      "status": "found",
+      "sample_count": 11,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        },
+        {
+          "sha256": "f0094290ec2bc60e6db4e371d65aa53ba0b435ee64ab32e0d86caf8dc1801eda",
+          "sha1": "acffb6f4f561e6399de22286ae9428422d1da892",
+          "md5": "ce3bdbc2fc5847f24fbcd58b6c20c15e",
+          "file_name": "Scannedfile_pdf.ace",
+          "file_type": "ace",
+          "file_size": 705849,
+          "signature": "Formbook",
+          "tags": [
+            "ace",
+            "FormBook"
+          ],
+          "first_seen": "2026-05-21 14:51:59",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f0094290ec2bc60e6db4e371d65aa53ba0b435ee64ab32e0d86caf8dc1801eda/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "afa1215d542b6b4a39d28249dff64f864a34229fd8d9aa59c512916fb49f0020",
+          "sha1": "aa0d64b3e7a3c457138d7a2315eee46452cf5d27",
+          "md5": "1bd1fb82d7a46b6878a4cf5b576fc93f",
+          "file_name": "INQUIRY.ace",
+          "file_type": "ace",
+          "file_size": 705850,
+          "signature": "SnakeKeylogger",
+          "tags": [
+            "ace",
+            "SnakeKeylogger"
+          ],
+          "first_seen": "2026-05-21 14:37:31",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/afa1215d542b6b4a39d28249dff64f864a34229fd8d9aa59c512916fb49f0020/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "887569a26c8455907993b95b00a33d77b773583eb99eb82a56572e1d968a1f96",
+          "sha1": "16e4dc63d1d987010bb8ce7a17b02f6ba07d3be9",
+          "md5": "8a92d2ba968f166f58c3d8f9cf269fa2",
+          "file_name": "Request_for_Quotation.ace",
+          "file_type": "ace",
+          "file_size": 916785,
+          "signature": "AgentTesla",
+          "tags": [
+            "ace",
+            "AgentTesla"
+          ],
+          "first_seen": "2026-05-21 14:30:12",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/887569a26c8455907993b95b00a33d77b773583eb99eb82a56572e1d968a1f96/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "80f7aa70647fac50bd19089f18c2bfdad7dc8e21d1d157aaddab963a82835399",
+          "sha1": "4f6794dd284fdf8a781b50d0c7b088f60a4cc95d",
+          "md5": "f798854f780719903808ea5a951c3f3e",
+          "file_name": "REQUESTXFORXQUOTATION.pdf.ace",
+          "file_type": "ace",
+          "file_size": 226441,
+          "signature": "Formbook",
+          "tags": [
+            "ace",
+            "FormBook"
+          ],
+          "first_seen": "2026-05-21 14:28:31",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/80f7aa70647fac50bd19089f18c2bfdad7dc8e21d1d157aaddab963a82835399/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "3aa15d906f530f4b50ae0ce7627da1eab22fdb6110e60af7ca85fad30c9e164d",
+          "sha1": "de2174b2dc391a94cd071fe9192c4244d52ef76b",
+          "md5": "975cb5f9371896d681a56b1693a320d3",
+          "file_name": "EX778415591042_(2).ace",
+          "file_type": "ace",
+          "file_size": 5918,
+          "signature": "GuLoader",
+          "tags": [
+            "ace",
+            "GuLoader"
+          ],
+          "first_seen": "2026-05-21 14:12:30",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/3aa15d906f530f4b50ae0ce7627da1eab22fdb6110e60af7ca85fad30c9e164d/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "79f9d7ffc96e85521f669f96b14749859024b6905b5e52f0d4496a9f3e0feea0",
+          "sha1": "dabb2a1a7f923ee3fc2ea3617a88bce21666f326",
+          "md5": "838567ccdd9017e2240d2e7dbf4470ed",
+          "file_name": "11922.ace",
+          "file_type": "ace",
+          "file_size": 2156374,
+          "signature": null,
+          "tags": [
+            "ace"
+          ],
+          "first_seen": "2026-05-20 17:51:35",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/79f9d7ffc96e85521f669f96b14749859024b6905b5e52f0d4496a9f3e0feea0/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "7956b8d1a92ba0139247c8d3650757cc51806efdf1359dda6fda5febf25eb735",
+          "sha1": "0d4a2dc3accc7d538140d473cb4fcdcf00d93b7a",
+          "md5": "f92e3e670bba348afd9c97df5c4aba9f",
+          "file_name": "pago.ace",
+          "file_type": "ace",
+          "file_size": 1039456,
+          "signature": null,
+          "tags": [
+            "ace"
+          ],
+          "first_seen": "2026-05-20 17:51:22",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/7956b8d1a92ba0139247c8d3650757cc51806efdf1359dda6fda5febf25eb735/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "13216f45b6f3d3778e530e07d0dcfcbeae12f599bef5273b37d4874758bfdc2d",
+          "sha1": "55de85886fa6ec963440ba04fd0e6a0bdd53177f",
+          "md5": "d26dd3f8ffe669e5d17e501d23781bb0",
+          "file_name": "HAFEEZXCHEMXGROUPXCO.,LTD.ace",
+          "file_type": "ace",
+          "file_size": 544207,
+          "signature": "SnakeKeylogger",
+          "tags": [
+            "ace",
+            "SnakeKeylogger"
+          ],
+          "first_seen": "2026-05-20 17:22:38",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/13216f45b6f3d3778e530e07d0dcfcbeae12f599bef5273b37d4874758bfdc2d/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "0908f9ece7f755d1480694cc02f351484caf8886a504696ab482f54aa854b9a5",
+          "sha1": "0c04e4a5301e67f88020440f98d3d277079f9db2",
+          "md5": "28fd12d6d661ad81df3db3dbf5c842a1",
+          "file_name": "GPLX-XINQUIRY-HQ242654.ace",
+          "file_type": "ace",
+          "file_size": 527355,
+          "signature": "SnakeKeylogger",
+          "tags": [
+            "ace",
+            "SnakeKeylogger"
+          ],
+          "first_seen": "2026-05-20 17:19:14",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0908f9ece7f755d1480694cc02f351484caf8886a504696ab482f54aa854b9a5/",
+          "matched_query": "tag:ACE"
+        },
+        {
+          "sha256": "3a2f5558c3b535e37f3b02b1ec0425a8efa092ab866b7443f8de4c17e90e3c54",
+          "sha1": "88d41dbae099bdc4d6266482b138855f00a16fd3",
+          "md5": "7554f2417368119b529cf022bd8dc642",
+          "file_name": "ItemsXNo.XA45-25-Sciex.ace",
+          "file_type": "ace",
+          "file_size": 1384142,
+          "signature": null,
+          "tags": [
+            "ace"
+          ],
+          "first_seen": "2026-05-20 17:02:10",
+          "last_seen": "2026-05-20 17:33:03",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/3a2f5558c3b535e37f3b02b1ec0425a8efa092ab866b7443f8de4c17e90e3c54/",
+          "matched_query": "tag:ACE"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2018-20252",
+      "description": "WinRAR OOB write in ACE/RAR parser",
+      "status": "found",
+      "sample_count": 1,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2018-20253",
+      "description": "WinRAR OOB write variant",
+      "status": "found",
+      "sample_count": 1,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2019-18408",
+      "description": "libarchive double-free in RAR decoder",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2019-9674",
+      "description": "Python zipfile zip bomb",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2021-35517",
+      "description": "Apache Commons Compress TAR OOM",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2021-36090",
+      "description": "Apache Commons Compress ZIP OOM",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2022-29072",
+      "description": "p7zip / 7-Zip heap overflow via crafted ZIP",
+      "status": "found",
+      "sample_count": 8,
+      "samples": [
+        {
+          "sha256": "92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02",
+          "sha1": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "md5": "856fcc25696a214f54af0d37de84d818",
+          "file_name": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "file_type": "exe",
+          "file_size": 4029080,
+          "signature": "LummaStealer",
+          "tags": [
+            "7zip",
+            "Arduino IDE",
+            "Ataleo GmbH",
+            "exe",
+            "LummaStealer",
+            "signed"
+          ],
+          "first_seen": "2024-12-24 07:14:25",
+          "last_seen": null,
+          "imphash": "1aae8bf580c846f39c71c05898e57e88",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9",
+          "sha1": "65e87e3efdc905c49198ddb97110f54d0a306a8f",
+          "md5": "dfaace3296fabb7f9652fb36756a4b51",
+          "file_name": "7z2401-x64.msix.zip",
+          "file_type": "zip",
+          "file_size": 10330375,
+          "signature": "NetSupport",
+          "tags": [
+            "7zip",
+            "91-149-232-112",
+            "msix",
+            "NetSupport",
+            "signed"
+          ],
+          "first_seen": "2024-10-29 12:14:11",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d",
+          "sha1": "e7087775b468c6a00d0651aacbebbb6a47a2d306",
+          "md5": "968d1bc25c2cb4296371e33680284bc3",
+          "file_name": "5-2839-2024_01.09.2024.rar",
+          "file_type": "rar",
+          "file_size": 11120,
+          "signature": "Armageddon",
+          "tags": [
+            "7zip",
+            "Armageddon",
+            "GammaDrop",
+            "GammaLoad",
+            "rar",
+            "UA"
+          ],
+          "first_seen": "2024-09-03 11:56:52",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276",
+          "sha1": "c33d0d7707b3708cd0a7316b1ba18703cbde0d1c",
+          "md5": "1d35a7337000ee04cec3f481524f87a9",
+          "file_name": "43.exe",
+          "file_type": "exe",
+          "file_size": 51639034,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "apt",
+            "exe",
+            "LummaStealer",
+            "UTG-Q-003",
+            "xworm"
+          ],
+          "first_seen": "2023-12-12 12:19:38",
+          "last_seen": null,
+          "imphash": "48aa5c8931746a9655524f67b25a47ef",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf",
+          "sha1": "e3d9786e86f26261beb2f98fc8f3e289f2f5286b",
+          "md5": "48ac303566e6f8c8f56c9472fb14d9d1",
+          "file_name": "7z2201_setup.msi",
+          "file_type": "msi",
+          "file_size": 2517504,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "batloader",
+            "msi"
+          ],
+          "first_seen": "2023-01-27 08:42:32",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5",
+          "sha1": "570d71112d993a41020a573295a29023ef6ae7f1",
+          "md5": "c35d2dee2cc1af28bb171d83c6bf0afc",
+          "file_name": "setup.7z",
+          "file_type": "7z",
+          "file_size": 507137,
+          "signature": "RedLineStealer",
+          "tags": [
+            "7z",
+            "7zip"
+          ],
+          "first_seen": "2022-05-30 11:36:42",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce",
+          "sha1": "91dfda9666a951a16163e5957cb6a200d31961b8",
+          "md5": "0d350222741e6aac8c62ca7a3ad80d1d",
+          "file_name": "PO 907115_TEXCEL TECH.7zip",
+          "file_type": "rar",
+          "file_size": 314644,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 13:18:27",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861",
+          "sha1": "ca1960d2100d9d3a5f638862b7303bd7c15d253a",
+          "md5": "712dbe7efedc036a49def570f28e212b",
+          "file_name": "Drawings  Related  Specifications.7zip",
+          "file_type": "rar",
+          "file_size": 423627,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 12:00:25",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861/",
+          "matched_query": "tag:7zip"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-36025",
+      "description": "Windows SmartScreen bypass via .url shortcut",
+      "status": "found",
+      "sample_count": 16,
+      "samples": [
+        {
+          "sha256": "0cb3d1764153b9a3030623c8a3a9a166a23fb15238399270d7022be0cda443bb",
+          "sha1": "72b397df67081f2209875c997112c10923ba530c",
+          "md5": "94f4be08caae697b20849e2e1e467290",
+          "file_name": "WDSecureUtilities(1).exe",
+          "file_type": "exe",
+          "file_size": 239616,
+          "signature": "PhemedroneStealer",
+          "tags": [
+            "exe",
+            "pastesnip-org",
+            "phemedrone",
+            "PhemedroneStealer"
+          ],
+          "first_seen": "2024-11-10 10:58:49",
+          "last_seen": null,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0cb3d1764153b9a3030623c8a3a9a166a23fb15238399270d7022be0cda443bb/",
+          "matched_query": "tag:Phemedrone"
+        },
+        {
+          "sha256": "f3a9c8045223ad668db8f15e8ff4a85ad262da603ad8ed11247a469e0622d694",
+          "sha1": "e1a4f34c89100d199b00c2127f8d706375099018",
+          "md5": "b31f770f36a3a6169d94e72f56dc048f",
+          "file_name": "b31f770f36a3a6169d94e72f56dc048f.exe",
+          "file_type": "exe",
+          "file_size": 98816,
+          "signature": "PhemedroneStealer",
+          "tags": [
+            "exe",
+            "HUN",
+            "phemedrone",
+            "PhemedroneStealer"
+          ],
+          "first_seen": "2024-05-19 19:59:34",
+          "last_seen": null,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f3a9c8045223ad668db8f15e8ff4a85ad262da603ad8ed11247a469e0622d694/",
+          "matched_query": "tag:Phemedrone"
+        },
+        {
+          "sha256": "d5adb611966a10b056fc53bec138ad1dfd319c9d631eeebfcbdb13f101afc8ff",
+          "sha1": "ff206f36fb8117bc112b915e6c523047e3ef0c8a",
+          "md5": "5a9a7eb3ae570ba2827f9b43f0ca8d8d",
+          "file_name": "AIDA64-5.97.4605.exe",
+          "file_type": "exe",
+          "file_size": 6212480,
+          "signature": "PhemedroneStealer",
+          "tags": [
+            "64",
+            "exe",
+            "phemedrone",
+            "PhemedroneStealer"
+          ],
+          "first_seen": "2024-04-07 23:17:46",
+          "last_seen": null,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/d5adb611966a10b056fc53bec138ad1dfd319c9d631eeebfcbdb13f101afc8ff/",
+          "matched_query": "tag:Phemedrone"
+        },
+        {
+          "sha256": "f9bba25adc0c0506f5833a4ccb3c429e3e460bf194dbc5ab14c78054d7640f9e",
+          "sha1": "9b91a45407fcfd6bf645baab7dd5b38e8f999c12",
+          "md5": "7f49f7a154d31e309f1ca0e83e8c6315",
+          "file_name": "loader666.exe",
+          "file_type": "exe",
+          "file_size": 5182784,
+          "signature": "PhemedroneStealer",
+          "tags": [
+            "exe",
+            "phemedrone",
+            "PhemedroneStealer"
+          ],
+          "first_seen": "2024-04-05 22:03:30",
+          "last_seen": null,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f9bba25adc0c0506f5833a4ccb3c429e3e460bf194dbc5ab14c78054d7640f9e/",
+          "matched_query": "tag:Phemedrone"
+        },
+        {
+          "sha256": "0f9e01f100f9cd8db400504d5994f5c8232c318578bb33b807710289d9ef480c",
+          "sha1": "edf3b9962a80ec88254f9f40b1727064b34c6060",
+          "md5": "eea34c5712ef820615cf10066f19ee96",
+          "file_name": "GH Injector - x64.exe",
+          "file_type": "exe",
+          "file_size": 10000000,
+          "signature": "PhemedroneStealer",
+          "tags": [
+            "exe",
+            "phemedrone",
+            "PhemedroneStealer"
+          ],
+          "first_seen": "2023-12-19 22:09:16",
+          "last_seen": null,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0f9e01f100f9cd8db400504d5994f5c8232c318578bb33b807710289d9ef480c/",
+          "matched_query": "tag:Phemedrone"
+        },
+        {
+          "sha256": "255d887e4aee44b4a811fd99c76d7df6ce442316125d236f9b3891bd56b82f8c",
+          "sha1": "77b6f4ce0867078a8d7c02fa1254912b6f4c0d00",
+          "md5": "4c51b62c9ee7a37ddc010e48b516c243",
+          "file_name": "tcpview.exe",
+          "file_type": "exe",
+          "file_size": 3992064,
+          "signature": "PhemedroneStealer",
+          "tags": [
+            "32",
+            "exe",
+            "phemedrone",
+            "PhemedroneStealer"
+          ],
+          "first_seen": "2023-10-04 16:02:58",
+          "last_seen": null,
+          "imphash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/255d887e4aee44b4a811fd99c76d7df6ce442316125d236f9b3891bd56b82f8c/",
+          "matched_query": "tag:Phemedrone"
+        },
+        {
+          "sha256": "e1f3f354b62a6aee0053bcca716741af176676419060b06aed5be5d2f9544af3",
+          "sha1": "482d36eadde2660992db18891f39bb4eeebe63a2",
+          "md5": "ef8f4673ca30ba63498ccbf514d7e795",
+          "file_name": "e1f3f354b62a6aee0053bcca716741af176676419060b06aed5be5d2f9544af3",
+          "file_type": "exe",
+          "file_size": 953856,
+          "signature": "DarkGate",
+          "tags": [
+            "DarkGate",
+            "exe",
+            "Orziveccho"
+          ],
+          "first_seen": "2025-09-01 13:08:45",
+          "last_seen": null,
+          "imphash": "97a4e4abf7342155c479dd42e8f07486",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/e1f3f354b62a6aee0053bcca716741af176676419060b06aed5be5d2f9544af3/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "e92f111b8aa01289f72c66585219861e0117c9939de56741cbb234fee55536fe",
+          "sha1": "1364d4a5afcaf3ebb147e0ff828028967800dbe3",
+          "md5": "d3de9b47f8ff4f23db2668f8ee287139",
+          "file_name": "5237",
+          "file_type": "exe",
+          "file_size": 4663272,
+          "signature": "DarkGate",
+          "tags": [
+            "BLVS Tech Inc",
+            "DarkGate",
+            "exe",
+            "signed"
+          ],
+          "first_seen": "2025-02-12 09:35:00",
+          "last_seen": "2025-02-12 10:32:52",
+          "imphash": "16c8c7a62c852018ed02e453e144c998",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/e92f111b8aa01289f72c66585219861e0117c9939de56741cbb234fee55536fe/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "1ffa8b06cb779360f8c42ccd4527ae3076d25d11b3a90976f04ea430173e9b85",
+          "sha1": "18cd397a8f1a29585ac2c928fc7da346dae68e91",
+          "md5": "ea3874838d38c5e9ee97748af1d561cb",
+          "file_name": "in.exe",
+          "file_type": "exe",
+          "file_size": 4157976,
+          "signature": "DarkGate",
+          "tags": [
+            "DarkGate",
+            "exe",
+            "signed",
+            "Technic AS Plus Inc"
+          ],
+          "first_seen": "2025-02-07 10:37:54",
+          "last_seen": null,
+          "imphash": "16c8c7a62c852018ed02e453e144c998",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/1ffa8b06cb779360f8c42ccd4527ae3076d25d11b3a90976f04ea430173e9b85/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "037e15b09413722b48802e6268848d0698b9ed468cd447b40e31efa5cdb3c313",
+          "sha1": "00b5a444bc5e52f7dd9753383317eb2497ec4b38",
+          "md5": "b94c5e38bbf4b6ef11e0442ce58c3131",
+          "file_name": "037e15b09413722b48802e6268848d0698b9ed468cd447b40e31efa5cdb3c313.a3x",
+          "file_type": "a3x",
+          "file_size": 598250,
+          "signature": "DarkGate",
+          "tags": [
+            "155-138-149-77",
+            "a3x",
+            "config",
+            "DarkGate"
+          ],
+          "first_seen": "2025-01-26 09:19:53",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/037e15b09413722b48802e6268848d0698b9ed468cd447b40e31efa5cdb3c313/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "a279ff2f21dd7f7d250976b60a261dc9a1b7c8ad4c87126cd74a0a84a8a1b121",
+          "sha1": "61a8cf0807e38e1c3548a3624d34877b33910076",
+          "md5": "3abf518c7e2d26b73332730840a5c441",
+          "file_name": "a279ff2f21dd7f7d250976b60a261dc9a1b7c8ad4c87126cd74a0a84a8a1b121",
+          "file_type": "7z",
+          "file_size": 1864834,
+          "signature": "DarkGate",
+          "tags": [
+            "155-138-149-77",
+            "7z",
+            "DarkGate"
+          ],
+          "first_seen": "2025-01-26 09:18:08",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a279ff2f21dd7f7d250976b60a261dc9a1b7c8ad4c87126cd74a0a84a8a1b121/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "6b6676267c70fbeb3257f0bb9bce1587f0bdec621238eb32dd9f84b2bcd7e3ea",
+          "sha1": "70ee02a76510b0757e3b26ffd98834f0d259f9d4",
+          "md5": "998cd2e474751b5de344562b4ddb39e2",
+          "file_name": "6b6676267c70fbeb3257f0bb9bce1587f0bdec621238eb32dd9f84b2bcd7e3ea",
+          "file_type": "exe",
+          "file_size": 4256256,
+          "signature": "DarkGate",
+          "tags": [
+            "155-138-149-77",
+            "DarkGate",
+            "exe"
+          ],
+          "first_seen": "2025-01-26 09:18:02",
+          "last_seen": null,
+          "imphash": "16c8c7a62c852018ed02e453e144c998",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/6b6676267c70fbeb3257f0bb9bce1587f0bdec621238eb32dd9f84b2bcd7e3ea/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "4fe8bbc88d7a8cc0eec24bd74951f1f00b5127e3899ae53de8dabd6ff417e6db",
+          "sha1": "ad67cda4c294705ecd45b5e1f14d49b32deb7a1a",
+          "md5": "849e4475405de2f405ec0c987c796791",
+          "file_name": "Notion Setup 4.3.0 (4).exe",
+          "file_type": "exe",
+          "file_size": 4266056,
+          "signature": "DarkGate",
+          "tags": [
+            "155-138-149-77",
+            "DarkGate",
+            "exe",
+            "KDL CENTRAL LIMITED",
+            "signed"
+          ],
+          "first_seen": "2025-01-25 14:46:49",
+          "last_seen": null,
+          "imphash": "16c8c7a62c852018ed02e453e144c998",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/4fe8bbc88d7a8cc0eec24bd74951f1f00b5127e3899ae53de8dabd6ff417e6db/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "634dd946969fd0ea89693faa9943907a7d539c722dc63a5dbd4b23a2bee6daae",
+          "sha1": "7e7edfd66d742e4dad4bea84aceb2a4ece7c817d",
+          "md5": "9b979d3d3f37bcb0525fe001b19be432",
+          "file_name": "634dd946969fd0ea89693faa9943907a7d539c722dc63a5dbd4b23a2bee6daae",
+          "file_type": "exe",
+          "file_size": 3796818,
+          "signature": "DarkGate",
+          "tags": [
+            "185-196-10-22",
+            "DarkGate",
+            "exe",
+            "greenindustry-pl"
+          ],
+          "first_seen": "2025-01-17 10:46:32",
+          "last_seen": "2025-01-17 10:53:37",
+          "imphash": "40ab50289f7ef5fae60801f88d4541fc",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/634dd946969fd0ea89693faa9943907a7d539c722dc63a5dbd4b23a2bee6daae/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "d72062ecb4c77ae06a07013825542922045114e79c170948e6e71a2f9b8a4ecf",
+          "sha1": "7c85f6efe9e4923937fa5792b7b3396c30fe3c9d",
+          "md5": "d873b86c02e8be6a7abaa41911b46e9d",
+          "file_name": "API.pdf www.skype.com.lnk.d",
+          "file_type": "lnk",
+          "file_size": 15163,
+          "signature": "DarkGate",
+          "tags": [
+            "154-216-16-83",
+            "2-58-56-243",
+            "DarkGate",
+            "lnk"
+          ],
+          "first_seen": "2024-12-15 06:55:44",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/d72062ecb4c77ae06a07013825542922045114e79c170948e6e71a2f9b8a4ecf/",
+          "matched_query": "sig:DarkGate"
+        },
+        {
+          "sha256": "b8a1bbd67a97c7be7c3bedcd6cca79840c836b89f647aa47de8b8aa19c24965c",
+          "sha1": "8026102a9114d3cceed75ebfd03a2230503515db",
+          "md5": "fdd561c8fe1b41734ca405052b4a57db",
+          "file_name": "3333.png.lnk.d",
+          "file_type": "lnk",
+          "file_size": 127644,
+          "signature": "DarkGate",
+          "tags": [
+            "154-216-16-83",
+            "2-58-56-243",
+            "DarkGate",
+            "lnk"
+          ],
+          "first_seen": "2024-12-15 06:55:39",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/b8a1bbd67a97c7be7c3bedcd6cca79840c836b89f647aa47de8b8aa19c24965c/",
+          "matched_query": "sig:DarkGate"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-38831",
+      "description": "WinRAR ZIP RCE — same-name file+folder trick",
+      "status": "found",
+      "sample_count": 11,
+      "samples": [
+        {
+          "sha256": "b980a67b4fca541e5a70a6a36d5a95f7a72fbefc3d26c707006d82b3b614911e",
+          "sha1": "fcf8f2e932d45e3f5cb68dc7aa882b648e86ec98",
+          "md5": "d3bad1e315e99797a2f611b10a02538e",
+          "file_name": "Informe FUNDAE - Monica Seara Fernandez.zip",
+          "file_type": "zip",
+          "file_size": 1840993,
+          "signature": null,
+          "tags": [
+            "CVE-2023-38831",
+            "zip"
+          ],
+          "first_seen": "2026-01-12 17:25:12",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/b980a67b4fca541e5a70a6a36d5a95f7a72fbefc3d26c707006d82b3b614911e/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "e52adcbe177f6aef09ec7d9b26bd4eafee1a8d5310055d2b6990cdb61bb764b5",
+          "sha1": "808debfab8ee9d3ed3ec375ad2eaa433571fc290",
+          "md5": "71eab64d689179a00fef2b2a81a5005c",
+          "file_name": "Automatic_Data_Processing_Terms_and_Conditions.rar",
+          "file_type": "zip",
+          "file_size": 5285171,
+          "signature": "Vidar",
+          "tags": [
+            "CVE-2023-38831",
+            "rar",
+            "vidar",
+            "zip"
+          ],
+          "first_seen": "2024-11-10 12:26:34",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/e52adcbe177f6aef09ec7d9b26bd4eafee1a8d5310055d2b6990cdb61bb764b5/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "a7459070acc9f901b2d07e1124a491144ae8ea9a5345a5d8ea7e6a273425ef7c",
+          "sha1": "9994f604241b84d01650076b068c92eb38d52a59",
+          "md5": "397bf22d0c503c53d9f6f9b16560824e",
+          "file_name": "a7459070acc9f901b2d07e1124a491144ae8ea9a5345a5d8ea7e6a273425ef7c.zip",
+          "file_type": "zip",
+          "file_size": 11946,
+          "signature": null,
+          "tags": [
+            "CVE-2023-38831",
+            "skynetx-com-br",
+            "zip"
+          ],
+          "first_seen": "2024-11-02 13:03:26",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a7459070acc9f901b2d07e1124a491144ae8ea9a5345a5d8ea7e6a273425ef7c/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "f75f1d4c561fcb013e262b3667982759f215ba7e714c43474755b72ed7f9d01e",
+          "sha1": "62ec26d058c4f162a2aa69299ec412098dd3c1b1",
+          "md5": "0ab99dca01c4e9d1dbef15428371e69f",
+          "file_name": "f75f1d4c561fcb013e262b3667982759f215ba7e714c43474755b72ed7f9d01e.docx",
+          "file_type": "doc",
+          "file_size": 13840,
+          "signature": null,
+          "tags": [
+            "CVE-2023-38831",
+            "doc",
+            "UAC-0099"
+          ],
+          "first_seen": "2024-09-30 13:30:15",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f75f1d4c561fcb013e262b3667982759f215ba7e714c43474755b72ed7f9d01e/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "986694cad425c8f566e4e12c104811d4e8b30ce6c4c4d38f919b617b1aa66b05",
+          "sha1": "eae4f59870c2758ba1641c4aac97efc9e262d655",
+          "md5": "50e3a982d434d4826a9acc1617c35949",
+          "file_name": "986694cad425c8f566e4e12c104811d4e8b30ce6c4c4d38f919b617b1aa66b05",
+          "file_type": "zip",
+          "file_size": 460895,
+          "signature": null,
+          "tags": [
+            "CVE-2023-38831",
+            "UAC-0099",
+            "zip"
+          ],
+          "first_seen": "2024-09-30 13:30:09",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/986694cad425c8f566e4e12c104811d4e8b30ce6c4c4d38f919b617b1aa66b05/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "1e03ec97e6dd1fd494a3e6d5de513ce88149be17be2b62b805477a6de72c97b8",
+          "sha1": "6a7d2edac67a5a50439a96d372433c72d466f934",
+          "md5": "c186f5d7cc0e80b1c7ac63cd7bfe281c",
+          "file_name": "FirmwareUpdate.rar",
+          "file_type": "zip",
+          "file_size": 329986,
+          "signature": null,
+          "tags": [
+            "CVE-2023-38831",
+            "zip"
+          ],
+          "first_seen": "2024-07-18 21:04:16",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/1e03ec97e6dd1fd494a3e6d5de513ce88149be17be2b62b805477a6de72c97b8/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "9d6b66a78c413fa83dbe21446d51b02c61e8f67dafbbadbed4664181fce41079",
+          "sha1": "a71aa7d9906567a6ea5c503eb15f5cd1eb07c90f",
+          "md5": "49022f75cd1c01f3a1ea2be740937dfb",
+          "file_name": "omegle.rar",
+          "file_type": "zip",
+          "file_size": 40194,
+          "signature": null,
+          "tags": [
+            "CVE-2023-38831",
+            "zip"
+          ],
+          "first_seen": "2024-05-31 18:39:48",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/9d6b66a78c413fa83dbe21446d51b02c61e8f67dafbbadbed4664181fce41079/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "d8ccaef116cada9c558f9e912d5cf7ef2978082611e677f6f55ca233f47a2f68",
+          "sha1": "65e440b5aee156fa6de192d2361302f3aa0665cc",
+          "md5": "2fec3ab587e6b5533b4c6b3c11dd357a",
+          "file_name": "2fec3ab587e6b5533b4c6b3c11dd357a.zip",
+          "file_type": "zip",
+          "file_size": 2272392,
+          "signature": "Gamaredon",
+          "tags": [
+            "apt",
+            "CVE-2023-38831",
+            "gamaredon",
+            "zip"
+          ],
+          "first_seen": "2024-04-12 17:14:49",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/d8ccaef116cada9c558f9e912d5cf7ef2978082611e677f6f55ca233f47a2f68/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "525b00fc379589a73ebd6471e440220c886b969332360e17fb44d5175b3d945e",
+          "sha1": "7e987c96ffb446f20d446618aca7baf9f59c7475",
+          "md5": "9b111c3692d58a84f9f4359a0412b61a",
+          "file_name": "Special Envoy Speech at NCA.zip",
+          "file_type": "zip",
+          "file_size": 26754,
+          "signature": "SideWinder",
+          "tags": [
+            "apt",
+            "CVE-2023-38831",
+            "SideWinder",
+            "zip"
+          ],
+          "first_seen": "2024-02-28 19:04:30",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/525b00fc379589a73ebd6471e440220c886b969332360e17fb44d5175b3d945e/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "f405f9208141f0e709810da86801f4f5c894eb3f655683deaf01e40983e6dd3a",
+          "sha1": "dc998dd19d42bee767abd37eefa4e754a7294829",
+          "md5": "4f59ca0bc42171562d3c320e88bb35d5",
+          "file_name": "southafrica.rar",
+          "file_type": "zip",
+          "file_size": 7473569,
+          "signature": "DiscordTokenStealer",
+          "tags": [
+            "CVE-2023-38831",
+            "DiscordTokenStealer",
+            "zip"
+          ],
+          "first_seen": "2024-01-30 18:49:57",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f405f9208141f0e709810da86801f4f5c894eb3f655683deaf01e40983e6dd3a/",
+          "matched_query": "tag:CVE-2023-38831"
+        },
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-40477",
+      "description": "WinRAR RAR5 OOB write via recovery volume",
+      "status": "found",
+      "sample_count": 1,
+      "samples": [
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-20696",
+      "description": "libarchive Windows RCE via Explorer",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2024-3094",
+      "description": "XZ Utils supply-chain backdoor (CVSS 10.0)",
+      "status": "found",
+      "sample_count": 20,
+      "samples": [
+        {
+          "sha256": "d2d99c2dcb17923e9ce1d91e16491527edcdd945aa68e54d83bc6fc927274b05",
+          "sha1": "d140b4ed0018358c393054e2b26e57e5a79b9809",
+          "md5": "995aae6360030168e608ddd78c5cbabd",
+          "file_name": "vvv.sh",
+          "file_type": "sh",
+          "file_size": 9817,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "sh"
+          ],
+          "first_seen": "2024-04-06 11:45:38",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/d2d99c2dcb17923e9ce1d91e16491527edcdd945aa68e54d83bc6fc927274b05/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "84319e9ec82b654438d8c26d8a93e9e3197dff0d93265e30f961b200bbb27472",
+          "sha1": "8f69cb2b31ba165c3f6d73718d70881c9a02efb5",
+          "md5": "c2b5285108fe0bb9c585a8afd2029296",
+          "file_name": "liblzma.so.5.6.0_fc40_build2",
+          "file_type": "elf",
+          "file_size": 249224,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-04-02 06:46:32",
+          "last_seen": "2024-04-02 07:30:39",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/84319e9ec82b654438d8c26d8a93e9e3197dff0d93265e30f961b200bbb27472/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "df0c2424b48b3e388fe31b469ac95076bd82d5222efe9dc0ef3fffbaedef047d",
+          "sha1": "38bc1c5287183497970d3bacab7c86edb7640cdc",
+          "md5": "906b3611f5349bfb096e74188bdc8994",
+          "file_name": "liblzma.so.5.6.0_fc40_build1",
+          "file_type": "elf",
+          "file_size": 249216,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-04-02 06:46:10",
+          "last_seen": "2024-04-02 07:30:43",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/df0c2424b48b3e388fe31b469ac95076bd82d5222efe9dc0ef3fffbaedef047d/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "257fc477b9684863e0822cbad3606d76c039be8dd51cdc13b73e74e93d7b04cc",
+          "sha1": "4546876d037d899090260fcf9fe49683998cc9de",
+          "md5": "a78380f647766a2bc099844375bd5a4c",
+          "file_name": "liblzma.so.5.6.1",
+          "file_type": "elf",
+          "file_size": 1306792,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-04-01 16:31:43",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/257fc477b9684863e0822cbad3606d76c039be8dd51cdc13b73e74e93d7b04cc/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "f50ee33bab6abc93164577ca80f111d77595659842920d04a4d22e184f675d14",
+          "sha1": "813e9eb112daa3e9501d3bddd8f78d44309bb598",
+          "md5": "079d41f2e76288f1fdd65e72bf58c304",
+          "file_name": "liblzma.so.5",
+          "file_type": "elf",
+          "file_size": 254520,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-03-31 09:15:44",
+          "last_seen": "2024-03-31 10:27:11",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f50ee33bab6abc93164577ca80f111d77595659842920d04a4d22e184f675d14/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "5448850cdc3a7ae41ff53b433c2adbd0ff492515012412ee63a40d2685db3049",
+          "sha1": "fb8b18fa39f198298c9f553496a18aa94fa75c03",
+          "md5": "4ec47410372386d02c432ba10e5d7fda",
+          "file_name": "liblzma_la_crc64_fast.o",
+          "file_type": "elf",
+          "file_size": 126360,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-03-31 00:28:08",
+          "last_seen": "2024-03-31 01:32:02",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/5448850cdc3a7ae41ff53b433c2adbd0ff492515012412ee63a40d2685db3049/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "ecda10d8877d555dbda4a4eba329e146b2be8ac4b7915fb723eaacc9f89d16bd",
+          "sha1": "86fc2c94f8fa3938e3261d0b9eb4836be289f8ae",
+          "md5": "35028f4b5c6673d6f2e1a80f02944fb2",
+          "file_name": "bad-3-corrupt_lzma2.xz",
+          "file_type": "xz",
+          "file_size": 512,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "xz"
+          ],
+          "first_seen": "2024-03-30 23:10:48",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/ecda10d8877d555dbda4a4eba329e146b2be8ac4b7915fb723eaacc9f89d16bd/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "319feb5a9cddd81955d915b5632b4a5f8f9080281fb46e2f6d69d53f693c23ae",
+          "sha1": "72e8163734d586b6360b24167a3aff2a3c961efb",
+          "md5": "4f0cf1d2a2d44b75079b3ea5ed28fe54",
+          "file_name": "x86_64-linux-gnu-liblzma.so.5.6.0",
+          "file_type": "elf",
+          "file_size": 247800,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-03-30 23:07:23",
+          "last_seen": "2024-03-31 00:27:45",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/319feb5a9cddd81955d915b5632b4a5f8f9080281fb46e2f6d69d53f693c23ae/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "b418bfd34aa246b2e7b5cb5d263a640e5d080810f767370c4d2c24662a274963",
+          "sha1": "cc5c1d8f9924a3939f932a50f666dba03531e6a9",
+          "md5": "d26cefd934b33b174a795760fc79e6b5",
+          "file_name": "liblzma_la-crc64-fast-5.6.1.o",
+          "file_type": "elf",
+          "file_size": 88664,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-03-30 23:06:52",
+          "last_seen": "2024-03-31 00:27:48",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/b418bfd34aa246b2e7b5cb5d263a640e5d080810f767370c4d2c24662a274963/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "8fa641c454c3e0f76de73b7cc3446096b9c8b9d33d406d38b8ac76090b0344fd",
+          "sha1": "123e570ac3d28a9f7ce6c30fdb19e20a8c23efae",
+          "md5": "d302c6cb2fa1c03c710fa5285651530f",
+          "file_name": "liblzma.so.5",
+          "file_type": "elf",
+          "file_size": 254521,
+          "signature": null,
+          "tags": [
+            "CVE-2024-3094",
+            "elf"
+          ],
+          "first_seen": "2024-03-30 23:06:06",
+          "last_seen": "2024-03-31 00:27:47",
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/8fa641c454c3e0f76de73b7cc3446096b9c8b9d33d406d38b8ac76090b0344fd/",
+          "matched_query": "tag:CVE-2024-3094"
+        },
+        {
+          "sha256": "ff07fa9c294fc87e44da9a67322c90be10b6bc76ab9fb837057fb3842b536e4c",
+          "sha1": "4c97f84538de1504b4f6344acdb19a62c10be51c",
+          "md5": "6d927db00cac59ff67032f17893c74c2",
+          "file_name": "Quotation 1563050.JS.xz",
+          "file_type": "xz",
+          "file_size": 1931864,
+          "signature": "DonutLoader",
+          "tags": [
+            "donutloader",
+            "exe",
+            "xz"
+          ],
+          "first_seen": "2026-03-19 12:36:58",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/ff07fa9c294fc87e44da9a67322c90be10b6bc76ab9fb837057fb3842b536e4c/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "f44c8e801a80ef26fa471e36e304823d79b94e6613113177ec1639a4164b95cb",
+          "sha1": "3c0f032873d922aaadc72620c6199c31399a4e54",
+          "md5": "8b9bdc0ab2d76731a2de2c894ee4e7fc",
+          "file_name": "nPurchase_Order_Inquiry.xz",
+          "file_type": "xz",
+          "file_size": 1989,
+          "signature": null,
+          "tags": [
+            "xz"
+          ],
+          "first_seen": "2026-02-23 11:31:14",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/f44c8e801a80ef26fa471e36e304823d79b94e6613113177ec1639a4164b95cb/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "910bbf3a72cd167d0562586ca7bf0857a354507cf56f7e78b2c1e1ca8ef2225a",
+          "sha1": "8485cb4359eca844ed3de34af7629aeb37be78c0",
+          "md5": "232c8a4da92cc1ea6b3854050220228d",
+          "file_name": "98J4V.xz",
+          "file_type": "xz",
+          "file_size": 718703,
+          "signature": "Formbook",
+          "tags": [
+            "FormBook",
+            "rar",
+            "xz"
+          ],
+          "first_seen": "2026-02-16 05:36:00",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/910bbf3a72cd167d0562586ca7bf0857a354507cf56f7e78b2c1e1ca8ef2225a/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "1d7d127d7b1ed83d2d74fe9d07e29745cf372317127cd6232fd8b164b06d15f9",
+          "sha1": "ebf412a60dadd65372ec0ca40ba7bbda95d120ce",
+          "md5": "2e23e44847f75c160a37ca46c6141804",
+          "file_name": "nRequest_for_Best_Offer-_HS_CODE_REF_102195_ET_115959_pdf.xz",
+          "file_type": "xz",
+          "file_size": 1905,
+          "signature": "GuLoader",
+          "tags": [
+            "GuLoader",
+            "xz"
+          ],
+          "first_seen": "2026-02-10 17:00:08",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/1d7d127d7b1ed83d2d74fe9d07e29745cf372317127cd6232fd8b164b06d15f9/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "2acbe1adaa423f16b66019c923e753d95fa014348761fb584cf5f2f3bb66226a",
+          "sha1": "cb160b5a312661670e991a01604acd630150bab3",
+          "md5": "59879736be8c6d84e98ee32bcebccbac",
+          "file_name": "nPO_345378_29__26_P.xz",
+          "file_type": "xz",
+          "file_size": 1899,
+          "signature": "Formbook",
+          "tags": [
+            "FormBook",
+            "xz"
+          ],
+          "first_seen": "2026-02-10 14:01:14",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/2acbe1adaa423f16b66019c923e753d95fa014348761fb584cf5f2f3bb66226a/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "a0ab3811cfb62377b0c9cfcc5559858f8da49830cc93df5339e145458f216ea5",
+          "sha1": "7a6d6d6fe50f5a380ec28a49c803c8baacf3c7df",
+          "md5": "f5ec5a2c76d99fb68aade05a9528b50c",
+          "file_name": "nOriginal_Shipping_Documents_tar.xz",
+          "file_type": "xz",
+          "file_size": 1463620,
+          "signature": "PhantomStealer",
+          "tags": [
+            "PhantomStealer",
+            "xz"
+          ],
+          "first_seen": "2026-02-03 07:30:11",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a0ab3811cfb62377b0c9cfcc5559858f8da49830cc93df5339e145458f216ea5/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "85b3240a8d0a3ea1a3f161ce7bf4a1a391bcb38d5bcc687c1c56ea22a52d7bfd",
+          "sha1": "d6ad39a750416ffbcc45d372277b3b629377211a",
+          "md5": "1044323ed585fc865598831f1a06f961",
+          "file_name": "nPO_tar.xz",
+          "file_type": "xz",
+          "file_size": 4012,
+          "signature": null,
+          "tags": [
+            "xz"
+          ],
+          "first_seen": "2026-01-21 06:00:09",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/85b3240a8d0a3ea1a3f161ce7bf4a1a391bcb38d5bcc687c1c56ea22a52d7bfd/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "83195b6dbea1ece079e9875a5f85f6ea12b85ad6b7fa979ad042c831952b345c",
+          "sha1": "7bfa55561e8a8758a25636ce7f7f7601485cb3ec",
+          "md5": "a9ad9262439ab1bbe0e0cdf72c1d05cd",
+          "file_name": "Order R2503009-_01_20_2026-xls.Xz",
+          "file_type": "zip",
+          "file_size": 48518,
+          "signature": null,
+          "tags": [
+            "xz",
+            "zip"
+          ],
+          "first_seen": "2026-01-20 21:16:10",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/83195b6dbea1ece079e9875a5f85f6ea12b85ad6b7fa979ad042c831952b345c/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "42886a79490320b8fcde15409f8e7bd811d4da019141ea47030fee1d6b4f6519",
+          "sha1": "4589246ad99d6c61be2fb4874017d82b4d40f3f2",
+          "md5": "0626bb5f9dfe442a118861f5956c8f1f",
+          "file_name": "nAWB_-_TRACKING_Shipping_Documents.xz",
+          "file_type": "xz",
+          "file_size": 878603,
+          "signature": "AgentTesla",
+          "tags": [
+            "AgentTesla",
+            "xz"
+          ],
+          "first_seen": "2026-01-15 04:00:17",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/42886a79490320b8fcde15409f8e7bd811d4da019141ea47030fee1d6b4f6519/",
+          "matched_query": "tag:XZ"
+        },
+        {
+          "sha256": "b18df9a29ff8eb9aa2080eb63e36e512e9217ca33dd18582d85138befa7050ba",
+          "sha1": "9876483964bffbcf3282a9683f73203cd297b3b7",
+          "md5": "18ac71f73790482af6c5b850ea6bb6af",
+          "file_name": "nPO___0312025TOYOBO3.xz",
+          "file_type": "xz",
+          "file_size": 557709,
+          "signature": "AgentTesla",
+          "tags": [
+            "AgentTesla",
+            "xz"
+          ],
+          "first_seen": "2025-12-02 19:30:20",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/b18df9a29ff8eb9aa2080eb63e36e512e9217ca33dd18582d85138befa7050ba/",
+          "matched_query": "tag:XZ"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-48957",
+      "description": "libarchive OOB read in RAR audio filter",
+      "status": "not_found",
+      "sample_count": 0,
+      "samples": []
+    },
+    {
+      "cve_id": "CVE-2025-11001",
+      "description": "7-Zip symlink traversal in ZIP → RCE",
+      "status": "found",
+      "sample_count": 8,
+      "samples": [
+        {
+          "sha256": "92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02",
+          "sha1": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "md5": "856fcc25696a214f54af0d37de84d818",
+          "file_name": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "file_type": "exe",
+          "file_size": 4029080,
+          "signature": "LummaStealer",
+          "tags": [
+            "7zip",
+            "Arduino IDE",
+            "Ataleo GmbH",
+            "exe",
+            "LummaStealer",
+            "signed"
+          ],
+          "first_seen": "2024-12-24 07:14:25",
+          "last_seen": null,
+          "imphash": "1aae8bf580c846f39c71c05898e57e88",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9",
+          "sha1": "65e87e3efdc905c49198ddb97110f54d0a306a8f",
+          "md5": "dfaace3296fabb7f9652fb36756a4b51",
+          "file_name": "7z2401-x64.msix.zip",
+          "file_type": "zip",
+          "file_size": 10330375,
+          "signature": "NetSupport",
+          "tags": [
+            "7zip",
+            "91-149-232-112",
+            "msix",
+            "NetSupport",
+            "signed"
+          ],
+          "first_seen": "2024-10-29 12:14:11",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d",
+          "sha1": "e7087775b468c6a00d0651aacbebbb6a47a2d306",
+          "md5": "968d1bc25c2cb4296371e33680284bc3",
+          "file_name": "5-2839-2024_01.09.2024.rar",
+          "file_type": "rar",
+          "file_size": 11120,
+          "signature": "Armageddon",
+          "tags": [
+            "7zip",
+            "Armageddon",
+            "GammaDrop",
+            "GammaLoad",
+            "rar",
+            "UA"
+          ],
+          "first_seen": "2024-09-03 11:56:52",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276",
+          "sha1": "c33d0d7707b3708cd0a7316b1ba18703cbde0d1c",
+          "md5": "1d35a7337000ee04cec3f481524f87a9",
+          "file_name": "43.exe",
+          "file_type": "exe",
+          "file_size": 51639034,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "apt",
+            "exe",
+            "LummaStealer",
+            "UTG-Q-003",
+            "xworm"
+          ],
+          "first_seen": "2023-12-12 12:19:38",
+          "last_seen": null,
+          "imphash": "48aa5c8931746a9655524f67b25a47ef",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf",
+          "sha1": "e3d9786e86f26261beb2f98fc8f3e289f2f5286b",
+          "md5": "48ac303566e6f8c8f56c9472fb14d9d1",
+          "file_name": "7z2201_setup.msi",
+          "file_type": "msi",
+          "file_size": 2517504,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "batloader",
+            "msi"
+          ],
+          "first_seen": "2023-01-27 08:42:32",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5",
+          "sha1": "570d71112d993a41020a573295a29023ef6ae7f1",
+          "md5": "c35d2dee2cc1af28bb171d83c6bf0afc",
+          "file_name": "setup.7z",
+          "file_type": "7z",
+          "file_size": 507137,
+          "signature": "RedLineStealer",
+          "tags": [
+            "7z",
+            "7zip"
+          ],
+          "first_seen": "2022-05-30 11:36:42",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce",
+          "sha1": "91dfda9666a951a16163e5957cb6a200d31961b8",
+          "md5": "0d350222741e6aac8c62ca7a3ad80d1d",
+          "file_name": "PO 907115_TEXCEL TECH.7zip",
+          "file_type": "rar",
+          "file_size": 314644,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 13:18:27",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861",
+          "sha1": "ca1960d2100d9d3a5f638862b7303bd7c15d253a",
+          "md5": "712dbe7efedc036a49def570f28e212b",
+          "file_name": "Drawings  Related  Specifications.7zip",
+          "file_type": "rar",
+          "file_size": 423627,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 12:00:25",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861/",
+          "matched_query": "tag:7zip"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-11002",
+      "description": "7-Zip symlink traversal variant",
+      "status": "found",
+      "sample_count": 8,
+      "samples": [
+        {
+          "sha256": "92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02",
+          "sha1": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "md5": "856fcc25696a214f54af0d37de84d818",
+          "file_name": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "file_type": "exe",
+          "file_size": 4029080,
+          "signature": "LummaStealer",
+          "tags": [
+            "7zip",
+            "Arduino IDE",
+            "Ataleo GmbH",
+            "exe",
+            "LummaStealer",
+            "signed"
+          ],
+          "first_seen": "2024-12-24 07:14:25",
+          "last_seen": null,
+          "imphash": "1aae8bf580c846f39c71c05898e57e88",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9",
+          "sha1": "65e87e3efdc905c49198ddb97110f54d0a306a8f",
+          "md5": "dfaace3296fabb7f9652fb36756a4b51",
+          "file_name": "7z2401-x64.msix.zip",
+          "file_type": "zip",
+          "file_size": 10330375,
+          "signature": "NetSupport",
+          "tags": [
+            "7zip",
+            "91-149-232-112",
+            "msix",
+            "NetSupport",
+            "signed"
+          ],
+          "first_seen": "2024-10-29 12:14:11",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d",
+          "sha1": "e7087775b468c6a00d0651aacbebbb6a47a2d306",
+          "md5": "968d1bc25c2cb4296371e33680284bc3",
+          "file_name": "5-2839-2024_01.09.2024.rar",
+          "file_type": "rar",
+          "file_size": 11120,
+          "signature": "Armageddon",
+          "tags": [
+            "7zip",
+            "Armageddon",
+            "GammaDrop",
+            "GammaLoad",
+            "rar",
+            "UA"
+          ],
+          "first_seen": "2024-09-03 11:56:52",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276",
+          "sha1": "c33d0d7707b3708cd0a7316b1ba18703cbde0d1c",
+          "md5": "1d35a7337000ee04cec3f481524f87a9",
+          "file_name": "43.exe",
+          "file_type": "exe",
+          "file_size": 51639034,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "apt",
+            "exe",
+            "LummaStealer",
+            "UTG-Q-003",
+            "xworm"
+          ],
+          "first_seen": "2023-12-12 12:19:38",
+          "last_seen": null,
+          "imphash": "48aa5c8931746a9655524f67b25a47ef",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf",
+          "sha1": "e3d9786e86f26261beb2f98fc8f3e289f2f5286b",
+          "md5": "48ac303566e6f8c8f56c9472fb14d9d1",
+          "file_name": "7z2201_setup.msi",
+          "file_type": "msi",
+          "file_size": 2517504,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "batloader",
+            "msi"
+          ],
+          "first_seen": "2023-01-27 08:42:32",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5",
+          "sha1": "570d71112d993a41020a573295a29023ef6ae7f1",
+          "md5": "c35d2dee2cc1af28bb171d83c6bf0afc",
+          "file_name": "setup.7z",
+          "file_type": "7z",
+          "file_size": 507137,
+          "signature": "RedLineStealer",
+          "tags": [
+            "7z",
+            "7zip"
+          ],
+          "first_seen": "2022-05-30 11:36:42",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce",
+          "sha1": "91dfda9666a951a16163e5957cb6a200d31961b8",
+          "md5": "0d350222741e6aac8c62ca7a3ad80d1d",
+          "file_name": "PO 907115_TEXCEL TECH.7zip",
+          "file_type": "rar",
+          "file_size": 314644,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 13:18:27",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861",
+          "sha1": "ca1960d2100d9d3a5f638862b7303bd7c15d253a",
+          "md5": "712dbe7efedc036a49def570f28e212b",
+          "file_name": "Drawings  Related  Specifications.7zip",
+          "file_type": "rar",
+          "file_size": 423627,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 12:00:25",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861/",
+          "matched_query": "tag:7zip"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-53816",
+      "description": "7-Zip RAR5 heap buffer overflow (DoS)",
+      "status": "found",
+      "sample_count": 8,
+      "samples": [
+        {
+          "sha256": "92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02",
+          "sha1": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "md5": "856fcc25696a214f54af0d37de84d818",
+          "file_name": "2e3ea061bac71f40040a84deb399f8ce7683f4b8",
+          "file_type": "exe",
+          "file_size": 4029080,
+          "signature": "LummaStealer",
+          "tags": [
+            "7zip",
+            "Arduino IDE",
+            "Ataleo GmbH",
+            "exe",
+            "LummaStealer",
+            "signed"
+          ],
+          "first_seen": "2024-12-24 07:14:25",
+          "last_seen": null,
+          "imphash": "1aae8bf580c846f39c71c05898e57e88",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/92d457b286fb63d2f5ec9413fd234643448c5f8d2c0763e43ed5cf27ab47eb02/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9",
+          "sha1": "65e87e3efdc905c49198ddb97110f54d0a306a8f",
+          "md5": "dfaace3296fabb7f9652fb36756a4b51",
+          "file_name": "7z2401-x64.msix.zip",
+          "file_type": "zip",
+          "file_size": 10330375,
+          "signature": "NetSupport",
+          "tags": [
+            "7zip",
+            "91-149-232-112",
+            "msix",
+            "NetSupport",
+            "signed"
+          ],
+          "first_seen": "2024-10-29 12:14:11",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/84f2d273623efb6cdd126a89c1f9567e8977d21ffe684758dd722a27d2d53aa9/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d",
+          "sha1": "e7087775b468c6a00d0651aacbebbb6a47a2d306",
+          "md5": "968d1bc25c2cb4296371e33680284bc3",
+          "file_name": "5-2839-2024_01.09.2024.rar",
+          "file_type": "rar",
+          "file_size": 11120,
+          "signature": "Armageddon",
+          "tags": [
+            "7zip",
+            "Armageddon",
+            "GammaDrop",
+            "GammaLoad",
+            "rar",
+            "UA"
+          ],
+          "first_seen": "2024-09-03 11:56:52",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a1d689a0839a143e371242fb217db82e0cbdfeff4daa49e6ffe5c5b3375fae3d/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276",
+          "sha1": "c33d0d7707b3708cd0a7316b1ba18703cbde0d1c",
+          "md5": "1d35a7337000ee04cec3f481524f87a9",
+          "file_name": "43.exe",
+          "file_type": "exe",
+          "file_size": 51639034,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "apt",
+            "exe",
+            "LummaStealer",
+            "UTG-Q-003",
+            "xworm"
+          ],
+          "first_seen": "2023-12-12 12:19:38",
+          "last_seen": null,
+          "imphash": "48aa5c8931746a9655524f67b25a47ef",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/80642f03171d1d2ecc8b119b0e5085c3eefac698b7c9181b4c15ea4ae3e92276/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf",
+          "sha1": "e3d9786e86f26261beb2f98fc8f3e289f2f5286b",
+          "md5": "48ac303566e6f8c8f56c9472fb14d9d1",
+          "file_name": "7z2201_setup.msi",
+          "file_type": "msi",
+          "file_size": 2517504,
+          "signature": null,
+          "tags": [
+            "7zip",
+            "batloader",
+            "msi"
+          ],
+          "first_seen": "2023-01-27 08:42:32",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a0133fc64c0bb7215aaa57c142357070d2d2f782039c3b4191786ad3fbd224cf/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5",
+          "sha1": "570d71112d993a41020a573295a29023ef6ae7f1",
+          "md5": "c35d2dee2cc1af28bb171d83c6bf0afc",
+          "file_name": "setup.7z",
+          "file_type": "7z",
+          "file_size": 507137,
+          "signature": "RedLineStealer",
+          "tags": [
+            "7z",
+            "7zip"
+          ],
+          "first_seen": "2022-05-30 11:36:42",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/727a3154e9862b477a4d556940a8fb47fb7f8dd955102ef7738bc32b587076f5/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce",
+          "sha1": "91dfda9666a951a16163e5957cb6a200d31961b8",
+          "md5": "0d350222741e6aac8c62ca7a3ad80d1d",
+          "file_name": "PO 907115_TEXCEL TECH.7zip",
+          "file_type": "rar",
+          "file_size": 314644,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 13:18:27",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/64d4881539d67991327264050e8fb2fe8b19fc57b9e56bb76ea2d0c806f248ce/",
+          "matched_query": "tag:7zip"
+        },
+        {
+          "sha256": "c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861",
+          "sha1": "ca1960d2100d9d3a5f638862b7303bd7c15d253a",
+          "md5": "712dbe7efedc036a49def570f28e212b",
+          "file_name": "Drawings  Related  Specifications.7zip",
+          "file_type": "rar",
+          "file_size": 423627,
+          "signature": "Formbook",
+          "tags": [
+            "7zip",
+            "FormBook"
+          ],
+          "first_seen": "2020-08-18 12:00:25",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c6a43c729575d33894b66ed9072add24ba50d9a48646343956f724c2403ae861/",
+          "matched_query": "tag:7zip"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-6218",
+      "description": "WinRAR path traversal via space-padded '..' segments",
+      "status": "found",
+      "sample_count": 11,
+      "samples": [
+        {
+          "sha256": "97361a91ba80981ca549ed19b2e2b9250fed6231027cd15418578b3db76b02ab",
+          "sha1": "2508e6326ec307d226d79c91e7e123e4a5b5e39e",
+          "md5": "5ae81a09156d61f9c5e05b3f00af5b60",
+          "file_name": "4_13_1_1389_28.04.2026.rar",
+          "file_type": "rar",
+          "file_size": 101162,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-05-13 15:31:32",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/97361a91ba80981ca549ed19b2e2b9250fed6231027cd15418578b3db76b02ab/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "c7e557cc9feb2615b132aaa8a2a756cd5461c9975186a2e7b4a609fb63b84e09",
+          "sha1": "491ed2434368ae93f4e6a0cb0fe0988526cc75a9",
+          "md5": "b9a0b71d748b659e4bd9b771bef2c302",
+          "file_name": "ideasserverRUST.rar",
+          "file_type": "rar",
+          "file_size": 5481,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-04-14 07:43:00",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c7e557cc9feb2615b132aaa8a2a756cd5461c9975186a2e7b4a609fb63b84e09/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "8150b2b39fa62fa2de177ed8526c621a3581c0eb481dd9740fc5894ce2b7c13b",
+          "sha1": "9509ea87cf739f1cb8d63b5343175bf6210f4037",
+          "md5": "014623f6f39501eb1afc07f608036e3a",
+          "file_name": "Рота забезпечення.rar",
+          "file_type": "rar",
+          "file_size": 896474,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-03-05 21:39:06",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/8150b2b39fa62fa2de177ed8526c621a3581c0eb481dd9740fc5894ce2b7c13b/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "efcd02eb478c43356d3ad1860ece5c0dde126882eb892a96b7526a16ae77d212",
+          "sha1": "44a521528a273da936b9e4bf240b1df9c63e0442",
+          "md5": "3765d9661e74897ee02dbbed8532c0ff",
+          "file_name": "Soporte_Tecnico_Nahuel.rar",
+          "file_type": "rar",
+          "file_size": 8650,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-03-05 09:44:25",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/efcd02eb478c43356d3ad1860ece5c0dde126882eb892a96b7526a16ae77d212/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "ba1498476b0613d0b25224deb44130c642467653ec475a47c3fa3024bcb4d7f4",
+          "sha1": "1e141d145610815150a49e826fc009f67f06c9ee",
+          "md5": "cdc1919fc612772b34daecbcf2e38a05",
+          "file_name": "1.rar",
+          "file_type": "rar",
+          "file_size": 4029436,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar",
+            "UAC-0252",
+            "UKR"
+          ],
+          "first_seen": "2026-03-03 14:30:44",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/ba1498476b0613d0b25224deb44130c642467653ec475a47c3fa3024bcb4d7f4/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "44aebac330929cfd5cd8f679d855141bd4190a0f0ea76eee750dbc2e8bb93c95",
+          "sha1": "94ef1b07ca1fbda70e2b7e492a02bf8bcb4e9492",
+          "md5": "1d7ab69b8ed6da37ac7523ffb3073ac8",
+          "file_name": "dfgh.rar",
+          "file_type": "rar",
+          "file_size": 15752690,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-03-02 10:04:19",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/44aebac330929cfd5cd8f679d855141bd4190a0f0ea76eee750dbc2e8bb93c95/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "30cabec3881131d8893b8c66d53ab133d73894509e05806e65b4cc8d8a1f7828",
+          "sha1": "c290008d5416086dfba068b921f2896fff637974",
+          "md5": "d8905a09f3acd32709ad5a20d504530c",
+          "file_name": "4_11_2_1537_03.02.2026.rar",
+          "file_type": "rar",
+          "file_size": 59783,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-02-03 08:43:16",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/30cabec3881131d8893b8c66d53ab133d73894509e05806e65b4cc8d8a1f7828/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "9ee7695e040ef9f191f89548479e558c66004c6ecd5d2ae69d44d40e6a14a8c8",
+          "sha1": "193b8961a9829ceaa1c7a7f553aeac9431930e08",
+          "md5": "6d25a35037cfae8a4cfab3611dd2df5a",
+          "file_name": "1_12_8_1590_03.02.2026.rar",
+          "file_type": "rar",
+          "file_size": 60253,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-02-03 08:10:54",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/9ee7695e040ef9f191f89548479e558c66004c6ecd5d2ae69d44d40e6a14a8c8/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "b6ef840b7161653d32f8f87b246209188c1aef5f074fe086c833d3e4d5a9a7a2",
+          "sha1": "a0cc43167f2c1ac6d4f358f99b9ea33bce629e3b",
+          "md5": "1045fcc5b7d92271f1a16c95ebdec9de",
+          "file_name": "5_12_6_1292_02.02.2026.rar",
+          "file_type": "rar",
+          "file_size": 60381,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-02-03 07:41:59",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/b6ef840b7161653d32f8f87b246209188c1aef5f074fe086c833d3e4d5a9a7a2/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "5210e176a7a2b2d3e5d11a02a11f419a5d9ef96bfb3c518ca3f0e4fffe78f4a5",
+          "sha1": "28b718d9948b4443bc7ec29a7f99ef9bd7e0d61b",
+          "md5": "733e254625adf9ccc991b23aec12cf57",
+          "file_name": "4_14_1_1762_02.02.2026.rar",
+          "file_type": "rar",
+          "file_size": 61606,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-02-02 12:23:08",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/5210e176a7a2b2d3e5d11a02a11f419a5d9ef96bfb3c518ca3f0e4fffe78f4a5/",
+          "matched_query": "tag:CVE-2025-6218"
+        },
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-8088",
+      "description": "WinRAR NTFS ADS traversal — RomCom zero-day",
+      "status": "found",
+      "sample_count": 21,
+      "samples": [
+        {
+          "sha256": "1c90a1ce25b5078cea3e1c6aaed4f2e1727aa54fdd3c4a12d57afc085f1fcff9",
+          "sha1": "bced32428926ef5a0ccc22eccf1f8ff94433dbc0",
+          "md5": "e764ac9ad7684cfc8fbe1d4dc86622a8",
+          "file_name": "1070_26782818.rar",
+          "file_type": "rar",
+          "file_size": 787519,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-05-28 14:12:25",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/1c90a1ce25b5078cea3e1c6aaed4f2e1727aa54fdd3c4a12d57afc085f1fcff9/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "97361a91ba80981ca549ed19b2e2b9250fed6231027cd15418578b3db76b02ab",
+          "sha1": "2508e6326ec307d226d79c91e7e123e4a5b5e39e",
+          "md5": "5ae81a09156d61f9c5e05b3f00af5b60",
+          "file_name": "4_13_1_1389_28.04.2026.rar",
+          "file_type": "rar",
+          "file_size": 101162,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-05-13 15:31:32",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/97361a91ba80981ca549ed19b2e2b9250fed6231027cd15418578b3db76b02ab/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "63c12f66ef4bac065a4472639c62a65d88027b86d6b8d85775da0813ecd1d771",
+          "sha1": "98d3fead3c2570976af145b3be37fb5a1a904d9c",
+          "md5": "9cbd773595b30709e548d7891cb8fa89",
+          "file_name": "Scan_1_17_1_1950_04.05.2026.rar",
+          "file_type": "rar",
+          "file_size": 100734,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-05-04 16:35:07",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/63c12f66ef4bac065a4472639c62a65d88027b86d6b8d85775da0813ecd1d771/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "856584606f0bc5182d1e9d20e70c1d07f78355afc974217a128707c9e14fa6d7",
+          "sha1": "faac720d8b595bbe676c37c2b4ea27007f2fec8f",
+          "md5": "7fff92a4e399006f212808874290c1f6",
+          "file_name": "Scan_5_19_1_1602_28.04.2026.rar",
+          "file_type": "rar",
+          "file_size": 102518,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-04-28 12:58:46",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/856584606f0bc5182d1e9d20e70c1d07f78355afc974217a128707c9e14fa6d7/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "7a7ceb023a054ef1c506283d8e606577ab690d02cea62875f2f12b9c54c91c4d",
+          "sha1": "f04a91bfcf40e36a3efb653e09e5707ab2533cb3",
+          "md5": "f9b38ad25fa975ea038359dce8410008",
+          "file_name": "Scan_2_19_7_1052_27.04.2026.rar",
+          "file_type": "rar",
+          "file_size": 98408,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-04-28 07:51:10",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/7a7ceb023a054ef1c506283d8e606577ab690d02cea62875f2f12b9c54c91c4d/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "76f01bcc194a6ef9a1ce940f937c66aaf957e431c18f210fe8787a3af437a973",
+          "sha1": "07e501f7417c8dd774a2a168f301faa9228faa1d",
+          "md5": "6ac9b60c25d223e2fffc9385df2af3b8",
+          "file_name": "Archive.rar",
+          "file_type": "rar",
+          "file_size": 304815,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "RUS"
+          ],
+          "first_seen": "2026-04-16 18:14:21",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/76f01bcc194a6ef9a1ce940f937c66aaf957e431c18f210fe8787a3af437a973/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "4de866be72f792368ac9a1eb6a271a0edd8cccbc35ad6b9efd8ad7b690560184",
+          "sha1": "ccc1d5b56b0babf0436a0e209f64e24cf01312e5",
+          "md5": "791b233734d0145a4b074a7e90bf7173",
+          "file_name": "service.global-e.com_orders_2026.rar",
+          "file_type": "rar",
+          "file_size": 54643,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-04-14 07:53:58",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/4de866be72f792368ac9a1eb6a271a0edd8cccbc35ad6b9efd8ad7b690560184/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "c7e557cc9feb2615b132aaa8a2a756cd5461c9975186a2e7b4a609fb63b84e09",
+          "sha1": "491ed2434368ae93f4e6a0cb0fe0988526cc75a9",
+          "md5": "b9a0b71d748b659e4bd9b771bef2c302",
+          "file_name": "ideasserverRUST.rar",
+          "file_type": "rar",
+          "file_size": 5481,
+          "signature": null,
+          "tags": [
+            "CVE-2025-6218",
+            "CVE-2025-8088",
+            "rar"
+          ],
+          "first_seen": "2026-04-14 07:43:00",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c7e557cc9feb2615b132aaa8a2a756cd5461c9975186a2e7b4a609fb63b84e09/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "c7da0a4276b3faf7c122ab9de0ba6c7f8499f7d72aa947515a2f41e13ca4f9a6",
+          "sha1": "6c6fe3ef84f3118161b3f5c16f495957441036c6",
+          "md5": "2dcfbf338789185d0b89775ffd4996ff",
+          "file_name": "Scan_1_16_4_1690_13.04.2026.rar",
+          "file_type": "rar",
+          "file_size": 112560,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-04-13 09:48:30",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c7da0a4276b3faf7c122ab9de0ba6c7f8499f7d72aa947515a2f41e13ca4f9a6/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "36a4f484969a4e9037ba398e6349164643cd58cea5568534dcbb0af2c32014c5",
+          "sha1": "98e7898509be64bb7a1fe75f179591866829f19b",
+          "md5": "4673c75fbae5b05b85a5cf0ef93c6447",
+          "file_name": "Scan_3_12_5_1759_10.04.2026.rar",
+          "file_type": "rar",
+          "file_size": 96439,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "UKR"
+          ],
+          "first_seen": "2026-04-13 06:30:45",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/36a4f484969a4e9037ba398e6349164643cd58cea5568534dcbb0af2c32014c5/",
+          "matched_query": "tag:CVE-2025-8088"
+        },
+        {
+          "sha256": "27a7a18e16955efd361fb35ccce7cf9e49209a3ffe16b2b9fbb41c658dcf28a9",
+          "sha1": "81de3dcc440aa6137bbc5b41ce68f7d74416f1e8",
+          "md5": "67b3b2c8b46d25dae0345441e13a2f56",
+          "file_name": "service.global-e.com_orders_2026.rar",
+          "file_type": "rar",
+          "file_size": 54643,
+          "signature": null,
+          "tags": [
+            "CVE-2025-8088",
+            "rar",
+            "RomCom"
+          ],
+          "first_seen": "2026-04-08 20:42:46",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/27a7a18e16955efd361fb35ccce7cf9e49209a3ffe16b2b9fbb41c658dcf28a9/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "e20f3a7806418c2739ad3d47959857eb0dd2e4960e966f413c6e047d11d003f0",
+          "sha1": "4c9e05b90802987242a919295a6190b851f35436",
+          "md5": "705f570e89ccbbcb32b8bb304537a2e9",
+          "file_name": "0yxsgr56.exe",
+          "file_type": "exe",
+          "file_size": 867056,
+          "signature": null,
+          "tags": [
+            "exe",
+            "RomCom",
+            "signed"
+          ],
+          "first_seen": "2026-02-11 11:52:53",
+          "last_seen": null,
+          "imphash": "d6ff2d8d10a4945b5a263e9b05c0c186",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/e20f3a7806418c2739ad3d47959857eb0dd2e4960e966f413c6e047d11d003f0/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "1f506782be55cf7da570ea38977f0eecfeabafa7e6d5916f08c31673af32779a",
+          "sha1": "749d47b1f72119c5d63180ceaaa39280da2829ac",
+          "md5": "da6d9f293b4b2c7b456299176dcea2f3",
+          "file_name": "4dd9e2085297515825416415413eae1c9632392cb159ac70e459d0ebeb2dd49d.bin.sample.gz",
+          "file_type": "gz",
+          "file_size": 1203001,
+          "signature": null,
+          "tags": [
+            "APT-36",
+            "gz",
+            "Loader",
+            "RomCom"
+          ],
+          "first_seen": "2026-01-02 16:32:05",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/1f506782be55cf7da570ea38977f0eecfeabafa7e6d5916f08c31673af32779a/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "0cae3b04919050963b4413a43d10fcd7ea4b3f332234ee6c65dcceee7a0833e5",
+          "sha1": "392b300d8a8bea9c6d34f2a9a94948b55c4cc1fd",
+          "md5": "9f69db123eb43e6b0ab300f645c15817",
+          "file_name": "12_December_2025_список_побажань_і_вимог.exe",
+          "file_type": "exe",
+          "file_size": 701016,
+          "signature": null,
+          "tags": [
+            "exe",
+            "RomCom",
+            "signed",
+            "XRYUS-TECHNOLOGIES-CORPORATION"
+          ],
+          "first_seen": "2025-12-12 22:43:25",
+          "last_seen": "2025-12-13 06:14:53",
+          "imphash": "6328c9ee8ac8be6d5eeedca552f01857",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0cae3b04919050963b4413a43d10fcd7ea4b3f332234ee6c65dcceee7a0833e5/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "8c2def9d3346a1f96b43c8a915d9585e742351b05a1887b2ec4293712eb64af7",
+          "sha1": "b91ad7fc830469ebc2dcfce085f683d927c91073",
+          "md5": "c42ae57d00edd4c5343f3639d434664f",
+          "file_name": "windows_notepad_with_sign.exe",
+          "file_type": "exe",
+          "file_size": 505040,
+          "signature": null,
+          "tags": [
+            "apt",
+            "exe",
+            "RomCom",
+            "signed"
+          ],
+          "first_seen": "2025-11-21 20:07:08",
+          "last_seen": "2025-11-22 14:51:44",
+          "imphash": "6cca7e75b412649b6f438549de300123",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/8c2def9d3346a1f96b43c8a915d9585e742351b05a1887b2ec4293712eb64af7/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "be5327cc54087eceb1c61e09bc5153a811f6b0f13114d4ede45860794fe52c6f",
+          "sha1": "0fcd32fa078e6869665c40245303d0189119270a",
+          "md5": "7f69f3680c53ef19ca474488f559c2db",
+          "file_name": "Timber.exe",
+          "file_type": "exe",
+          "file_size": 1605864,
+          "signature": null,
+          "tags": [
+            "apt",
+            "exe",
+            "RomCom",
+            "signed"
+          ],
+          "first_seen": "2025-10-28 19:15:00",
+          "last_seen": null,
+          "imphash": "aba87277c3d634995a156c3846e5154b",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/be5327cc54087eceb1c61e09bc5153a811f6b0f13114d4ede45860794fe52c6f/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "c777fe4e7f5cac1269294e94ecc4c93497df07c4d8f564488115e259f018d27e",
+          "sha1": "4064afe36d2e3c9aef8e338f371cc70abe4e775e",
+          "md5": "0b67513ce354679267fda76e69156d67",
+          "file_name": "windows application 1.exe",
+          "file_type": "exe",
+          "file_size": 1275696,
+          "signature": null,
+          "tags": [
+            "apt",
+            "exe",
+            "RomCom",
+            "signed"
+          ],
+          "first_seen": "2025-10-20 20:41:43",
+          "last_seen": null,
+          "imphash": "133c3a90c7f5ff631aafa15cd6b2e110",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c777fe4e7f5cac1269294e94ecc4c93497df07c4d8f564488115e259f018d27e/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "5e57136b6fa43c0f9c024d18d22be151e0f05be08796ae28d6f9623a07a2aa64",
+          "sha1": "e93d3a8f3280d1cfad4df42d35d861a6eac065d7",
+          "md5": "add512234182e40de62b89adee5315f8",
+          "file_name": "camo.exe",
+          "file_type": "exe",
+          "file_size": 148056,
+          "signature": null,
+          "tags": [
+            "exe",
+            "RomCom",
+            "signed"
+          ],
+          "first_seen": "2025-10-08 20:12:41",
+          "last_seen": null,
+          "imphash": "d443c6e0e10bce0b959a45062a3a250c",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/5e57136b6fa43c0f9c024d18d22be151e0f05be08796ae28d6f9623a07a2aa64/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "c31db8abf4102090173c78943f1ddbdf9bb8819331d074edf563de1c0613a9ae",
+          "sha1": "d3825c69a0015148ab450137e9a894007681db94",
+          "md5": "546f2edaf37efff2c87cfcad8b0ff520",
+          "file_name": "c31db8abf4102090173c78943f1ddbdf9bb8819331d074edf563de1c0613a9ae",
+          "file_type": "exe",
+          "file_size": 260856,
+          "signature": null,
+          "tags": [
+            "exe",
+            "RomCom",
+            "signed"
+          ],
+          "first_seen": "2025-08-19 16:08:47",
+          "last_seen": null,
+          "imphash": "3def83bbbf2c79def3691a5b51257fa0",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/c31db8abf4102090173c78943f1ddbdf9bb8819331d074edf563de1c0613a9ae/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "a25d011e2d8e9288de74d78aba4c9412a0ad8b321253ef1122451d2a3d176efa",
+          "sha1": "1c4643922b71f53710cb94b601427f9c8a2d6450",
+          "md5": "5525075d8d53a2035710c3fb6c091ea3",
+          "file_name": "a25d011e2d8e9288de74d78aba4c9412a0ad8b321253ef1122451d2a3d176efa",
+          "file_type": "lnk",
+          "file_size": 2018,
+          "signature": null,
+          "tags": [
+            "lnk",
+            "RomCom"
+          ],
+          "first_seen": "2025-08-19 15:00:20",
+          "last_seen": null,
+          "imphash": null,
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/a25d011e2d8e9288de74d78aba4c9412a0ad8b321253ef1122451d2a3d176efa/",
+          "matched_query": "tag:RomCom"
+        },
+        {
+          "sha256": "0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f",
+          "sha1": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "md5": "6f32c72517fd6d42b5bf91a783f6ac5c",
+          "file_name": "6592af7b52e4f4e3066de667dcc27ec195bb2843",
+          "file_type": "exe",
+          "file_size": 3947544,
+          "signature": null,
+          "tags": [
+            "exe",
+            "signed",
+            "SUMMIT RECRUITMENT LIMITED",
+            "WinRAR"
+          ],
+          "first_seen": "2024-12-13 18:48:58",
+          "last_seen": null,
+          "imphash": "39da3cace27ab9503fa46001ce968ea6",
+          "delivery_method": "",
+          "origin_country": "",
+          "bazaar_url": "https://bazaar.abuse.ch/sample/0dc160127748145fb0f0c6a60c2bdfc686c89a52c96482f7e2ddf68fe177fb5f/",
+          "matched_query": "tag:WinRAR"
+        }
+      ]
+    }
+  ]
+}
