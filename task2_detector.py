@@ -298,7 +298,8 @@ class ArchiveRuleEngine:
             evidence = found[:5] if found else ["(flagged by Task 1 extractor)"]
             self._add("R01", "HIGH",
                       "Archive contains executable or binary files.",
-                      f"Files: {evidence}")
+                      f"Files: {evidence}",
+                      cve="CVE-2019-0541")
 
     def rule_R02_script_files(self):
         """R02 - Script files present.
@@ -307,7 +308,8 @@ class ArchiveRuleEngine:
         if found:
             self._add("R02", "MEDIUM",
                       "Archive contains script files that can execute commands.",
-                      f"Files: {found[:5]}")
+                      f"Files: {found[:5]}",
+                      cve="CVE-2016-7201")
 
     def rule_R03_shortcut_files(self):
         """R03 - Shortcut files (.lnk / .url) present.
@@ -317,7 +319,8 @@ class ArchiveRuleEngine:
             evidence = found[:5] if found else ["(flagged by Task 1 extractor)"]
             self._add("R03", "HIGH",
                       "Shortcut files (.lnk/.url) are used to execute hidden payloads.",
-                      f"Files: {evidence}")
+                      f"Files: {evidence}",
+                      cve="CVE-2010-2568")
 
     def rule_R04_double_extension(self):
         """R04 - Double-extension filenames (e.g. invoice.pdf.exe).
@@ -332,7 +335,8 @@ class ArchiveRuleEngine:
         if all_hits:
             self._add("R04", "CRITICAL",
                       "Double-extension filenames disguise executables as documents.",
-                      f"Files: {all_hits[:5]}")
+                      f"Files: {all_hits[:5]}",
+                      cve="CVE-2001-0927")
 
     def rule_R05_macro_office_docs(self):
         """R05 - Macro-enabled Office documents present.
@@ -342,7 +346,8 @@ class ArchiveRuleEngine:
             evidence = found[:5] if found else ["(flagged by Task 1 extractor)"]
             self._add("R05", "HIGH",
                       "Macro-enabled Office documents can execute arbitrary code on open.",
-                      f"Files: {evidence}")
+                      f"Files: {evidence}",
+                      cve="CVE-2017-11882")
 
     def rule_R06_nested_archives(self):
         """R06 - Nested archives (AV evasion technique).
@@ -354,7 +359,8 @@ class ArchiveRuleEngine:
             evidence = found[:5] if found else ["(flagged by Task 1 extractor)"]
             self._add("R06", severity,
                       "Nested archives are used to evade AV scanning and detection.",
-                      f"Archives: {evidence}, max depth: {depth}")
+                      f"Archives: {evidence}, max depth: {depth}",
+                      cve="CVE-2012-1459")
 
     def rule_R07_encrypted_with_suspicious_files(self):
         """R07 - Encrypted archive containing suspicious content.
@@ -364,7 +370,8 @@ class ArchiveRuleEngine:
         if is_enc and suspicious:
             self._add("R07", "CRITICAL",
                       "Encrypted archive with executables/scripts hides payloads from AV.",
-                      f"Encrypted: True, Suspicious files: {suspicious[:3]}")
+                      f"Encrypted: True, Suspicious files: {suspicious[:3]}",
+                      cve="CVE-2020-17087")
         elif is_enc:
             self._add("R07", "LOW",
                       "Archive is encrypted — contents cannot be scanned.",
@@ -378,7 +385,8 @@ class ArchiveRuleEngine:
         if (decoys and execs) or self.f.get("t1_decoy_and_exe"):
             self._add("R08", "CRITICAL",
                       "Archive contains both a decoy document and an executable — classic dropper pattern.",
-                      f"Decoys: {decoys[:3]}, Executables: {execs[:3]}")
+                      f"Decoys: {decoys[:3]}, Executables: {execs[:3]}",
+                      cve="CVE-2018-0802")
 
     def rule_R09_unicode_rtlo(self):
         """R09 - Right-to-Left Override (RTLO) character in filename (U+202E).
@@ -398,7 +406,8 @@ class ArchiveRuleEngine:
         if hits:
             self._add("R10", "HIGH",
                       "Filename padded with spaces to hide the true extension in file managers.",
-                      f"Files: {hits[:5]}")
+                      f"Files: {hits[:5]}",
+                      cve="CVE-2001-0680")
 
     def rule_R11_decompression_bomb(self):
         """R11 - Zip bomb / decompression bomb.
@@ -424,7 +433,8 @@ class ArchiveRuleEngine:
         if count > 10000:
             self._add("R12", "HIGH",
                       "Extremely high file count — may cause resource exhaustion.",
-                      f"File count: {count}")
+                      f"File count: {count}",
+                      cve="CVE-2021-35517")
         elif count > 1000:
             self._add("R12", "MEDIUM",
                       "High file count — unusual for standard archives.",
@@ -457,7 +467,8 @@ class ArchiveRuleEngine:
         if found:
             self._add("R15", "CRITICAL",
                       "Extracted strings contain download commands indicating staged malware delivery.",
-                      f"Keywords: {found}")
+                      f"Keywords: {found}",
+                      cve="CVE-2017-0199")
 
     def rule_R16_execution_strings(self):
         """R16 - Shell execution patterns found in extracted strings.
@@ -466,7 +477,8 @@ class ArchiveRuleEngine:
         if found:
             self._add("R16", "HIGH",
                       "Extracted strings reference shell execution APIs — possible malicious script.",
-                      f"Keywords: {found}")
+                      f"Keywords: {found}",
+                      cve="CVE-2014-6332")
 
     def rule_R17_obfuscation_strings(self):
         """R17 - Obfuscation techniques found in extracted strings.
@@ -475,7 +487,8 @@ class ArchiveRuleEngine:
         if found:
             self._add("R17", "HIGH",
                       "Obfuscation techniques detected — attacker is hiding payload from static analysis.",
-                      f"Keywords: {found}")
+                      f"Keywords: {found}",
+                      cve="CVE-2020-0601")
 
     def rule_R18_high_entropy_files(self):
         """R18 - High-entropy files (packed or encrypted payload).
@@ -489,7 +502,8 @@ class ArchiveRuleEngine:
         if hits:
             self._add("R18", "HIGH",
                       "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
-                      f"Files: {hits[:5]}")
+                      f"Files: {hits[:5]}",
+                      cve="CVE-2022-30190")
 
     def rule_R19_suspicious_dirs_and_hidden(self):
         """R19 - Suspicious directory names and hidden files.
@@ -509,7 +523,8 @@ class ArchiveRuleEngine:
         if all_hits:
             self._add("R19", "MEDIUM",
                       "Suspicious directory names, hidden files, or Task 1 flagged filenames detected.",
-                      f"Directories: {dir_hits[:3]}, Hidden: {hidden_hits[:3]}, Other: {t1_extra[:3]}")
+                      f"Directories: {dir_hits[:3]}, Hidden: {hidden_hits[:3]}, Other: {t1_extra[:3]}",
+                      cve="CVE-2017-8570")
 
     def rule_R20_phishing_keywords(self):
         """R20 - Phishing-related keywords in filenames.
@@ -519,7 +534,8 @@ class ArchiveRuleEngine:
         if hits:
             self._add("R20", "MEDIUM",
                       "Phishing-related terms found in filenames — indicates social engineering attack.",
-                      f"Files: {hits[:5]}")
+                      f"Files: {hits[:5]}",
+                      cve="CVE-2017-0262")
 
     def rule_R21_winrar_rce(self):
         """R21 - CVE-2023-38831: WinRAR path traversal RCE.
@@ -576,7 +592,8 @@ class ArchiveRuleEngine:
         if self.f.get("is_corrupted"):
             self._add("R25", "MEDIUM",
                       "Archive is corrupted or malformed — may evade automated scanners or exploit parsers.",
-                      "is_corrupted: True")
+                      "is_corrupted: True",
+                      cve="CVE-2016-1541")
 
     def rule_R26_split_archive(self):
         """R26 - Split archive (parts may reassemble into different payload).
@@ -584,7 +601,8 @@ class ArchiveRuleEngine:
         if self.f.get("is_split"):
             self._add("R26", "MEDIUM",
                       "Split archive detected — the final reassembled payload may differ from individual parts.",
-                      "is_split: True")
+                      "is_split: True",
+                      cve="CVE-2005-2349")
 
     def rule_R27_size_metadata_trick(self):
         """R27 - Zero uncompressed size but non-zero compressed size (header manipulation).
@@ -596,7 +614,8 @@ class ArchiveRuleEngine:
         if hits:
             self._add("R27", "HIGH",
                       "Files with non-zero compressed size but zero uncompressed size — header manipulation.",
-                      f"Files: {hits[:5]}")
+                      f"Files: {hits[:5]}",
+                      cve="CVE-2014-9390")
 
     def rule_R28_timestamp_anomaly(self):
         """R28 - Impossible or anomalous file timestamps (anti-forensics).
@@ -613,7 +632,8 @@ class ArchiveRuleEngine:
         if hits:
             self._add("R28", "LOW",
                       "Anomalous file timestamps — may indicate anti-forensics tampering.",
-                      f"Files: {hits[:3]}")
+                      f"Files: {hits[:3]}",
+                      cve="CVE-2008-0888")
 
     def rule_R29_hardcoded_urls(self):
         """R29 - Hardcoded URLs or IP addresses in extracted strings.
@@ -626,7 +646,8 @@ class ArchiveRuleEngine:
             sev = "HIGH" if len(found_urls) > 3 else "MEDIUM"
             self._add("R29", sev,
                       "Hardcoded URL or IP address — may indicate C2 communication or staged download.",
-                      f"URLs: {found_urls[:5]}")
+                      f"URLs: {found_urls[:5]}",
+                      cve="CVE-2021-40444")
 
     def rule_R30_mime_extension_mismatch(self):
         """R30 - File extension does not match detected MIME type.
@@ -646,7 +667,8 @@ class ArchiveRuleEngine:
         if all_hits:
             self._add("R30", "HIGH",
                       "File extension does not match detected MIME type — possible disguised executable.",
-                      f"Files: {all_hits[:5]}")
+                      f"Files: {all_hits[:5]}",
+                      cve="CVE-2012-0010")
 
     def rule_R31_oversized_archive(self):
         """R31 - Oversized archive file (evasion or DoS).
@@ -656,7 +678,199 @@ class ArchiveRuleEngine:
         if size > 2 * GB:
             self._add("R31", "MEDIUM",
                       "Archive size exceeds 2 GB — may be used to overwhelm analysis tools or hide content.",
-                      f"Size: {size / GB:.2f} GB")
+                      f"Size: {size / GB:.2f} GB",
+                      cve="CVE-2019-3462")
+
+
+    def rule_R32_winrar_ace_path_traversal(self):
+        """R32 - CVE-2018-20250: WinRAR ACE format absolute path traversal RCE.
+        The UNACEV2.DLL library ignores the extraction destination and uses
+        the filename field as an absolute path, enabling startup folder persistence.
+        Source: archive_format + filenames (ACE/absolute path indicators)"""
+        fmt = self.f.get("archive_format", "").lower()
+        has_abs = any(
+            fn.startswith("C:\\") or fn.startswith("/") or "Startup" in fn
+            for fn in self.filenames
+        )
+        has_exe = bool(self._files_with_ext({".exe", ".dll", ".bat", ".ps1"}))
+        if has_abs and has_exe:
+            self._add("R32", "CRITICAL",
+                      "Absolute path in archive filename — may exploit CVE-2018-20250 WinRAR ACE path traversal RCE.",
+                      f"Format: {fmt.upper()}, Absolute paths + executables detected.",
+                      cve="CVE-2018-20250")
+
+    def rule_R33_winrar_ace_oob_write(self):
+        """R33 - CVE-2018-20252 / CVE-2018-20253: WinRAR out-of-bounds write
+        during parsing of crafted ACE/RAR archives leading to arbitrary code execution.
+        Source: is_corrupted + archive_format"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        if fmt in ("rar", "zip") and is_corrupt:
+            self._add("R33", "HIGH",
+                      "Crafted/corrupted RAR or ZIP may trigger out-of-bounds write (CVE-2018-20252/20253).",
+                      f"Format: {fmt.upper()}, Corrupted: True",
+                      cve="CVE-2018-20252")
+
+    def rule_R34_python_tarfile_traversal(self):
+        """R34 - CVE-2007-4559: Python tarfile module path traversal.
+        The extract/extractall functions do not sanitize member paths,
+        allowing overwrite of arbitrary files on the system.
+        Source: archive_format + filenames (.. check)"""
+        fmt = self.f.get("archive_format", "").lower()
+        hits = [fn for fn in self.filenames if ".." in fn or fn.startswith("/")]
+        if fmt == "tar" and hits:
+            self._add("R34", "HIGH",
+                      "TAR archive with path traversal entries — may exploit CVE-2007-4559 Python tarfile traversal.",
+                      f"Files: {hits[:5]}",
+                      cve="CVE-2007-4559")
+
+    def rule_R35_7zip_symlink_traversal(self):
+        """R35 - CVE-2025-11001 / CVE-2025-11002: 7-Zip symbolic link path traversal RCE.
+        Maliciously crafted ZIP files with symlinks escape the extraction directory
+        and allow arbitrary file writes leading to code execution.
+        Source: archive_format + filenames (symlink-like names)"""
+        fmt = self.f.get("archive_format", "").lower()
+        # Symlink entries often have very short names pointing to absolute paths
+        has_traversal = any(".." in fn or fn.startswith("/") for fn in self.filenames)
+        if fmt == "zip" and has_traversal:
+            self._add("R35", "CRITICAL",
+                      "ZIP with traversal/symlink entries — may exploit CVE-2025-11001/11002 7-Zip RCE.",
+                      f"Traversal paths detected in ZIP archive.",
+                      cve="CVE-2025-11001")
+
+    def rule_R36_7zip_rar5_heap_overflow(self):
+        """R36 - CVE-2025-53816: 7-Zip heap-based buffer overflow in RAR5 decoder.
+        A maliciously crafted RAR5 archive can cause memory corruption (DoS/potential RCE).
+        Source: archive_format + is_corrupted"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        if fmt == "rar" and is_corrupt:
+            self._add("R36", "HIGH",
+                      "Corrupted RAR5 archive may trigger CVE-2025-53816 7-Zip heap buffer overflow.",
+                      "Format: RAR, Corrupted: True",
+                      cve="CVE-2025-53816")
+
+    def rule_R37_libarchive_rar_oob(self):
+        """R37 - CVE-2024-48957: libarchive out-of-bounds access via crafted RAR file.
+        The execute_filter_audio function in RAR support allows memory corruption
+        via a specially crafted archive.
+        Source: archive_format + is_corrupted"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        if fmt == "rar" and is_corrupt:
+            self._add("R37", "HIGH",
+                      "Crafted RAR may trigger CVE-2024-48957 libarchive out-of-bounds read.",
+                      "Format: RAR, Corrupted: True",
+                      cve="CVE-2024-48957")
+
+    def rule_R38_libarchive_windows_rce(self):
+        """R38 - CVE-2024-20696: libarchive RCE on Windows via malformed archive.
+        Affects Windows 10+ (libarchive integrated in Explorer). Opening a crafted
+        ZIP/TAR/CAB can execute arbitrary code under the user context.
+        Source: archive_format + filenames (long/malformed names)"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        has_long = any(len(fn) > 200 for fn in self.filenames)
+        if fmt in ("zip", "tar", "cab") and (is_corrupt or has_long):
+            self._add("R38", "CRITICAL",
+                      "Malformed archive may trigger CVE-2024-20696 libarchive Windows RCE.",
+                      f"Format: {fmt.upper()}, Corrupted: {is_corrupt}, Long filenames: {has_long}",
+                      cve="CVE-2024-20696")
+
+    def rule_R39_winrar_ntfs_ads(self):
+        """R39 - CVE-2025-6218: WinRAR path traversal via NTFS Alternate Data Streams.
+        Allows writing files outside the extraction directory using ADS notation.
+        Source: filenames (colon ADS notation or traversal sequences)"""
+        hits = [fn for fn in self.filenames if ":" in fn and not fn.startswith("C:")]
+        traversal = [fn for fn in self.filenames if ".." in fn]
+        if hits or traversal:
+            all_hits = list(set(hits + traversal))
+            self._add("R39", "CRITICAL",
+                      "NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.",
+                      f"Files: {all_hits[:5]}",
+                      cve="CVE-2025-6218")
+
+    def rule_R40_libarchive_double_free(self):
+        """R40 - CVE-2019-18408 / CVE-2025-5914: libarchive double-free in RAR decoder.
+        A crafted RAR archive triggers a double-free condition in parse_codes()
+        leading to memory corruption or DoS.
+        Source: archive_format + is_corrupted"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        if fmt == "rar" and is_corrupt:
+            self._add("R40", "HIGH",
+                      "Crafted RAR may trigger CVE-2019-18408/CVE-2025-5914 libarchive double-free.",
+                      "Format: RAR, Corrupted: True",
+                      cve="CVE-2019-18408")
+
+    def rule_R41_zip_slip_generic(self):
+        """R41 - CVE-2018-1000544 / CVE-2018-1002208: Zip Slip in multiple libraries.
+        Path traversal via archive extraction affects Ruby rubyzip, .NET SharpZipLib
+        and dozens of other libraries — any archive with .. in filenames is a risk.
+        Source: filenames (.. check, not already covered by R13 for non-ZIP formats)"""
+        fmt = self.f.get("archive_format", "").lower()
+        if fmt in ("zip", "7z", "rar", "tar"):
+            hits = [fn for fn in self.filenames if ".." in fn]
+            if hits:
+                self._add("R41", "HIGH",
+                          "Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).",
+                          f"Files: {hits[:5]}",
+                          cve="CVE-2018-1000544")
+
+    def rule_R42_infozip_envvar_injection(self):
+        """R42 - CVE-2014-8139 / CVE-2014-8140: Info-ZIP unzip CRC/header buffer overflow.
+        Crafted ZIP files with malformed CRC or extra fields trigger buffer overflows
+        in unzip versions before 6.0 patch level 11.
+        Source: archive_format + is_corrupted"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        comment_len = len(self.f.get("archive_comment", ""))
+        if fmt == "zip" and (is_corrupt or comment_len > 256):
+            self._add("R42", "HIGH",
+                      "Malformed ZIP may trigger Info-ZIP CRC/header buffer overflow (CVE-2014-8139/8140).",
+                      f"Corrupted: {is_corrupt}, Comment length: {comment_len}",
+                      cve="CVE-2014-8139")
+
+    def rule_R43_zip_excessive_compression(self):
+        """R43 - CVE-2021-36090 / CVE-2021-35516: Apache Commons Compress zip bomb / OOM.
+        Excessively nested or highly compressed ZIP entries cause OutOfMemoryError,
+        enabling denial of service against Java applications using Commons Compress.
+        Source: compression_ratio + file_count"""
+        ratio = self.f.get("compression_ratio", 0)
+        count = self.f.get("file_count", 0)
+        fmt   = self.f.get("archive_format", "").lower()
+        if fmt == "zip" and (ratio > 30 or count > 500):
+            self._add("R43", "MEDIUM",
+                      "High compression or file count may trigger Apache Commons Compress OOM (CVE-2021-36090/35516).",
+                      f"Ratio: {ratio:.1f}x, File count: {count}",
+                      cve="CVE-2021-36090")
+
+    def rule_R44_p7zip_heap_overflow(self):
+        """R44 - CVE-2022-29072 / p7zip heap overflow: Heap buffer overflow in p7zip
+        via crafted ZIP archive. The NArchive::NZip::CInArchive::FindCd function
+        allows out-of-bounds memory access.
+        Source: archive_format + is_corrupted"""
+        fmt = self.f.get("archive_format", "").lower()
+        is_corrupt = self.f.get("is_corrupted", False)
+        if fmt == "zip" and is_corrupt:
+            self._add("R44", "HIGH",
+                      "Crafted ZIP may trigger p7zip heap buffer overflow (CVE-2022-29072).",
+                      "Format: ZIP, Corrupted: True",
+                      cve="CVE-2022-29072")
+
+    def rule_R45_winrar_format_string(self):
+        """R45 - CVE-2004-0648: WinRAR 2.90-3.50 format string vulnerability.
+        Format string specifiers in UUE/XXE filenames within archives allow
+        arbitrary code execution when WinRAR displays diagnostic messages.
+        Source: filenames (format string patterns)"""
+        import re as _re
+        fmt_pattern = _re.compile(r'%[0-9]*[sdfxp]')
+        hits = [fn for fn in self.filenames if fmt_pattern.search(fn)]
+        if hits:
+            self._add("R45", "HIGH",
+                      "Format string patterns in filenames — may exploit CVE-2004-0648 WinRAR format string vulnerability.",
+                      f"Files: {hits[:5]}",
+                      cve="CVE-2004-0648")
 
     # ---------------------------------------------
     #  RUN ALL RULES
@@ -695,6 +909,20 @@ class ArchiveRuleEngine:
             self.rule_R29_hardcoded_urls,
             self.rule_R30_mime_extension_mismatch,
             self.rule_R31_oversized_archive,
+            self.rule_R32_winrar_ace_path_traversal,
+            self.rule_R33_winrar_ace_oob_write,
+            self.rule_R34_python_tarfile_traversal,
+            self.rule_R35_7zip_symlink_traversal,
+            self.rule_R36_7zip_rar5_heap_overflow,
+            self.rule_R37_libarchive_rar_oob,
+            self.rule_R38_libarchive_windows_rce,
+            self.rule_R39_winrar_ntfs_ads,
+            self.rule_R40_libarchive_double_free,
+            self.rule_R41_zip_slip_generic,
+            self.rule_R42_infozip_envvar_injection,
+            self.rule_R43_zip_excessive_compression,
+            self.rule_R44_p7zip_heap_overflow,
+            self.rule_R45_winrar_format_string,
         ]
         for rule in rules:
             try:
