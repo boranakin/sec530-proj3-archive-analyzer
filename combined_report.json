@@ -10,7 +10,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.766403",
+      "timestamp": "2026-05-29T12:29:29.859219",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -59,14 +59,14 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['invoice_2024.pdf.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R20",
           "severity": "MEDIUM",
           "description": "Phishing-related terms found in filenames — indicates social engineering attack.",
           "evidence": "Files: ['invoice_2024.pdf', 'invoice_2024.pdf.exe']",
-          "cve": "CVE-2017-0262"
+          "cve": null
         },
         {
           "rule_id": "R29",
@@ -76,7 +76,7 @@
           "cve": "CVE-2021-40444"
         }
       ],
-      "explanation": "The archive 'invoice_Q3_2024.zip' was classified as MALICIOUS based on 9 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R04] [CVE-2001-0927] Double-extension filenames disguise executables as documents.\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\nMEDIUM severity indicators:\n  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.\n  - [R20] [CVE-2017-0262] Phishing-related terms found in filenames — indicates social engineering attack.\n  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.\n\nMatched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2001-0927, CVE-2018-0802, CVE-2017-0199, CVE-2014-6332, CVE-2022-30190, CVE-2017-0262, CVE-2021-40444",
+      "explanation": "The archive 'invoice_Q3_2024.zip' was classified as MALICIOUS based on 9 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R04] [CVE-2001-0927] Double-extension filenames disguise executables as documents.\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\nMEDIUM severity indicators:\n  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.\n  - [R20] Phishing-related terms found in filenames — indicates social engineering attack.\n  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.\n\nMatched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2001-0927, CVE-2018-0802, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444",
       "hashes": {
         "md5": "d41d8cd98f00b204e9800998ecf8427e",
         "sha1": "adc83b19e793491b1c6ea0fd8b46cd9f32e592fc",
@@ -89,7 +89,7 @@
       "classification": "MALICIOUS",
       "severity_score": 65,
       "risk_level": "HIGH",
-      "timestamp": "2026-05-29T12:17:50.768022",
+      "timestamp": "2026-05-29T12:29:29.860645",
       "triggered_rules": [
         {
           "rule_id": "R11",
@@ -119,7 +119,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.768986",
+      "timestamp": "2026-05-29T12:29:29.861262",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -161,7 +161,7 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['../../Windows/System32/malware.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R32",
@@ -181,7 +181,7 @@
           "rule_id": "R39",
           "severity": "CRITICAL",
           "description": "NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.",
-          "evidence": "Files: ['../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat', '../../Windows/System32/malware.exe']",
+          "evidence": "Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']",
           "cve": "CVE-2025-6218"
         },
         {
@@ -192,7 +192,7 @@
           "cve": "CVE-2018-1000544"
         }
       ],
-      "explanation": "The archive 'update_package.zip' was classified as MALICIOUS based on 10 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.\n  - [R32] [CVE-2018-20250] Absolute path in archive filename — may exploit CVE-2018-20250 WinRAR ACE path traversal RCE.\n  - [R35] [CVE-2025-11001] ZIP with traversal/symlink entries — may exploit CVE-2025-11001/11002 7-Zip RCE.\n  - [R39] [CVE-2025-6218] NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R41] [CVE-2018-1000544] Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).\nMEDIUM severity indicators:\n  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.\n\nMatched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-2014-6332, CVE-2022-30190, CVE-2018-20250, CVE-2025-11001, CVE-2025-6218, CVE-2018-1000544",
+      "explanation": "The archive 'update_package.zip' was classified as MALICIOUS based on 10 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.\n  - [R32] [CVE-2018-20250] Absolute path in archive filename — may exploit CVE-2018-20250 WinRAR ACE path traversal RCE.\n  - [R35] [CVE-2025-11001] ZIP with traversal/symlink entries — may exploit CVE-2025-11001/11002 7-Zip RCE.\n  - [R39] [CVE-2025-6218] NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R41] [CVE-2018-1000544] Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).\nMEDIUM severity indicators:\n  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.\n\nMatched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-2014-6332, CVE-2018-20250, CVE-2025-11001, CVE-2025-6218, CVE-2018-1000544",
       "hashes": {
         "md5": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
         "sha1": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
@@ -205,7 +205,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.770133",
+      "timestamp": "2026-05-29T12:29:29.862376",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -233,7 +233,7 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['contract_signed.pdf/../payload.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R21",
@@ -257,7 +257,7 @@
           "cve": "CVE-2018-1000544"
         }
       ],
-      "explanation": "The archive 'contract_signed.rar' was classified as MALICIOUS based on 7 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.\n  - [R21] [CVE-2023-38831] Structure resembles CVE-2023-38831 WinRAR RCE — path traversal + executable in RAR.\n  - [R39] [CVE-2025-6218] NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R41] [CVE-2018-1000544] Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).\n\nMatched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2022-30190, CVE-2023-38831, CVE-2025-6218, CVE-2018-1000544",
+      "explanation": "The archive 'contract_signed.rar' was classified as MALICIOUS based on 7 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.\n  - [R21] [CVE-2023-38831] Structure resembles CVE-2023-38831 WinRAR RCE — path traversal + executable in RAR.\n  - [R39] [CVE-2025-6218] NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R41] [CVE-2018-1000544] Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).\n\nMatched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2023-38831, CVE-2025-6218, CVE-2018-1000544",
       "hashes": {
         "md5": "cccccccccccccccccccccccccccccccc",
         "sha1": "cccccccccccccccccccccccccccccccccccccccc",
@@ -270,7 +270,7 @@
       "classification": "MALICIOUS",
       "severity_score": 80,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.771202",
+      "timestamp": "2026-05-29T12:29:29.863469",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -284,10 +284,10 @@
           "severity": "CRITICAL",
           "description": "Encrypted archive with executables/scripts hides payloads from AV.",
           "evidence": "Encrypted: True, Suspicious files: ['installer.exe']",
-          "cve": "CVE-2020-17087"
+          "cve": null
         }
       ],
-      "explanation": "The archive 'protected_docs.zip' was classified as MALICIOUS based on 2 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R07] [CVE-2020-17087] Encrypted archive with executables/scripts hides payloads from AV.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n\nMatched CVEs: CVE-2019-0541, CVE-2020-17087",
+      "explanation": "The archive 'protected_docs.zip' was classified as MALICIOUS based on 2 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R07] Encrypted archive with executables/scripts hides payloads from AV.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n\nMatched CVEs: CVE-2019-0541",
       "hashes": {
         "md5": "dddddddddddddddddddddddddddddddd",
         "sha1": "dddddddddddddddddddddddddddddddddddddddd",
@@ -300,7 +300,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.772137",
+      "timestamp": "2026-05-29T12:29:29.863997",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -328,14 +328,14 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['photo\\u202egpj.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R19",
           "severity": "MEDIUM",
           "description": "Suspicious directory names, hidden files, or Task 1 flagged filenames detected.",
           "evidence": "Directories: [], Hidden: [], Other: ['photo\\u202egpj.exe']",
-          "cve": "CVE-2017-8570"
+          "cve": null
         },
         {
           "rule_id": "R24",
@@ -345,7 +345,7 @@
           "cve": "CVE-2025-8088"
         }
       ],
-      "explanation": "The archive 'photos.zip' was classified as MALICIOUS based on 6 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R09] [CVE-2009-3376] RTLO character (U+202E) reverses the filename to hide the real extension.\n  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\nMEDIUM severity indicators:\n  - [R19] [CVE-2017-8570] Suspicious directory names, hidden files, or Task 1 flagged filenames detected.\n\nMatched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2022-30190, CVE-2017-8570, CVE-2025-8088",
+      "explanation": "The archive 'photos.zip' was classified as MALICIOUS based on 6 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R09] [CVE-2009-3376] RTLO character (U+202E) reverses the filename to hide the real extension.\n  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\nMEDIUM severity indicators:\n  - [R19] Suspicious directory names, hidden files, or Task 1 flagged filenames detected.\n\nMatched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088",
       "hashes": {
         "md5": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
         "sha1": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -358,7 +358,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.773040",
+      "timestamp": "2026-05-29T12:29:29.865593",
       "triggered_rules": [
         {
           "rule_id": "R03",
@@ -386,7 +386,7 @@
           "severity": "HIGH",
           "description": "Obfuscation techniques detected — attacker is hiding payload from static analysis.",
           "evidence": "Keywords: ['base64', 'frombase64string', '-encodedcommand', 'iex(']",
-          "cve": "CVE-2020-0601"
+          "cve": null
         },
         {
           "rule_id": "R29",
@@ -396,7 +396,7 @@
           "cve": "CVE-2021-40444"
         }
       ],
-      "explanation": "The archive 'resume_john_doe.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.\nHIGH severity indicators:\n  - [R03] [CVE-2010-2568] Shortcut files (.lnk/.url) are used to execute hidden payloads.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R17] [CVE-2020-0601] Obfuscation techniques detected — attacker is hiding payload from static analysis.\nMEDIUM severity indicators:\n  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.\n\nMatched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2020-0601, CVE-2021-40444",
+      "explanation": "The archive 'resume_john_doe.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.\nHIGH severity indicators:\n  - [R03] [CVE-2010-2568] Shortcut files (.lnk/.url) are used to execute hidden payloads.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R17] Obfuscation techniques detected — attacker is hiding payload from static analysis.\nMEDIUM severity indicators:\n  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.\n\nMatched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444",
       "hashes": {
         "md5": "ffffffffffffffffffffffffffffffff",
         "sha1": "ffffffffffffffffffffffffffffffffffffffff",
@@ -409,14 +409,14 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.774120",
+      "timestamp": "2026-05-29T12:29:29.866842",
       "triggered_rules": [
         {
           "rule_id": "R05",
           "severity": "HIGH",
           "description": "Macro-enabled Office documents can execute arbitrary code on open.",
           "evidence": "Files: ['Q4_budget_report.xlsm']",
-          "cve": "CVE-2017-11882"
+          "cve": null
         },
         {
           "rule_id": "R15",
@@ -437,7 +437,7 @@
           "severity": "HIGH",
           "description": "Obfuscation techniques detected — attacker is hiding payload from static analysis.",
           "evidence": "Keywords: ['base64']",
-          "cve": "CVE-2020-0601"
+          "cve": null
         },
         {
           "rule_id": "R29",
@@ -447,7 +447,7 @@
           "cve": "CVE-2021-40444"
         }
       ],
-      "explanation": "The archive 'Q4_budget_report.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.\nHIGH severity indicators:\n  - [R05] [CVE-2017-11882] Macro-enabled Office documents can execute arbitrary code on open.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R17] [CVE-2020-0601] Obfuscation techniques detected — attacker is hiding payload from static analysis.\nMEDIUM severity indicators:\n  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.\n\nMatched CVEs: CVE-2017-11882, CVE-2017-0199, CVE-2014-6332, CVE-2020-0601, CVE-2021-40444",
+      "explanation": "The archive 'Q4_budget_report.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.\nHIGH severity indicators:\n  - [R05] Macro-enabled Office documents can execute arbitrary code on open.\n  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.\n  - [R17] Obfuscation techniques detected — attacker is hiding payload from static analysis.\nMEDIUM severity indicators:\n  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.\n\nMatched CVEs: CVE-2017-0199, CVE-2014-6332, CVE-2021-40444",
       "hashes": {
         "md5": "11111111111111111111111111111111",
         "sha1": "1111111111111111111111111111111111111111",
@@ -460,7 +460,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.776824",
+      "timestamp": "2026-05-29T12:29:29.868801",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -488,10 +488,10 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['layer1/layer2.7z', 'layer1/layer2/payload.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         }
       ],
-      "explanation": "The archive 'software_bundle.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R06] [CVE-2012-1459] Nested archives are used to evade AV scanning and detection.\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n\nMatched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802, CVE-2022-30190",
+      "explanation": "The archive 'software_bundle.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R06] [CVE-2012-1459] Nested archives are used to evade AV scanning and detection.\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n\nMatched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802",
       "hashes": {
         "md5": "22222222222222222222222222222222",
         "sha1": "2222222222222222222222222222222222222222",
@@ -504,7 +504,7 @@
       "classification": "MALICIOUS",
       "severity_score": 90,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.778892",
+      "timestamp": "2026-05-29T12:29:29.869836",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -518,17 +518,17 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['patch.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R27",
           "severity": "HIGH",
           "description": "Files with non-zero compressed size but zero uncompressed size — header manipulation.",
           "evidence": "Files: ['patch.exe']",
-          "cve": "CVE-2014-9390"
+          "cve": null
         }
       ],
-      "explanation": "The archive 'patch_v2.zip' was classified as MALICIOUS based on 3 triggered detection rule(s).\n\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R27] [CVE-2014-9390] Files with non-zero compressed size but zero uncompressed size — header manipulation.\n\nMatched CVEs: CVE-2019-0541, CVE-2022-30190, CVE-2014-9390",
+      "explanation": "The archive 'patch_v2.zip' was classified as MALICIOUS based on 3 triggered detection rule(s).\n\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R27] Files with non-zero compressed size but zero uncompressed size — header manipulation.\n\nMatched CVEs: CVE-2019-0541",
       "hashes": {
         "md5": "33333333333333333333333333333333",
         "sha1": "3333333333333333333333333333333333333333",
@@ -541,7 +541,7 @@
       "classification": "MALICIOUS",
       "severity_score": 90,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.780929",
+      "timestamp": "2026-05-29T12:29:29.870796",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -555,7 +555,7 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R22",
@@ -565,7 +565,7 @@
           "cve": "CVE-2018-18384"
         }
       ],
-      "explanation": "The archive 'archive_test.rar' was classified as MALICIOUS based on 3 triggered detection rule(s).\n\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R22] [CVE-2018-18384] Malformed structure or oversized path may trigger CVE-2018-18384 WinRAR buffer overflow.\n\nMatched CVEs: CVE-2019-0541, CVE-2022-30190, CVE-2018-18384",
+      "explanation": "The archive 'archive_test.rar' was classified as MALICIOUS based on 3 triggered detection rule(s).\n\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n  - [R22] [CVE-2018-18384] Malformed structure or oversized path may trigger CVE-2018-18384 WinRAR buffer overflow.\n\nMatched CVEs: CVE-2019-0541, CVE-2018-18384",
       "hashes": {
         "md5": "44444444444444444444444444444444",
         "sha1": "4444444444444444444444444444444444444444",
@@ -578,7 +578,7 @@
       "classification": "MALICIOUS",
       "severity_score": 100,
       "risk_level": "CRITICAL",
-      "timestamp": "2026-05-29T12:17:50.783763",
+      "timestamp": "2026-05-29T12:29:29.871625",
       "triggered_rules": [
         {
           "rule_id": "R01",
@@ -599,7 +599,7 @@
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['repÀrt_v2.exe']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         },
         {
           "rule_id": "R24",
@@ -609,7 +609,7 @@
           "cve": "CVE-2025-8088"
         }
       ],
-      "explanation": "The archive 'documents.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n\nMatched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2022-30190, CVE-2025-8088",
+      "explanation": "The archive 'documents.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).\n\nCRITICAL indicators:\n  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.\n  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.\nHIGH severity indicators:\n  - [R01] [CVE-2019-0541] Archive contains executable or binary files.\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n\nMatched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2025-8088",
       "hashes": {
         "md5": "55555555555555555555555555555555",
         "sha1": "5555555555555555555555555555555555555555",
@@ -622,7 +622,7 @@
       "classification": "BENIGN",
       "severity_score": 0,
       "risk_level": "LOW",
-      "timestamp": "2026-05-29T12:17:50.796101",
+      "timestamp": "2026-05-29T12:29:29.872599",
       "triggered_rules": [],
       "explanation": "No suspicious indicators were found in 'holiday_photos_2024.zip'. The archive appears to contain only standard files with no anomalous features.",
       "hashes": {
@@ -637,7 +637,7 @@
       "classification": "SUSPICIOUS",
       "severity_score": 15,
       "risk_level": "LOW",
-      "timestamp": "2026-05-29T12:17:50.798754",
+      "timestamp": "2026-05-29T12:29:29.873473",
       "triggered_rules": [
         {
           "rule_id": "R02",
@@ -660,17 +660,17 @@
       "classification": "SUSPICIOUS",
       "severity_score": 30,
       "risk_level": "MEDIUM",
-      "timestamp": "2026-05-29T12:17:50.800818",
+      "timestamp": "2026-05-29T12:29:29.874569",
       "triggered_rules": [
         {
           "rule_id": "R18",
           "severity": "HIGH",
           "description": "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
           "evidence": "Files: ['Q3_report.docx']",
-          "cve": "CVE-2022-30190"
+          "cve": null
         }
       ],
-      "explanation": "The archive 'work_backup_nov2024.zip' was classified as SUSPICIOUS based on 1 triggered detection rule(s).\n\nHIGH severity indicators:\n  - [R18] [CVE-2022-30190] High-entropy files suggest encrypted or packed payloads embedded in the archive.\n\nMatched CVEs: CVE-2022-30190",
+      "explanation": "The archive 'work_backup_nov2024.zip' was classified as SUSPICIOUS based on 1 triggered detection rule(s).\n\nHIGH severity indicators:\n  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.",
       "hashes": {
         "md5": "88888888888888888888888888888888",
         "sha1": "8888888888888888888888888888888888888888",

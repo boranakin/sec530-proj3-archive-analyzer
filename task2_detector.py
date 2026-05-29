@@ -299,7 +299,7 @@ class ArchiveRuleEngine:
             self._add("R01", "HIGH",
                       "Archive contains executable or binary files.",
                       f"Files: {evidence}",
-                      cve="CVE-2019-0541")
+                      cve=None)
 
     def rule_R02_script_files(self):
         """R02 - Script files present.
@@ -309,7 +309,7 @@ class ArchiveRuleEngine:
             self._add("R02", "MEDIUM",
                       "Archive contains script files that can execute commands.",
                       f"Files: {found[:5]}",
-                      cve="CVE-2016-7201")
+                      cve=None)
 
     def rule_R03_shortcut_files(self):
         """R03 - Shortcut files (.lnk / .url) present.
@@ -320,7 +320,7 @@ class ArchiveRuleEngine:
             self._add("R03", "HIGH",
                       "Shortcut files (.lnk/.url) are used to execute hidden payloads.",
                       f"Files: {evidence}",
-                      cve="CVE-2010-2568")
+                      cve="CVE-2023-36025")
 
     def rule_R04_double_extension(self):
         """R04 - Double-extension filenames (e.g. invoice.pdf.exe).
@@ -336,7 +336,7 @@ class ArchiveRuleEngine:
             self._add("R04", "CRITICAL",
                       "Double-extension filenames disguise executables as documents.",
                       f"Files: {all_hits[:5]}",
-                      cve="CVE-2001-0927")
+                      cve=None)
 
     def rule_R05_macro_office_docs(self):
         """R05 - Macro-enabled Office documents present.
@@ -360,7 +360,7 @@ class ArchiveRuleEngine:
             self._add("R06", severity,
                       "Nested archives are used to evade AV scanning and detection.",
                       f"Archives: {evidence}, max depth: {depth}",
-                      cve="CVE-2012-1459")
+                      cve=None)
 
     def rule_R07_encrypted_with_suspicious_files(self):
         """R07 - Encrypted archive containing suspicious content.
@@ -386,7 +386,7 @@ class ArchiveRuleEngine:
             self._add("R08", "CRITICAL",
                       "Archive contains both a decoy document and an executable — classic dropper pattern.",
                       f"Decoys: {decoys[:3]}, Executables: {execs[:3]}",
-                      cve="CVE-2018-0802")
+                      cve=None)
 
     def rule_R09_unicode_rtlo(self):
         """R09 - Right-to-Left Override (RTLO) character in filename (U+202E).
@@ -397,7 +397,7 @@ class ArchiveRuleEngine:
             self._add("R09", "CRITICAL",
                       "RTLO character (U+202E) reverses the filename to hide the real extension.",
                       f"Files: {evidence}",
-                      cve="CVE-2009-3376")
+                      cve=None)
 
     def rule_R10_space_padding(self):
         """R10 - Filename padded with spaces to hide extension.
@@ -448,7 +448,7 @@ class ArchiveRuleEngine:
             self._add("R13", "CRITICAL",
                       "Path traversal filenames can overwrite system files on extraction.",
                       f"Files: {hits[:5]}",
-                      cve="CVE-2018-3718")
+                      cve="CVE-2018-1000544")
 
     def rule_R14_null_byte_filename(self):
         """R14 - Null byte in filename (parser confusion attack).
@@ -468,7 +468,7 @@ class ArchiveRuleEngine:
             self._add("R15", "CRITICAL",
                       "Extracted strings contain download commands indicating staged malware delivery.",
                       f"Keywords: {found}",
-                      cve="CVE-2017-0199")
+                      cve=None)
 
     def rule_R16_execution_strings(self):
         """R16 - Shell execution patterns found in extracted strings.
@@ -478,7 +478,7 @@ class ArchiveRuleEngine:
             self._add("R16", "HIGH",
                       "Extracted strings reference shell execution APIs — possible malicious script.",
                       f"Keywords: {found}",
-                      cve="CVE-2014-6332")
+                      cve=None)
 
     def rule_R17_obfuscation_strings(self):
         """R17 - Obfuscation techniques found in extracted strings.
@@ -803,20 +803,6 @@ class ArchiveRuleEngine:
                       "Format: RAR, Corrupted: True",
                       cve="CVE-2019-18408")
 
-    def rule_R41_zip_slip_generic(self):
-        """R41 - CVE-2018-1000544 / CVE-2018-1002208: Zip Slip in multiple libraries.
-        Path traversal via archive extraction affects Ruby rubyzip, .NET SharpZipLib
-        and dozens of other libraries — any archive with .. in filenames is a risk.
-        Source: filenames (.. check, not already covered by R13 for non-ZIP formats)"""
-        fmt = self.f.get("archive_format", "").lower()
-        if fmt in ("zip", "7z", "rar", "tar"):
-            hits = [fn for fn in self.filenames if ".." in fn]
-            if hits:
-                self._add("R41", "HIGH",
-                          "Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).",
-                          f"Files: {hits[:5]}",
-                          cve="CVE-2018-1000544")
-
     def rule_R42_infozip_envvar_injection(self):
         """R42 - CVE-2014-8139 / CVE-2014-8140: Info-ZIP unzip CRC/header buffer overflow.
         Crafted ZIP files with malformed CRC or extra fields trigger buffer overflows
@@ -918,7 +904,6 @@ class ArchiveRuleEngine:
             self.rule_R38_libarchive_windows_rce,
             self.rule_R39_winrar_ntfs_ads,
             self.rule_R40_libarchive_double_free,
-            self.rule_R41_zip_slip_generic,
             self.rule_R42_infozip_envvar_injection,
             self.rule_R43_zip_excessive_compression,
             self.rule_R44_p7zip_heap_overflow,
