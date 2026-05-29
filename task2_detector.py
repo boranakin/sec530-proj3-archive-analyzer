@@ -347,7 +347,7 @@ class ArchiveRuleEngine:
             self._add("R05", "HIGH",
                       "Macro-enabled Office documents can execute arbitrary code on open.",
                       f"Files: {evidence}",
-                      cve="CVE-2017-11882")
+                      cve=None)
 
     def rule_R06_nested_archives(self):
         """R06 - Nested archives (AV evasion technique).
@@ -371,7 +371,7 @@ class ArchiveRuleEngine:
             self._add("R07", "CRITICAL",
                       "Encrypted archive with executables/scripts hides payloads from AV.",
                       f"Encrypted: True, Suspicious files: {suspicious[:3]}",
-                      cve="CVE-2020-17087")
+                      cve=None)
         elif is_enc:
             self._add("R07", "LOW",
                       "Archive is encrypted — contents cannot be scanned.",
@@ -407,7 +407,7 @@ class ArchiveRuleEngine:
             self._add("R10", "HIGH",
                       "Filename padded with spaces to hide the true extension in file managers.",
                       f"Files: {hits[:5]}",
-                      cve="CVE-2001-0680")
+                      cve=None)
 
     def rule_R11_decompression_bomb(self):
         """R11 - Zip bomb / decompression bomb.
@@ -488,7 +488,7 @@ class ArchiveRuleEngine:
             self._add("R17", "HIGH",
                       "Obfuscation techniques detected — attacker is hiding payload from static analysis.",
                       f"Keywords: {found}",
-                      cve="CVE-2020-0601")
+                      cve=None)
 
     def rule_R18_high_entropy_files(self):
         """R18 - High-entropy files (packed or encrypted payload).
@@ -503,7 +503,7 @@ class ArchiveRuleEngine:
             self._add("R18", "HIGH",
                       "High-entropy files suggest encrypted or packed payloads embedded in the archive.",
                       f"Files: {hits[:5]}",
-                      cve="CVE-2022-30190")
+                      cve=None)
 
     def rule_R19_suspicious_dirs_and_hidden(self):
         """R19 - Suspicious directory names and hidden files.
@@ -524,7 +524,7 @@ class ArchiveRuleEngine:
             self._add("R19", "MEDIUM",
                       "Suspicious directory names, hidden files, or Task 1 flagged filenames detected.",
                       f"Directories: {dir_hits[:3]}, Hidden: {hidden_hits[:3]}, Other: {t1_extra[:3]}",
-                      cve="CVE-2017-8570")
+                      cve=None)
 
     def rule_R20_phishing_keywords(self):
         """R20 - Phishing-related keywords in filenames.
@@ -535,7 +535,7 @@ class ArchiveRuleEngine:
             self._add("R20", "MEDIUM",
                       "Phishing-related terms found in filenames — indicates social engineering attack.",
                       f"Files: {hits[:5]}",
-                      cve="CVE-2017-0262")
+                      cve=None)
 
     def rule_R21_winrar_rce(self):
         """R21 - CVE-2023-38831: WinRAR path traversal RCE.
@@ -615,7 +615,7 @@ class ArchiveRuleEngine:
             self._add("R27", "HIGH",
                       "Files with non-zero compressed size but zero uncompressed size — header manipulation.",
                       f"Files: {hits[:5]}",
-                      cve="CVE-2014-9390")
+                      cve=None)
 
     def rule_R28_timestamp_anomaly(self):
         """R28 - Impossible or anomalous file timestamps (anti-forensics).
@@ -679,7 +679,7 @@ class ArchiveRuleEngine:
             self._add("R31", "MEDIUM",
                       "Archive size exceeds 2 GB — may be used to overwhelm analysis tools or hide content.",
                       f"Size: {size / GB:.2f} GB",
-                      cve="CVE-2019-3462")
+                      cve=None)
 
 
     def rule_R32_winrar_ace_path_traversal(self):
