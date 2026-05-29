@@ -15,7 +15,7 @@
 <div style="max-width:860px;margin:0 auto;padding:2rem 1rem;">
 
   <div style="margin-bottom:2rem;">
-    <p style="font-size:12px;color:#888780;margin-bottom:6px;">sec530 · project 3 · task 2 · static rule-based detection · 2026-05-29 12:29:34</p>
+    <p style="font-size:12px;color:#888780;margin-bottom:6px;">sec530 · project 3 · task 2 · static rule-based detection · 2026-05-29 17:52:31</p>
     <h1 style="font-size:24px;font-weight:500;margin-bottom:1.25rem;">archive analysis report</h1>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.5rem;">
@@ -70,11 +70,11 @@
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">9</p>
+      <p style="font-size:20px;font-weight:500;">10</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">7</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
     </div>
   </div>
 
@@ -84,13 +84,13 @@
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (9)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (10)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R04</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2001-0927</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Double-extension filenames disguise executables as documents.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf.exe']</p>
@@ -99,8 +99,8 @@
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-0802</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['invoice_2024.pdf'], Executables: ['invoice_2024.pdf.exe', 'update.ps1']</p>
 </div>
@@ -108,16 +108,25 @@
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R15</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2017-0199</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings contain download commands indicating staged malware delivery.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Download-command keywords in strings — indicates staged malware delivery.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['invoke-webrequest']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Name collisions: [], Executables present.</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf.exe', 'update.ps1']</p>
@@ -126,8 +135,8 @@
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2014-6332</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Shell-execution API references in strings — possible malicious script.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['cmd.exe', 'powershell']</p>
 </div>
@@ -136,7 +145,7 @@
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf.exe']</p>
 </div>
@@ -144,8 +153,8 @@
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R02</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2016-7201</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute commands.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute OS commands.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['update.ps1']</p>
 </div>
@@ -154,7 +163,7 @@
     <span style="font-family:monospace;font-size:12px;color:#888780;">R20</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">Phishing-related terms found in filenames — indicates social engineering attack.</span>
+    <span style="font-size:13px;color:#1c1c1a;">Phishing-related terms in filenames — social-engineering lure.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['invoice_2024.pdf', 'invoice_2024.pdf.exe']</p>
 </div>
@@ -162,32 +171,43 @@
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R29</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2021-40444</span>
-    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URL or IP address — may indicate C2 communication or staged download.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URLs/IPs in strings — possible C2 channel or staged download.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs: ['http://192.168.1.100:4444/payload.exe']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs/IPs: ['http://192.168.1.100:4444/payload.exe']</p>
 </div>
   </div>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'invoice_Q3_2024.zip' was classified as MALICIOUS based on 9 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'invoice_Q3_2024.zip' was classified as MALICIOUS based on 10 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R04] [CVE-2001-0927] Double-extension filenames disguise executables as documents.
-  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.
-  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.
+  [R04] Double-extension filenames disguise executables as documents.
+    Why: Windows hides known extensions by default; 'report.pdf.exe' displays as 'report.pdf', inducing the user to double-click and execute malware believing it is a document.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
+  [R15] Download-command keywords in strings — indicates staged malware delivery.
+    Why: Commands like Invoke-WebRequest, certutil -decode, or BITSAdmin are used by loaders to fetch a second-stage payload after the archive is extracted and executed.
+  [R21] [CVE-2023-38831] CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.
+    Why: CVE-2023-38831 is a WinRAR logical flaw: when the user clicks a benign file, WinRAR also extracts and runs executables inside a same-named folder, achieving silent RCE.  Actively exploited by APT28, Sandworm, and others.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R16] Shell-execution API references in strings — possible malicious script.
+    Why: WScript.Shell, CreateProcess, VirtualAlloc and similar APIs are core primitives for process spawning and code injection used by malware.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
 MEDIUM severity indicators:
-  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.
-  - [R20] Phishing-related terms found in filenames — indicates social engineering attack.
-  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.
+  [R02] Archive contains script files that can execute OS commands.
+    Why: Script files (.ps1, .vbs, .bat, .sh …) execute with user-level privileges on double-click and are widely abused as first-stage loaders.
+  [R20] Phishing-related terms in filenames — social-engineering lure.
+    Why: Terms like 'invoice', 'payment', 'urgent', or 'verify' exploit psychological urgency to induce users to open archive contents without scrutiny.
+  [R29] Hardcoded URLs/IPs in strings — possible C2 channel or staged download.
+    Why: Hardcoded network addresses inside archive content indicate the extracted payload will phone home or pull a second stage from an attacker-controlled server.
 
-Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2001-0927, CVE-2018-0802, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2016-7201</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2001-0927</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-0802</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2017-0199</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2014-6332</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2021-40444</span></div>
+Referenced CVEs: CVE-2023-38831</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span></div>
   </div>
 
 </div>
@@ -237,17 +257,17 @@ Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2001-0927, CVE-2018-0802, CVE-20
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R11</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-10769</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extreme compression ratio indicates a potential decompression bomb.</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-9674</span>
+    <span style="font-size:13px;color:#1c1c1a;">Extreme compression ratio — potential decompression bomb (zip-of-death).</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Ratio: 1032.5x, Uncompressed: 1.00 GB</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
-    <span style="font-family:monospace;font-size:12px;color:#888780;">R43</span>
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R42</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
     <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2021-36090</span>
-    <span style="font-size:13px;color:#1c1c1a;">High compression or file count may trigger Apache Commons Compress OOM (CVE-2021-36090/35516).</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2021-36090: High compression/file-count ZIP may cause Commons Compress OOM.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Ratio: 1032.5x, File count: 1</p>
 </div>
@@ -258,12 +278,14 @@ Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2001-0927, CVE-2018-0802, CVE-20
     <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'free_software.zip' was classified as MALICIOUS based on 2 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R11] [CVE-2019-10769] Extreme compression ratio indicates a potential decompression bomb.
+  [R11] [CVE-2019-9674] Extreme compression ratio — potential decompression bomb (zip-of-death).
+    Why: A decompression bomb (CWE-409) stores gigabytes or petabytes of data in a tiny file.  Extracting it exhausts disk/RAM and can crash or disable antivirus engines, creating an opening for secondary payloads. CVE-2019-9674 covers this class of attack in Python's zipfile module.
 MEDIUM severity indicators:
-  - [R43] [CVE-2021-36090] High compression or file count may trigger Apache Commons Compress OOM (CVE-2021-36090/35516).
+  [R42] [CVE-2021-36090] CVE-2021-36090: High compression/file-count ZIP may cause Commons Compress OOM.
+    Why: CVE-2021-36090: Apache Commons Compress 1.0–1.20 allocates memory proportional to claimed (uncompressed) sizes in ZIP entries.  A crafted archive with huge claimed sizes causes OOM even for very small compressed inputs, crashing any Java service that processes the file.
 
-Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-10769</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2021-36090</span></div>
+Referenced CVEs: CVE-2019-9674, CVE-2021-36090</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-9674</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2021-36090</span></div>
   </div>
 
 </div>
@@ -293,11 +315,11 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">10</p>
+      <p style="font-size:20px;font-weight:500;">11</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">9</p>
+      <p style="font-size:20px;font-weight:500;">6</p>
     </div>
   </div>
 
@@ -307,14 +329,14 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (10)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (11)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-0802</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['readme.pdf'], Executables: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
 </div>
@@ -322,17 +344,26 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R13</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-3718</span>
-    <span style="font-size:13px;color:#1c1c1a;">Path traversal filenames can overwrite system files on extraction.</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-1000544</span>
+    <span style="font-size:13px;color:#1c1c1a;">Path-traversal filenames (Zip Slip) — can overwrite arbitrary files on extraction.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Name collisions: [], Executables present.</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R32</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
     <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-20250</span>
-    <span style="font-size:13px;color:#1c1c1a;">Absolute path in archive filename — may exploit CVE-2018-20250 WinRAR ACE path traversal RCE.</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2018-20250: Absolute path in archive entry — WinRAR ACE path traversal RCE.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Absolute paths + executables detected.</p>
 </div>
@@ -341,7 +372,7 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R35</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
     <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-11001</span>
-    <span style="font-size:13px;color:#1c1c1a;">ZIP with traversal/symlink entries — may exploit CVE-2025-11001/11002 7-Zip RCE.</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2025-11001/11002: ZIP with traversal/symlink entries — 7-Zip RCE vector.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Traversal paths detected in ZIP archive.</p>
 </div>
@@ -350,15 +381,15 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R39</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
     <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-6218</span>
-    <span style="font-size:13px;color:#1c1c1a;">NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.</span>
+    <span style="font-size:13px;color:#1c1c1a;">NTFS ADS / path-traversal in filenames — CVE-2025-6218 WinRAR RCE vector.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">ADS entries: [], Traversal: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
@@ -367,8 +398,8 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2014-6332</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Shell-execution API references in strings — possible malicious script.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['cmd.exe']</p>
 </div>
@@ -377,25 +408,25 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
-    <span style="font-family:monospace;font-size:12px;color:#888780;">R41</span>
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R46</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-1000544</span>
-    <span style="font-size:13px;color:#1c1c1a;">Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-10860</span>
+    <span style="font-size:13px;color:#1c1c1a;">Zip Slip (CVE-2018-10860/1002209): Path-traversal entries in archive — arbitrary file write.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Files: ['../../Windows/System32/malware.exe', '../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R02</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2016-7201</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute commands.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute OS commands.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['../../AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/run.bat']</p>
 </div>
@@ -403,24 +434,36 @@ Matched CVEs: CVE-2019-10769, CVE-2021-36090</p>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'update_package.zip' was classified as MALICIOUS based on 10 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'update_package.zip' was classified as MALICIOUS based on 11 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.
-  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.
-  - [R32] [CVE-2018-20250] Absolute path in archive filename — may exploit CVE-2018-20250 WinRAR ACE path traversal RCE.
-  - [R35] [CVE-2025-11001] ZIP with traversal/symlink entries — may exploit CVE-2025-11001/11002 7-Zip RCE.
-  - [R39] [CVE-2025-6218] NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
+  [R13] [CVE-2018-1000544] Path-traversal filenames (Zip Slip) — can overwrite arbitrary files on extraction.
+    Why: Zip Slip (CVE-2018-1000544 and &gt;100 related library CVEs) allows '..' sequences in archive entry names to escape the extraction directory, overwriting system files or dropping persistence backdoors.
+  [R21] [CVE-2023-38831] CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.
+    Why: CVE-2023-38831 is a WinRAR logical flaw: when the user clicks a benign file, WinRAR also extracts and runs executables inside a same-named folder, achieving silent RCE.  Actively exploited by APT28, Sandworm, and others.
+  [R32] [CVE-2018-20250] CVE-2018-20250: Absolute path in archive entry — WinRAR ACE path traversal RCE.
+    Why: CVE-2018-20250 allows ACE archives to write files to arbitrary absolute paths (including the Startup folder) via UNACEV2.DLL path-validation bypass.  File persists and executes on next user logon without privilege escalation.  Exploited in the wild by multiple APT groups.
+  [R35] [CVE-2025-11001] CVE-2025-11001/11002: ZIP with traversal/symlink entries — 7-Zip RCE vector.
+    Why: CVE-2025-11001 and CVE-2025-11002 affect 7-Zip &lt; 25.00: symlinks embedded in ZIP archives can escape the extraction directory, enabling arbitrary file write and subsequent RCE (e.g. via Startup folder persistence).
+  [R39] [CVE-2025-6218] NTFS ADS / path-traversal in filenames — CVE-2025-6218 WinRAR RCE vector.
+    Why: CVE-2025-8088 (RomCom zero-day): ADS-notation archive entries bypass WinRAR path validation, silently writing payloads to Startup or other auto-run locations. CVE-2025-6218 achieves the same via space-padded '..' segments.  Both were exploited in the wild in 2025.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
-  - [R41] [CVE-2018-1000544] Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R16] Shell-execution API references in strings — possible malicious script.
+    Why: WScript.Shell, CreateProcess, VirtualAlloc and similar APIs are core primitives for process spawning and code injection used by malware.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
+  [R46] [CVE-2018-10860] Zip Slip (CVE-2018-10860/1002209): Path-traversal entries in archive — arbitrary file write.
+    Why: Zip Slip affects archive libraries in Python, Java, Go, Perl, Ruby and others.  '..' entries in archive names escape the extraction directory and overwrite arbitrary files, often leading to code execution.
 MEDIUM severity indicators:
-  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.
+  [R02] Archive contains script files that can execute OS commands.
+    Why: Script files (.ps1, .vbs, .bat, .sh …) execute with user-level privileges on double-click and are widely abused as first-stage loaders.
 
-Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-2014-6332, CVE-2018-20250, CVE-2025-11001, CVE-2025-6218, CVE-2018-1000544</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2016-7201</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-0802</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-3718</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2014-6332</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-20250</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-11001</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-6218</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-1000544</span></div>
+Referenced CVEs: CVE-2018-1000544, CVE-2018-10860, CVE-2018-20250, CVE-2023-38831, CVE-2025-11001, CVE-2025-6218</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-1000544</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-20250</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-11001</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-6218</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-10860</span></div>
   </div>
 
 </div>
@@ -450,11 +493,11 @@ Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-20
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">7</p>
+      <p style="font-size:20px;font-weight:500;">6</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">6</p>
+      <p style="font-size:20px;font-weight:500;">3</p>
     </div>
   </div>
 
@@ -464,14 +507,14 @@ Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-20
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (7)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (6)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-0802</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['contract_signed.pdf', 'contract_signed.pdf/'], Executables: ['contract_signed.pdf/../payload.exe']</p>
 </div>
@@ -479,34 +522,25 @@ Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-20
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R13</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-3718</span>
-    <span style="font-size:13px;color:#1c1c1a;">Path traversal filenames can overwrite system files on extraction.</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-1000544</span>
+    <span style="font-size:13px;color:#1c1c1a;">Path-traversal filenames (Zip Slip) — can overwrite arbitrary files on extraction.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
-</div>
-<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
-  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
-    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
-    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
-    <span style="font-size:13px;color:#1c1c1a;">Structure resembles CVE-2023-38831 WinRAR RCE — path traversal + executable in RAR.</span>
-  </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: RAR, Path traversal detected, Executables present.</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R39</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
     <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-6218</span>
-    <span style="font-size:13px;color:#1c1c1a;">NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.</span>
+    <span style="font-size:13px;color:#1c1c1a;">NTFS ADS / path-traversal in filenames — CVE-2025-6218 WinRAR RCE vector.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">ADS entries: [], Traversal: ['contract_signed.pdf/../payload.exe']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
@@ -516,37 +550,42 @@ Matched CVEs: CVE-2019-0541, CVE-2016-7201, CVE-2018-0802, CVE-2018-3718, CVE-20
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
-    <span style="font-family:monospace;font-size:12px;color:#888780;">R41</span>
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R46</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-1000544</span>
-    <span style="font-size:13px;color:#1c1c1a;">Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-10860</span>
+    <span style="font-size:13px;color:#1c1c1a;">Zip Slip (CVE-2018-10860/1002209): Path-traversal entries in archive — arbitrary file write.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['contract_signed.pdf/../payload.exe']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: RAR, Files: ['contract_signed.pdf/../payload.exe']</p>
 </div>
   </div>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'contract_signed.rar' was classified as MALICIOUS based on 7 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'contract_signed.rar' was classified as MALICIOUS based on 6 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.
-  - [R13] [CVE-2018-3718] Path traversal filenames can overwrite system files on extraction.
-  - [R21] [CVE-2023-38831] Structure resembles CVE-2023-38831 WinRAR RCE — path traversal + executable in RAR.
-  - [R39] [CVE-2025-6218] NTFS Alternate Data Streams or traversal in filenames — may exploit CVE-2025-6218 WinRAR path traversal.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
+  [R13] [CVE-2018-1000544] Path-traversal filenames (Zip Slip) — can overwrite arbitrary files on extraction.
+    Why: Zip Slip (CVE-2018-1000544 and &gt;100 related library CVEs) allows '..' sequences in archive entry names to escape the extraction directory, overwriting system files or dropping persistence backdoors.
+  [R39] [CVE-2025-6218] NTFS ADS / path-traversal in filenames — CVE-2025-6218 WinRAR RCE vector.
+    Why: CVE-2025-8088 (RomCom zero-day): ADS-notation archive entries bypass WinRAR path validation, silently writing payloads to Startup or other auto-run locations. CVE-2025-6218 achieves the same via space-padded '..' segments.  Both were exploited in the wild in 2025.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
-  - [R41] [CVE-2018-1000544] Zip Slip pattern — path traversal entries affect multiple extraction libraries (CVE-2018-1000544).
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
+  [R46] [CVE-2018-10860] Zip Slip (CVE-2018-10860/1002209): Path-traversal entries in archive — arbitrary file write.
+    Why: Zip Slip affects archive libraries in Python, Java, Go, Perl, Ruby and others.  '..' entries in archive names escape the extraction directory and overwrite arbitrary files, often leading to code execution.
 
-Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2023-38831, CVE-2025-6218, CVE-2018-1000544</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-0802</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-3718</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-6218</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-1000544</span></div>
+Referenced CVEs: CVE-2018-1000544, CVE-2018-10860, CVE-2025-6218</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-1000544</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-6218</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-10860</span></div>
   </div>
 
 </div>
@@ -565,9 +604,9 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2023-38831, CVE-2
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
-      <p style="font-size:20px;font-weight:500;">80/100</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
       <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
-        <div style="width:80%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
       </div>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
@@ -576,11 +615,11 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2023-38831, CVE-2
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">2</p>
+      <p style="font-size:20px;font-weight:500;">3</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">1</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
     </div>
   </div>
 
@@ -590,22 +629,31 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2023-38831, CVE-2
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (2)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (3)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R07</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">Encrypted archive with executables/scripts hides payloads from AV.</span>
+    <span style="font-size:13px;color:#1c1c1a;">Encrypted archive with executables/scripts — payload is hidden from AV.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Encrypted: True, Suspicious files: ['installer.exe']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['readme.txt'], Executables: ['installer.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['installer.exe']</p>
@@ -614,15 +662,17 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2018-3718, CVE-2023-38831, CVE-2
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'protected_docs.zip' was classified as MALICIOUS based on 2 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'protected_docs.zip' was classified as MALICIOUS based on 3 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R07] Encrypted archive with executables/scripts hides payloads from AV.
+  [R07] Encrypted archive with executables/scripts — payload is hidden from AV.
+    Why: Encryption prevents AV engines from inspecting the archive contents.  Combined with executables this is a classic payload-delivery evasion pattern.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-
-Matched CVEs: CVE-2019-0541</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span></div>
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.</p>
+    
   </div>
 
 </div>
@@ -652,11 +702,11 @@ Matched CVEs: CVE-2019-0541</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">6</p>
+      <p style="font-size:20px;font-weight:500;">7</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">4</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
     </div>
   </div>
 
@@ -666,14 +716,14 @@ Matched CVEs: CVE-2019-0541</p>
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (6)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (7)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-0802</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['holiday.jpg'], Executables: ['photo\u202egpj.exe']</p>
 </div>
@@ -681,17 +731,26 @@ Matched CVEs: CVE-2019-0541</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R09</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2009-3376</span>
-    <span style="font-size:13px;color:#1c1c1a;">RTLO character (U+202E) reverses the filename to hide the real extension.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">RTLO character (U+202E) in filename reverses displayed extension.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Name collisions: [], Executables present.</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R24</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-8088</span>
-    <span style="font-size:13px;color:#1c1c1a;">Unicode normalization spoofing — filename appears benign but has executable extension.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Unicode homograph in executable filename — may fool validators and users.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
 </div>
@@ -699,7 +758,7 @@ Matched CVEs: CVE-2019-0541</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
@@ -709,7 +768,7 @@ Matched CVEs: CVE-2019-0541</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['photo\u202egpj.exe']</p>
 </div>
@@ -718,28 +777,36 @@ Matched CVEs: CVE-2019-0541</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R19</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">Suspicious directory names, hidden files, or Task 1 flagged filenames detected.</span>
+    <span style="font-size:13px;color:#1c1c1a;">Suspicious directory names, hidden files, or flagged filenames detected.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Directories: [], Hidden: [], Other: ['photo\u202egpj.exe']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Dirs: [], Hidden: [], Other: ['photo\u202egpj.exe']</p>
 </div>
   </div>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'photos.zip' was classified as MALICIOUS based on 6 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'photos.zip' was classified as MALICIOUS based on 7 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.
-  - [R09] [CVE-2009-3376] RTLO character (U+202E) reverses the filename to hide the real extension.
-  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
+  [R09] RTLO character (U+202E) in filename reverses displayed extension.
+    Why: The Unicode Right-to-Left Override causes text after it to be displayed in reverse.  Attackers craft filenames like 'photo‮exe.jpg' which appear as 'photogpj.exe' — users see a JPEG icon but click an executable.
+  [R21] [CVE-2023-38831] CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.
+    Why: CVE-2023-38831 is a WinRAR logical flaw: when the user clicks a benign file, WinRAR also extracts and runs executables inside a same-named folder, achieving silent RCE.  Actively exploited by APT28, Sandworm, and others.
+  [R24] Unicode homograph in executable filename — may fool validators and users.
+    Why: Lookalike Unicode characters (Cyrillic, fullwidth, etc.) render identically to ASCII in most fonts.  Combined with an executable extension this can bypass allowlists and deceive users about the file type.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
 MEDIUM severity indicators:
-  - [R19] Suspicious directory names, hidden files, or Task 1 flagged filenames detected.
+  [R19] Suspicious directory names, hidden files, or flagged filenames detected.
+    Why: Archive entries targeting system paths (AppData, Startup, System32) or marked hidden attempt to drop files in persistence locations invisible to the user.
 
-Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-0802</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2009-3376</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-8088</span></div>
+Referenced CVEs: CVE-2023-38831</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span></div>
   </div>
 
 </div>
@@ -773,7 +840,7 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">4</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
     </div>
   </div>
 
@@ -789,8 +856,8 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R15</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2017-0199</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings contain download commands indicating staged malware delivery.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Download-command keywords in strings — indicates staged malware delivery.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['invoke-webrequest']</p>
 </div>
@@ -798,8 +865,8 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R03</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2010-2568</span>
-    <span style="font-size:13px;color:#1c1c1a;">Shortcut files (.lnk/.url) are used to execute hidden payloads.</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-36025</span>
+    <span style="font-size:13px;color:#1c1c1a;">Shortcut files (.lnk/.url/.desktop) present — can execute hidden payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['Open_Resume.lnk']</p>
 </div>
@@ -807,8 +874,8 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2014-6332</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Shell-execution API references in strings — possible malicious script.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['powershell']</p>
 </div>
@@ -817,7 +884,7 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R17</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">Obfuscation techniques detected — attacker is hiding payload from static analysis.</span>
+    <span style="font-size:13px;color:#1c1c1a;">Obfuscation techniques in strings — attacker hiding payload from static analysis.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['base64', 'frombase64string', '-encodedcommand', 'iex(']</p>
 </div>
@@ -825,10 +892,10 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R29</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2021-40444</span>
-    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URL or IP address — may indicate C2 communication or staged download.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URLs/IPs in strings — possible C2 channel or staged download.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs: ['http://evil.ru/stage2/payload.exe', 'http://c2.evil.ru/beacon']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs/IPs: ['http://evil.ru/stage2/payload.exe', 'http://c2.evil.ru/beacon']</p>
 </div>
   </div>
 
@@ -837,16 +904,21 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2009-3376, CVE-2025-8088</p>
     <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'resume_john_doe.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.
+  [R15] Download-command keywords in strings — indicates staged malware delivery.
+    Why: Commands like Invoke-WebRequest, certutil -decode, or BITSAdmin are used by loaders to fetch a second-stage payload after the archive is extracted and executed.
 HIGH severity indicators:
-  - [R03] [CVE-2010-2568] Shortcut files (.lnk/.url) are used to execute hidden payloads.
-  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.
-  - [R17] Obfuscation techniques detected — attacker is hiding payload from static analysis.
+  [R03] [CVE-2023-36025] Shortcut files (.lnk/.url/.desktop) present — can execute hidden payloads.
+    Why: Shortcut files store arbitrary command targets. CVE-2023-36025 allows crafted .url files to bypass Windows SmartScreen entirely, executing malware without any security warning.
+  [R16] Shell-execution API references in strings — possible malicious script.
+    Why: WScript.Shell, CreateProcess, VirtualAlloc and similar APIs are core primitives for process spawning and code injection used by malware.
+  [R17] Obfuscation techniques in strings — attacker hiding payload from static analysis.
+    Why: Base64 encoding, -EncodedCommand, and Invoke-Expression are standard PowerShell obfuscation primitives; they conceal the true command from signature-based detection.
 MEDIUM severity indicators:
-  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.
+  [R29] Hardcoded URLs/IPs in strings — possible C2 channel or staged download.
+    Why: Hardcoded network addresses inside archive content indicate the extracted payload will phone home or pull a second stage from an attacker-controlled server.
 
-Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2010-2568</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2017-0199</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2014-6332</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2021-40444</span></div>
+Referenced CVEs: CVE-2023-36025</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-36025</span></div>
   </div>
 
 </div>
@@ -880,7 +952,7 @@ Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">3</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
     </div>
   </div>
 
@@ -896,8 +968,8 @@ Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R15</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2017-0199</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings contain download commands indicating staged malware delivery.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Download-command keywords in strings — indicates staged malware delivery.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['urldownloadtofile']</p>
 </div>
@@ -914,8 +986,8 @@ Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R16</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2014-6332</span>
-    <span style="font-size:13px;color:#1c1c1a;">Extracted strings reference shell execution APIs — possible malicious script.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Shell-execution API references in strings — possible malicious script.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['wscript.shell', 'createobject', 'wscript']</p>
 </div>
@@ -924,7 +996,7 @@ Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R17</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">Obfuscation techniques detected — attacker is hiding payload from static analysis.</span>
+    <span style="font-size:13px;color:#1c1c1a;">Obfuscation techniques in strings — attacker hiding payload from static analysis.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Keywords: ['base64']</p>
 </div>
@@ -932,10 +1004,10 @@ Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R29</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2021-40444</span>
-    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URL or IP address — may indicate C2 communication or staged download.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Hardcoded URLs/IPs in strings — possible C2 channel or staged download.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs: ['http://185.220.101.45/drop/stage1.dll']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">URLs/IPs: ['http://185.220.101.45/drop/stage1.dll']</p>
 </div>
   </div>
 
@@ -944,16 +1016,19 @@ Matched CVEs: CVE-2010-2568, CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
     <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'Q4_budget_report.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R15] [CVE-2017-0199] Extracted strings contain download commands indicating staged malware delivery.
+  [R15] Download-command keywords in strings — indicates staged malware delivery.
+    Why: Commands like Invoke-WebRequest, certutil -decode, or BITSAdmin are used by loaders to fetch a second-stage payload after the archive is extracted and executed.
 HIGH severity indicators:
-  - [R05] Macro-enabled Office documents can execute arbitrary code on open.
-  - [R16] [CVE-2014-6332] Extracted strings reference shell execution APIs — possible malicious script.
-  - [R17] Obfuscation techniques detected — attacker is hiding payload from static analysis.
+  [R05] Macro-enabled Office documents can execute arbitrary code on open.
+    Why: VBA macros embedded in Office documents execute under full user privileges when 'Enable Content' is clicked. This technique remains a top initial-access vector.
+  [R16] Shell-execution API references in strings — possible malicious script.
+    Why: WScript.Shell, CreateProcess, VirtualAlloc and similar APIs are core primitives for process spawning and code injection used by malware.
+  [R17] Obfuscation techniques in strings — attacker hiding payload from static analysis.
+    Why: Base64 encoding, -EncodedCommand, and Invoke-Expression are standard PowerShell obfuscation primitives; they conceal the true command from signature-based detection.
 MEDIUM severity indicators:
-  - [R29] [CVE-2021-40444] Hardcoded URL or IP address — may indicate C2 communication or staged download.
-
-Matched CVEs: CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2017-0199</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2014-6332</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2021-40444</span></div>
+  [R29] Hardcoded URLs/IPs in strings — possible C2 channel or staged download.
+    Why: Hardcoded network addresses inside archive content indicate the extracted payload will phone home or pull a second stage from an attacker-controlled server.</p>
+    
   </div>
 
 </div>
@@ -983,11 +1058,11 @@ Matched CVEs: CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">4</p>
+      <p style="font-size:20px;font-weight:500;">5</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">3</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
     </div>
   </div>
 
@@ -997,31 +1072,40 @@ Matched CVEs: CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (4)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (5)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R06</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2012-1459</span>
-    <span style="font-size:13px;color:#1c1c1a;">Nested archives are used to evade AV scanning and detection.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Nested archives detected — used to evade AV scanning.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Archives: ['layer1.zip', 'layer1/layer2.7z'], max depth: 3</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Archives: ['layer1.zip', 'layer1/layer2.7z'], max nesting depth: 3</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-0802</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: [], Executables: ['layer1/layer2/payload.exe']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['readme.txt'], Executables: ['layer1/layer2/payload.exe']</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Name collisions: [], Executables present.</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['layer1/layer2/payload.exe']</p>
@@ -1031,25 +1115,31 @@ Matched CVEs: CVE-2017-0199, CVE-2014-6332, CVE-2021-40444</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['layer1/layer2.7z', 'layer1/layer2/payload.exe']</p>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['layer1/layer2/payload.exe']</p>
 </div>
   </div>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'software_bundle.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'software_bundle.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R06] [CVE-2012-1459] Nested archives are used to evade AV scanning and detection.
-  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.
+  [R06] Nested archives detected — used to evade AV scanning.
+    Why: Recursive archives exhaust AV scan budgets; the inner payload is never inspected.  Depth ≥ 3 strongly suggests intentional evasion.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
+  [R21] [CVE-2023-38831] CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.
+    Why: CVE-2023-38831 is a WinRAR logical flaw: when the user clicks a benign file, WinRAR also extracts and runs executables inside a same-named folder, achieving silent RCE.  Actively exploited by APT28, Sandworm, and others.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
 
-Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2012-1459</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-0802</span></div>
+Referenced CVEs: CVE-2023-38831</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span></div>
   </div>
 
 </div>
@@ -1068,9 +1158,9 @@ Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
-      <p style="font-size:20px;font-weight:500;">90/100</p>
+      <p style="font-size:20px;font-weight:500;">100/100</p>
       <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
-        <div style="width:90%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+        <div style="width:100%;height:6px;border-radius:99px;background:#E24B4A;"></div>
       </div>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
@@ -1079,11 +1169,11 @@ Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">3</p>
+      <p style="font-size:20px;font-weight:500;">4</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">1</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
     </div>
   </div>
 
@@ -1093,13 +1183,22 @@ Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (3)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (4)</p>
     
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['patch_notes.txt'], Executables: ['patch.exe']</p>
+</div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['patch.exe']</p>
@@ -1109,7 +1208,7 @@ Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['patch.exe']</p>
 </div>
@@ -1118,7 +1217,7 @@ Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R27</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">Files with non-zero compressed size but zero uncompressed size — header manipulation.</span>
+    <span style="font-size:13px;color:#1c1c1a;">Files with zero uncompressed size but non-zero compressed size — header forgery.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['patch.exe']</p>
 </div>
@@ -1126,15 +1225,19 @@ Matched CVEs: CVE-2019-0541, CVE-2012-1459, CVE-2018-0802</p>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'patch_v2.zip' was classified as MALICIOUS based on 3 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'patch_v2.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).
 
+CRITICAL indicators:
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
-  - [R27] Files with non-zero compressed size but zero uncompressed size — header manipulation.
-
-Matched CVEs: CVE-2019-0541</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span></div>
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
+  [R27] Files with zero uncompressed size but non-zero compressed size — header forgery.
+    Why: Forging the uncompressed-size field to 0 hides real content from tools that read header metadata for quick classification instead of fully decompressing entries.</p>
+    
   </div>
 
 </div>
@@ -1153,22 +1256,22 @@ Matched CVEs: CVE-2019-0541</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.25rem;">
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">severity score</p>
-      <p style="font-size:20px;font-weight:500;">90/100</p>
+      <p style="font-size:20px;font-weight:500;">60/100</p>
       <div style="background:#e5e5e3;border-radius:99px;height:6px;margin-top:5px;overflow:hidden;">
-        <div style="width:90%;height:6px;border-radius:99px;background:#E24B4A;"></div>
+        <div style="width:60%;height:6px;border-radius:99px;background:#EF9F27;"></div>
       </div>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">risk level</p>
-      <p style="font-size:20px;font-weight:500;">CRITICAL</p>
+      <p style="font-size:20px;font-weight:500;">HIGH</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">3</p>
+      <p style="font-size:20px;font-weight:500;">2</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">2</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
     </div>
   </div>
 
@@ -1178,13 +1281,13 @@ Matched CVEs: CVE-2019-0541</p>
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (3)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (2)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe']</p>
@@ -1194,32 +1297,22 @@ Matched CVEs: CVE-2019-0541</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.exe']</p>
-</div>
-<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
-  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
-    <span style="font-family:monospace;font-size:12px;color:#888780;">R22</span>
-    <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-18384</span>
-    <span style="font-size:13px;color:#1c1c1a;">Malformed structure or oversized path may trigger CVE-2018-18384 WinRAR buffer overflow.</span>
-  </div>
-  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: RAR, Corrupted: False, Long path: True</p>
 </div>
   </div>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'archive_test.rar' was classified as MALICIOUS based on 3 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'archive_test.rar' was classified as MALICIOUS based on 2 triggered detection rule(s).
 
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
-  - [R22] [CVE-2018-18384] Malformed structure or oversized path may trigger CVE-2018-18384 WinRAR buffer overflow.
-
-Matched CVEs: CVE-2019-0541, CVE-2018-18384</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-18384</span></div>
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.</p>
+    
   </div>
 
 </div>
@@ -1249,11 +1342,11 @@ Matched CVEs: CVE-2019-0541, CVE-2018-18384</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">rules triggered</p>
-      <p style="font-size:20px;font-weight:500;">4</p>
+      <p style="font-size:20px;font-weight:500;">5</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">3</p>
+      <p style="font-size:20px;font-weight:500;">1</p>
     </div>
   </div>
 
@@ -1263,23 +1356,32 @@ Matched CVEs: CVE-2019-0541, CVE-2018-18384</p>
   </div>
 
   <div style="margin-bottom:1rem;">
-    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (4)</p>
+    <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:8px;">triggered rules (5)</p>
     
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R08</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2018-0802</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains both a decoy document and an executable — classic dropper pattern.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Decoy document + executable — classic dropper pattern.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Decoys: ['report.pdf'], Executables: ['repÀrt_v2.exe']</p>
 </div>
 <div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
+    <span style="font-family:monospace;font-size:12px;color:#888780;">R21</span>
+    <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
+    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2023-38831</span>
+    <span style="font-size:13px;color:#1c1c1a;">CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.</span>
+  </div>
+  <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Format: ZIP, Name collisions: [], Executables present.</p>
+</div>
+<div style="border-bottom:0.5px solid rgba(0,0,0,0.07);padding:9px 0;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R24</span>
     <span style="background:#FCEBEB;color:#A32D2D;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">CRITICAL</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2025-8088</span>
-    <span style="font-size:13px;color:#1c1c1a;">Unicode normalization spoofing — filename appears benign but has executable extension.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Unicode homograph in executable filename — may fool validators and users.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['repÀrt_v2.exe']</p>
 </div>
@@ -1287,7 +1389,7 @@ Matched CVEs: CVE-2019-0541, CVE-2018-18384</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R01</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2019-0541</span>
+    
     <span style="font-size:13px;color:#1c1c1a;">Archive contains executable or binary files.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['repÀrt_v2.exe']</p>
@@ -1297,7 +1399,7 @@ Matched CVEs: CVE-2019-0541, CVE-2018-18384</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['repÀrt_v2.exe']</p>
 </div>
@@ -1305,17 +1407,23 @@ Matched CVEs: CVE-2019-0541, CVE-2018-18384</p>
 
   <div style="border-top:0.5px solid rgba(0,0,0,0.07);padding-top:0.85rem;">
     <p style="font-size:12px;font-weight:500;color:#888780;margin-bottom:6px;">explanation</p>
-    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'documents.zip' was classified as MALICIOUS based on 4 triggered detection rule(s).
+    <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'documents.zip' was classified as MALICIOUS based on 5 triggered detection rule(s).
 
 CRITICAL indicators:
-  - [R08] [CVE-2018-0802] Archive contains both a decoy document and an executable — classic dropper pattern.
-  - [R24] [CVE-2025-8088] Unicode normalization spoofing — filename appears benign but has executable extension.
+  [R08] Decoy document + executable — classic dropper pattern.
+    Why: Pairing a harmless-looking document with an executable is the hallmark of a dropper: the victim opens the document, sees expected content, and never notices the payload that ran in the background.
+  [R21] [CVE-2023-38831] CVE-2023-38831 pattern: ZIP with same-named file+folder containing executable.
+    Why: CVE-2023-38831 is a WinRAR logical flaw: when the user clicks a benign file, WinRAR also extracts and runs executables inside a same-named folder, achieving silent RCE.  Actively exploited by APT28, Sandworm, and others.
+  [R24] Unicode homograph in executable filename — may fool validators and users.
+    Why: Lookalike Unicode characters (Cyrillic, fullwidth, etc.) render identically to ASCII in most fonts.  Combined with an executable extension this can bypass allowlists and deceive users about the file type.
 HIGH severity indicators:
-  - [R01] [CVE-2019-0541] Archive contains executable or binary files.
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.
+  [R01] Archive contains executable or binary files.
+    Why: Executables bundled in archives are a primary delivery mechanism for malware; they bypass email attachment filters that block .exe directly.
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.
 
-Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2025-8088</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2019-0541</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2018-0802</span> <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2025-8088</span></div>
+Referenced CVEs: CVE-2023-38831</p>
+    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2023-38831</span></div>
   </div>
 
 </div>
@@ -1400,7 +1508,7 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2025-8088</p>
     </div>
     <div style="background:#f5f5f4;border-radius:8px;padding:0.85rem;">
       <p style="font-size:11px;color:#888780;margin-bottom:3px;">CVE matches</p>
-      <p style="font-size:20px;font-weight:500;">1</p>
+      <p style="font-size:20px;font-weight:500;">0</p>
     </div>
   </div>
 
@@ -1416,8 +1524,8 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2025-8088</p>
   <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px;">
     <span style="font-family:monospace;font-size:12px;color:#888780;">R02</span>
     <span style="background:#E6F1FB;color:#185FA5;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">MEDIUM</span>
-    <span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;margin-left:4px;">CVE-2016-7201</span>
-    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute commands.</span>
+    
+    <span style="font-size:13px;color:#1c1c1a;">Archive contains script files that can execute OS commands.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['myproject/main.py']</p>
 </div>
@@ -1428,10 +1536,9 @@ Matched CVEs: CVE-2019-0541, CVE-2018-0802, CVE-2025-8088</p>
     <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'myproject_v1.0.tar.gz' was classified as SUSPICIOUS based on 1 triggered detection rule(s).
 
 MEDIUM severity indicators:
-  - [R02] [CVE-2016-7201] Archive contains script files that can execute commands.
-
-Matched CVEs: CVE-2016-7201</p>
-    <div style="margin-top:10px;display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><span style="font-size:12px;color:#888780;">matched CVEs:</span><span style="background:#F1EFE8;color:#5f5e5a;font-family:monospace;font-size:11px;padding:2px 7px;border-radius:5px;">CVE-2016-7201</span></div>
+  [R02] Archive contains script files that can execute OS commands.
+    Why: Script files (.ps1, .vbs, .bat, .sh …) execute with user-level privileges on double-click and are widely abused as first-stage loaders.</p>
+    
   </div>
 
 </div>
@@ -1482,7 +1589,7 @@ Matched CVEs: CVE-2016-7201</p>
     <span style="font-family:monospace;font-size:12px;color:#888780;">R18</span>
     <span style="background:#FAEEDA;color:#854F0B;font-size:11px;padding:2px 8px;border-radius:6px;font-weight:500;">HIGH</span>
     
-    <span style="font-size:13px;color:#1c1c1a;">High-entropy files suggest encrypted or packed payloads embedded in the archive.</span>
+    <span style="font-size:13px;color:#1c1c1a;">High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.</span>
   </div>
   <p style="font-size:11px;font-family:monospace;color:#888780;padding-left:4px;word-break:break-word;">Files: ['Q3_report.docx']</p>
 </div>
@@ -1493,14 +1600,15 @@ Matched CVEs: CVE-2016-7201</p>
     <p style="font-size:13px;line-height:1.75;color:#444441;white-space:pre-wrap;">The archive 'work_backup_nov2024.zip' was classified as SUSPICIOUS based on 1 triggered detection rule(s).
 
 HIGH severity indicators:
-  - [R18] High-entropy files suggest encrypted or packed payloads embedded in the archive.</p>
+  [R18] High-entropy files (≥ 7.5 bits/byte) — likely packed or encrypted payloads.
+    Why: A Shannon entropy of ≥ 7.5 bits/byte indicates near-random data, consistent with encrypted or UPX/MPRESS-packed executables.  Legitimate plain-text files score 4–6.</p>
     
   </div>
 
 </div>
 
   <p style="font-size:11px;color:#b4b2a9;text-align:center;margin-top:2rem;">
-    generated by sec530 task 2 detector &middot; 2026-05-29 12:29:34
+    generated by sec530 task 2 detector &middot; 2026-05-29 17:52:31
   </p>
 
 </div>
