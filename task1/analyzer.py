@@ -8,6 +8,9 @@ import rarfile
 import re
 import magic
 import json
+import gzip
+import bz2
+import lzma
 from pathlib import Path
 from datetime import datetime
 
@@ -178,7 +181,28 @@ class ArchiveAnalyzer:
                             
                             dt = f.creationtime.isoformat() if f.creationtime else None
                             self._process_internal_file(f.filename, uncomp, comp, dt, None)
-
+                            
+            # --- STANDALONE GZ / BZ2 / XZ SUPPORT ---
+            elif self.file_path.suffix.lower() in {'.gz', '.bz2', '.xz'} and not tarfile.is_tarfile(self.file_path):
+                ext = self.file_path.suffix.lower()
+                self.report["2_archive_metadata"]["format"] = ext[1:].upper()
+                self.report["2_archive_metadata"]["file_count"] = 1
+                
+                opener = gzip.open if ext == '.gz' else bz2.open if ext == '.bz2' else lzma.open
+                try:
+                    with opener(self.file_path, 'rb') as archive:
+                        content = archive.read()
+                        uncomp_size = len(content)
+                        comp_size = self.file_path.stat().st_size
+                        
+                        total_uncompressed += uncomp_size
+                        total_compressed += comp_size
+                        
+                        # Process the payload (the internal file name is just the archive name minus the extension)
+                        self._process_internal_file(self.file_path.stem, uncomp_size, comp_size, None, content)
+                except Exception:
+                    self.report["2_archive_metadata"]["corrupted"] = True
+                    
             # Decompression Bomb Check (Ratio > 100x OR Uncompressed > 1GB)
             if total_uncompressed > 0:
                 ratio = round(total_uncompressed / total_compressed, 2) if total_compressed > 0 else 1
