@@ -11,6 +11,8 @@ import json
 import gzip
 import bz2
 import lzma
+import argparse
+import sys
 from pathlib import Path
 from datetime import datetime
 
@@ -285,25 +287,41 @@ class ArchiveAnalyzer:
             self.report["4_security_indicators"]["decoy_and_executable_combo"] = True
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) < 2:
-        print("Usage: python analyzer.py <path_to_archive>")
-        sys.exit(1)
+    
+    parser = argparse.ArgumentParser(description="Task 1: Archive Analyzer Extractor")
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("file", nargs="?", help="Path to a single archive file")
+    group.add_argument("--batch", metavar="DIR", help="Directory to scan recursively for archives")
+    parser.add_argument("--outdir", default="reports", help="Directory to save the JSON reports")
+    
+    args = parser.parse_args()
+    
+    # Ensure output directory exists
+    out_path = Path(args.outdir)
+    out_path.mkdir(parents=True, exist_ok=True)
+
+    def run_analysis(target_path):
+        try:
+            analyzer = ArchiveAnalyzer(target_path)
+            result = analyzer.analyze()
+            
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            base_name = target_path.stem
+            output_filename = out_path / f"{base_name}_{timestamp}.json"
+            
+            with open(output_filename, 'w') as f:
+                json.dump(result, f, indent=4)
+            print(f"[+] Analyzed: {target_path.name} -> {output_filename.name}")
+        except Exception as e:
+            print(f"[-] Error processing {target_path.name}: {e}")
+
+    if args.batch:
+        scan_dir = Path(args.batch)
+        print(f"[*] Starting batch analysis recursively on: {scan_dir}")
+        for file_path in scan_dir.rglob("*"):
+            if file_path.is_file():
+                run_analysis(file_path)
+        print(f"[*] Batch complete. All reports safely stored in '{args.outdir}'")
+    else:
+        run_analysis(Path(args.file))
         
-    target_file = sys.argv[1]
-    analyzer = ArchiveAnalyzer(target_file)
-    result = analyzer.analyze()
-    
-    # 1. Print the JSON to the console for your immediate review
-    print(json.dumps(result, indent=4))
-    
-    # 2. Generate a unique timestamp (Format: YYYYMMDD_HHMMSS)
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    base_name = Path(target_file).stem
-    output_filename = f"{base_name}_{timestamp}.json"
-    
-    # 3. Save the JSON to a unique file
-    with open(output_filename, 'w') as f:
-        json.dump(result, f, indent=4)
-        
-    print(f"\n[+] Success! Report saved to: {output_filename}")
